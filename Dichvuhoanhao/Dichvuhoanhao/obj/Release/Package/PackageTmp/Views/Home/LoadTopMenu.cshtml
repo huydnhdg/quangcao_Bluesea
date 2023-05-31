@@ -1,0 +1,60 @@
+﻿@model Dichvuhoanhao.Entity.LinkHeader
+@{
+    var sk = ViewBag.sk;
+    var yo = ViewBag.yo;
+    var g = ViewBag.g;
+    var h1 = ViewBag.title;
+}
+
+<div class="header-main">
+
+    <div class="bg-header">
+        <img src="/Assets/client/img/bgheader.png" class="img-responsive" alt="img" width="100%"/>
+    </div>
+    <div class="header-menu">
+        <div class="header-menu-content">
+            <ul>
+                <li>
+                    <a href="@g.Link" target="_blank">
+                        <img src="~/Assets/client/img/g-ic.png" alt="g-ic" />
+                    </a>
+                </li>
+
+                <li>
+                    <a href="@yo.Link" target="_blank">
+                        <img src="~/Assets/client/img/yu-ic.png" alt="yu-ic" />
+                    </a>
+                </li>
+
+                <li>
+                    <a href="@sk.Link" target="_blank">
+                        <img src="~/Assets/client/img/sk-ic.png" alt="sk-ic" />
+                    </a>
+                </li>
+                <li>
+                    <a href="@Model.Link" target="_blank">
+                        <img src="~/Assets/client/img/fa-ic.png" alt="fa-ic" />
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="header-icon">
+        <a href="/trang-chu"><img src="~/Assets/client/img/logo-header.png" class="img-responsive" alt="Bluesea sáng tạo giá trị cuộc sống"></a>
+    </div>
+    <div class="white-opa" style="width:100%; height:50px; opacity:0.2;background-color:white; position:absolute; top:0;">
+
+    </div>
+</div>
+
+<form class="navbar-form" role="search" action="/tim-kiem" method="get">
+    <div class="input-group add-on">
+        <input class="form-control" placeholder="Nhập từ khóa cần tìm" value="@ViewBag.SearchString" name="keyword" id="keyword" type="text" style="font-style:italic;">
+        <div class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search white"></i></button>
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<EINVOICE_BLUESEA.Models.Partner>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="slogan" class="Clients Index">
+    <div class="slogan">
+        <div class="h1">B-INVOICE <br> Một giải pháp – Triệu khách hàng. <br></div>
+        <div class="h3">Hãy xem lý do tại sao khách hàng tin tưởng chúng tôi.</div>
+    </div>
+</div>
+<div class="mySection light arrowDown">
+    <div class="container text-center">
+        <h2 class="mySectionTitle">
+            Khách hàng của hóa đơn điện tử B-INVOICE
+        </h2>
+        <hr class="mySectionLineShort">
+        <div class="rowRes">
+            @foreach (var item in Model)
+            {
+                <div class="colRes234">
+                    <a href="#" title="@item.Title">
+                        <img class="img-responsive myImgHoverZoom" src="@item.Thumnail" alt="@item.Title">
+                    </a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+@{ Html.RenderAction("loadPurble", "Home");}
+

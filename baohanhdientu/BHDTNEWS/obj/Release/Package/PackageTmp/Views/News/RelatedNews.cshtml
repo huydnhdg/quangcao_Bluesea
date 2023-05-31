@@ -1,0 +1,201 @@
+﻿@model PagedList.IPagedList<BHDTNEWS.Models.Article>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Tin liên quan - Bảo Hành Điện Tử";
+    Layout = "~/Views/Shared/_LayoutBHDT.cshtml";
+    IEnumerable<BHDTNEWS.Models.Article> footerNews = ViewBag.footerNews;
+    IEnumerable<BHDTNEWS.Models.Video> footerVideos = ViewBag.footerVideos;
+    BHDTNEWS.Models.Config config = ViewBag.config;
+}
+
+<!--Section 1-->
+<section class="news_section">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-sm-12">
+                <p class="section1_first_text">
+                    Các tin liên quan
+                </p>
+            </div>
+        </div>
+        <div class="row d-flex">
+            @foreach (var itemContent in Model)
+            {                
+                <div class="col-md-4 ftco-animate">
+                    <div class="blog-entry align-self-stretch thumbnail_news_image" style="border-top: 1px solid #1C668B;">
+                        <div class="text mt-3">
+                            <h3 class="heading" style="min-height: 26px;"><a href="@Url.Action("NewsDetail","News",new {rewrite=itemContent.Link})">@itemContent.Title</a></h3>
+                            <div class="meta mb-2" style="text-align: right;">
+                                <div><a href="@Url.Action("NewsDetail","News",new {rewrite=itemContent.Link})" class="news_created_date">Ngày đăng: @Convert.ToDateTime(@itemContent.Createdate).ToString("dd/MM/yyyy")</a></div>
+                            </div>
+                            <a alt="Bảo hành điện tử" href="@Url.Action("NewsDetail","News",new {rewrite=itemContent.Link})" class="block-20 rounded" style="background-image: url('@itemContent.Image'); margin-top: 5px;">
+                                <span class="background-image" role="img" aria-label="Bảo hành điện tử"> </span>
+                            </a>
+                            <p class="" style="padding-top: 15px;">@itemContent.ShortDescription</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <div class="block-27">
+                    @Html.PagedListPager(Model, page => Url.Action("RelatedNews", new { page, key=ViewBag.key}))
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section7_bg">
+        <div class="">
+            <div class="col-sm-2"><p style="width: 100px"></p></div>
+            <div class="col-sm-8">
+                <marquee class="section7_text_1" width="90%" direction="right" height="100px" behavior="alternate">
+                    Bạn vẫn còn câu hỏi?
+                </marquee>
+            </div>
+        </div>
+        <div class="">
+            <div class="col-sm-6">
+                <marquee class="" width="90%" direction="right" behavior="alternate">
+                    <div class="">
+                        <a href="tel:@config.Hotline"><img alt="Bảo hành điện tử" class="" src="~/images/bhdt/section7_contact_now.png" /></a>
+                    </div>
+                </marquee>
+            </div>
+            <div class="col-sm-6">
+            </div>
+        </div>
+        <div class="">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-11">
+                <marquee class="section7_text_3" width="90%" direction="right" behavior="alternate">
+                    Hoặc gọi Hotline: <a style="color: #FF0707;" href="tel:@config.Hotline">@config.Hotline</a> - <a style="color: #FF0707;" href="tel:@config.PhoneNumber">@config.PhoneNumber</a>
+                </marquee>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="container footer">
+    <div class="container-fluid px-lg-5">
+        <div class="row">
+            <div class="col-md-12 py-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/">Trang chủ</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="~/gioi-thieu">Giới Thiệu</a></li>
+                                            <li class="short_new_title"><a class="short_new_title" href="~/giai-phap">Giải Pháp</a></li>
+                                            <li class="short_new_title"><a href="~/dung-thu">Dùng Thử</a></li>
+                                            <li class="short_new_title"><a href="~/dang-ky">Đăng Ký Sử Dụng</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/bang-gia">Báo Giá</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Cơ Bản</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Nâng Cao</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước VIP</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Super VIP</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/tin-tuc">Tin tức</a></h2>
+                                        <ul class="list-unstyled">
+                                            @foreach (var oldFooter in footerNews)
+                                            {
+                                                <li class="short_new_title">
+                                                    <a href="@Url.Action("NewsDetail","News",new {rewrite=oldFooter.Link})" class="d-block">
+                                                        @oldFooter.Title
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/kenh-youtube">Kênh Youtube</a></h2>
+                                        <ul class="list-unstyled">
+                                            @foreach (var oldFooterVideo in footerVideos)
+                                            {
+                                                <li class="short_new_title">
+                                                    <a href="@Url.Action("YoutubeChannelDetail", "YoutubeChannel", new { id = oldFooterVideo.Id })" class="d-block">
+                                                        @oldFooterVideo.Title
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="padding-bottom: 40px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_phone.png);background-repeat: no-repeat; background-position-x: 16px; background-position-y: 8px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 58px; padding-bottom: 8px;"><a class="footer_heading_title" style="color: #fff;margin-bottom: 30px;" href="#">Điện thoại</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="tel:02437672210">0243 767 2210</a></li>
+                                            <li class="short_new_title">
+                                                <span style="color: #fff;">Hotline:</span><br />
+                                                <a class="short_new_title" href="tel:@config.Hotline">@config.Hotline</a><span style="color: #fff;"> - </span>
+                                                <a class="short_new_title" href="tel:@config.PhoneNumber">@config.PhoneNumber</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_email.png);background-repeat: no-repeat; background-position-x: 20px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 80px; padding-bottom: 8px;"><a class="footer_heading_title" style="color: #fff;" href="#">Email</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="mail:baohanh@bluesea.vn">kd@bluesea.vn</a></li>
+                                            <li class="short_new_title"><a href="mail:xuanhung@bluesea.vn">xuanhung@bluesea.vn</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_location.png);background-repeat: no-repeat; background-position-x: 16px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 48px; padding-bottom: 9px;"><a class="footer_heading_title" style="color: #fff;" href="#">Địa chỉ</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="">
+                                                <span style="color: #fff;">Head Office:</span><br />
+                                                <span style="color: #fff;">91 Trung Kính, Trung Hòa,<br /><span>Cầu Giấy, Hà Nội</span></span>
+                                            </li>
+                                            <br />
+                                            <li class="">
+                                                <span style="color: #fff;">Brand Office:</span><br />
+                                                <span style="color: #fff;">205B Hoàng Hoa Thám, P.6,<br /><span>Bình Thạnh, TP.HCM</span></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_icon.png);background-repeat: no-repeat; background-position-x: 16px;background-position-y: 1px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 68px;padding-bottom: 9px;"><a class="footer_heading_title" style="color: #fff;" href="#">Facebook</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <div id="fb-root"></div>                                                
+                                                <div class="fb-page" data-href="https://www.facebook.com/BaoHanhDienTuBlueSea/" data-tabs="timeline" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/BaoHanhDienTuBlueSea/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/BaoHanhDienTuBlueSea/">Bảo Hành Điện Tử</a></blockquote></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+

@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/Assets/client/img/favi.png" type="image/x-icon" rel="shortcut icon" />
+    <meta name="description" content="@ViewBag.Description">
+    <meta name="keywords" content="@ViewBag.Keyword">
+    <meta name="google-site-verification" content="vUsU8cCBB5I3QUns1L4Seji6tuQ9nIToIC7KwHe5tDs" />
+    <title>@ViewBag.Title</title>
+
+    <!--css-->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Assets/client/css/style.css">
+    <link rel="stylesheet" href="/Assets/client/css/bootstrap.css">
+    <link rel="stylesheet" href="/Assets/client/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--css3-->
+    <link href="/Assets/client/css3/animate.css" rel="stylesheet" />
+    <link href="/Assets/client/css/slide/style.css" rel="stylesheet" />
+    <link href="/Assets/client/css3/hover.css" rel="stylesheet" />
+
+    @*<script type="text/javascript">
+(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="//static.zotabox.com/b/5/b575b7af40353bd887e42363ef003d1a/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-97381592-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+  <script type="text/javascript" id="stringeeXChatWidget" src="https://v2.stringee.com/stringeexchat/sdk/product/StringeeXChatBox-2.0.0.js?key=YTN4YzZxdGZWaXFJU3g5cTQzTSszdz09&showBot=1"> </script>*@
+
+<script data-ad-client="ca-pub-6587730549542644" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+    <!-- Messenger Plugin chat Code -->
+
+    <div id="fb-root"></div>
+
+
+
+    <!-- Your Plugin chat code -->
+
+    <div id="fb-customer-chat" class="fb-customerchat">
+
+    </div>
+
+
+
+    <script>
+
+        var chatbox = document.getElementById('fb-customer-chat');
+
+        chatbox.setAttribute("page_id", "275359786218498");
+
+        chatbox.setAttribute("attribution", "page_inbox");
+
+        window.fbAsyncInit = function () {
+
+            FB.init({
+
+                xfbml: true,
+
+                version: 'v10.0'
+
+            });
+
+        };
+
+
+
+        (function (d, s, id) {
+
+            var js, fjs = d.getElementsByTagName(s)[0];
+
+            if (d.getElementById(id)) return;
+
+            js = d.createElement(s); js.id = id;
+
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+    <header>
+        @{ Html.RenderAction("LoadTopMenu", "Home");}
+    </header>
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="menu">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a style="margin:5px 10px 0 10px;" class="hvr-pulse-shrink" href="~/" class="navbar-brand">Trang chủ</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                @{ Html.RenderAction("LoadMainMenu", "Home");}
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        @RenderBody()
+    </div>
+    <div class="feedback container">
+        <div class="partner">
+            @{Html.RenderAction("LoadPartner", "Home");}
+        </div>
+        <div class="skype">
+            @{Html.RenderAction("LoadSkype", "Home");}
+        </div>
+    </div>
+    <footer>
+        <div class="bg-footer">
+            <img src="/Assets/client/img/bgfooter.png" class="img-responsive" alt="background footer" />
+        </div>
+        <div class="footer container">
+            <div class="footer-logo col-lg-2 col-md-2 col-xs-12 col-sm-2">
+                <img src="/Assets/client/img/logo-f.png" class="img-responsive" alt="bluesea">
+            </div>
+            <div class="footer-content col-lg-10 col-md-10 col-xs-12 col-sm-10">
+                <div class="footer-menu col-lg-12">
+                    <ul>
+                        <li><a href="/bao-hanh-dien-tu">Bảo hành điện tử</a></li>
+                        <li><a href="/tich-diem-doi-qua">Tích điểm đổi quà</a></li>
+                        <li><a href="/cong-thanh-toan">Cổng thanh toán</a></li>
+                        <li><a href="/thiet-ke-web">Thiết kế website</a></li>
+                        <li><a href="/sms-brandname">Sms Brandname</a></li>
+                        <li><a href="/hoa-don-dien-tu">Hóa đơn điện tử</a></li>
+
+
+                        <li><a href="/lien-he">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-row">
+                    <div class="col-lg-8 col-md-8 col-xs-9 col-sm-9 footer-address">
+                        <p>Trụ sở chính: 91 Trung Kính - Trung Hòa - Cầu Giấy - Hà Nội</p>
+                        <p>Điện thoại: 04.3.767.2210 hoặc 0827496688 Fax: 04.3.767.2005</p>
+                        <br>
+                        <p>Chi nhánh: 205B Hoàng Hoa Thám - P6 - Quận Bình Thạnh - TP. HCM</p>
+                        <p>Điện thoại: 08.3.515.8577 hoặc 08.3.550.0422 Fax: 08.3.515.3123</p>
+                        <p>&copy; 2013 Bluesea Media, JSC</p>
+                    </div>
+                    <div class="footer-icon col-lg-4 col-md-4 col-xs-3 col-sm-3">
+                        <div style="text-align:center;" class="col-lg-6 col-md-6 ">
+                            <img src="/Assets/client/img/call-footer.png" alt="hotlline">
+                            <p>094.515.2826</p>
+                        </div>
+                        <div style="text-align:center;" class="col-lg-6 col-md-6 ">
+                            <img src="/Assets/client/img/call-footer.png" alt="hotlline">
+                            <p>082.749.6688</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/Assets/client/js/bootstrap.min.js"></script>
+
+
+
+    <script src="/Assets/client/css3/wow.min.js"></script>
+    <script src="/Assets/client/css3/custom.js"></script>
+    <script src="/Assets/client/js/slide/custom.js"></script>
+    <script src="/Assets/client/js/slide/custom1.js"></script>
+
+
+    <script type="text/javascript">
+        setTimeout(function () {
+            $('#squarespaceModal').modal('show');
+
+        }, 500);
+        //$('#squarespaceModal').modal('show');
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#myCarousel').carousel({
+                interval: 50000
+            })
+            $('#myCarousel').on('slid.bs.carousel', function () {
+                //alert("slid");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#skypecarousel').carousel({
+                interval: 5000
+            })
+            $('#skypecarousel').on('slid.bs.carousel', function () {
+                //alert("slid");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#partnercarousel').carousel({
+                interval: 10000
+            })
+            $('#partnercarousel').on('slid.bs.carousel', function () {
+                //alert("slid");
+            });
+        });
+    </script>
+
+
+    <script src="/Assets/client/js/controller/contactController.js"></script>
+    <script src="http://cdn.vietdesigner.net/data/codes/backtotop-tenlua/tenlua.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #e0e0e0;
+        }
+
+        #totop, #totop2 {
+            position: fixed;
+            right: 0;
+            bottom: 80px;
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            cursor: pointer;
+            display: none;
+            background: url("/Assets/client/img/gototop.png") no-repeat 0px 0;
+            z-index: 9999;
+        }
+
+        #totop2 {
+            background: url("/Assets/client/img/gototop.png") no-repeat -149px 0;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('html').append('<div id="totop"></div><div id="totop2"></div>')
+            $('#totop').hover(function () { $('#totop2').fadeIn().mouseout(function () { $(this).fadeOut(200) }) })
+            var defaultTop = $(window).height() - 10 - 80//10 là vị trí cạnh bottom ban đầu, 249 là chiều cao
+            $(window).resize(function () {
+                defaultTop = $(window).height() - 10 - 80//phòng trường hợp resize trình duyệt
+            })
+            var ranPo = ['-298px 0', '-447px 0', '-596px 0', '-745px 0']
+            $(window).scroll(function () {
+                var $top = $(window).scrollTop()
+                if ($top > 50) {
+                    $('#totop').fadeIn(100)
+                    $('#totop2').css('top', defaultTop)
+                }
+                else {
+                    $('#totop,#totop2').fadeOut(100)
+                }
+            })
+            $('#totop2').click(function () {
+                timeranPo = window.setInterval(function () {
+                    $('#totop2').css({ 'background-position': ranPo[Math.floor(Math.random() * ranPo.length)], 'display': 'block' })
+                }, 200)
+                setTimeout(function () {
+                    $('html,body').stop().animate({
+                        scrollTop: '50px'
+                    }, 400, function () {
+                        $('#totop2').stop().animate({ 'top': '-250px' }, 300, function () {
+                            clearInterval(timeranPo)
+                            $('#totop2').css('background-position', '-149px 0').hide()
+                        })
+                    })
+                }, 800)
+            })
+        })
+    </script>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

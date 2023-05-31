@@ -1,0 +1,74 @@
+﻿@model EINVOICE_BLUESEA.Models.News
+@{
+    ViewBag.Title = "Detail";
+}
+
+    <div id="slogan" class="HoTro ChiTietTinTuc">
+        <div class="slogan">
+            <div class="h1">HÓA ĐƠN ĐIỆN TỬ B-INVOICE</div>
+            <div class="h3">PHÁT HÀNH NHANH  -  AN TOÀN, BẢO MẬT - TIẾT KIỆM CHI PHÍ</div>
+        </div>
+    </div>
+    <div id="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="/" class="home" title="Trang chủ">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li><a href="/tin-tuc">Tin tức</a></li>
+                <li class="active">@Model.Title</li>
+
+            </ol>
+        </div>
+    </div>
+    <div class="mySection">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <h1 class="mySectionTitle">
+                        @Model.Title
+                    </h1>
+                    <div class="blogDetailSubText">
+                        <span>Ngày đăng: @Model.Createdate</span>
+
+                    </div>
+                    <div class="mySectionText myBody">
+                        @Html.Raw(Model.FullContent)
+
+                    </div>
+                    <hr>
+                    <div>
+
+                        <div class="fb-comments" data-href="~/tin-tuc/@Model.Alt" data-width="100%" data-numposts="5"></div>
+                    </div>
+                    <div>
+
+                        <div class="fb-like" data-href="~/tin-tuc/@Model.Alt" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                    </div>
+                    <div>
+                        <h3>Tin liên quan</h3>
+                        <ul class="blogListBlogs">
+                            @foreach (var item in ViewBag.listOld)
+                            {
+                                <li>
+                                    <a href="/tin-tuc/@item.Alt">@item.Title</a>
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <a href="http://baohanhdientu.vip/" target="_blank">
+                        <img src="~/img/bn_baohanh.jpg" class="img-responsive" />
+                    </a>
+                    <a href="http://quangcaohieuqua.com.vn/sms-brandname" target="_blank">
+                        <img src="~/img/bn_sms.jpg" class="img-responsive" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+

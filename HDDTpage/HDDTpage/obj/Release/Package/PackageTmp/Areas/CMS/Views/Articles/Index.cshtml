@@ -1,0 +1,161 @@
+﻿@model IEnumerable<HDDTpage.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/CMS/Views/Shared/_LayoutCMS.cshtml";
+}
+
+<section class="content-header">
+    <h1>
+        Acticle
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Acticle</a></li>
+        @*<li class="active">Data tables</li>*@
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <p>
+                            @Html.ActionLink("Tạo mới", "Create")
+                        </p>
+                    </div>
+
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Title)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Description)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Image)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CreateDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Alt)
+                                    </th>
+                                    @*<th>
+                                            @Html.DisplayNameFor(model => model.Url)
+                                        </th>*@
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Type)
+                                    </th>
+                                    @*<th>
+                                            @Html.DisplayNameFor(model => model.Text)
+                                        </th>*@
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.IsActive)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Tag)
+                                    </th>
+                                    <th class="col-xs-1"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Title)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </td>
+                                        <td>
+                                            @*@Html.DisplayFor(modelItem => item.Image)*@
+                                            <img style="width:50px;height:50px;" src="@(item.Image == null ? "/Content/cms/dist/img/no-img.png" : item.Image)" alt="" />
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CreateDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Alt)
+                                        </td>
+                                        @*<td>
+                                                @Html.DisplayFor(modelItem => item.Url)
+                                            </td>*@
+                                        <td>
+                                            @*@Html.DisplayFor(modelItem => item.Type)*@
+                                            @(item.Type == 1 ? "Thắc mắc" : item.Type == 2 ? "Phản hồi" : item.Type == 3 ? "Quy trình" : "Tin tức")
+                                        </td>
+                                        @*<td>
+                                                @Html.DisplayFor(modelItem => item.Text)
+                                            </td>*@
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.IsActive)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Tag)
+                                        </td>
+                                        <td class="col-xs-1 text-center">
+                                            @Html.ActionLink("Sửa", "Edit", new { id = item.Id })
+                                            <hr class="no-margin" style="border-top:1px solid orange" />
+                                            @Html.ActionLink("Chi tiết", "Details", new { id = item.Id })
+                                            <hr class="no-margin" style="border-top:1px solid orange" />
+                                            @Html.ActionLink("Xóa", "Delete", new { id = item.Id })
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Title)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Description)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Image)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CreateDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Alt)
+                                    </th>
+                                    @*<th>
+                                            @Html.DisplayNameFor(model => model.Url)
+                                        </th>*@
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Type)
+                                    </th>
+                                    @*<th>
+                                            @Html.DisplayNameFor(model => model.Text)
+                                        </th>*@
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.IsActive)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Tag)
+                                    </th>
+                                    <th class="col-xs-1"></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+</section>
+<!-- /.content -->

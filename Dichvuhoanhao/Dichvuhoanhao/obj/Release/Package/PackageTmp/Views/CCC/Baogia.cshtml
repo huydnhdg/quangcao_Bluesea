@@ -1,0 +1,60 @@
+﻿@model Dichvuhoanhao.Entity.Quote
+@{
+    ViewBag.Description = ViewBag.des;
+    ViewBag.Title = ViewBag.title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Dichvuhoanhao.Entity.ItemService> itemservice = ViewBag.itemservice;
+}
+<div class="banner">
+    <img class="img-responsive" alt="bao-hanh-dien-tu" src="http://quangcaohieuqua.com.vn/Assets/client/img/bao-hanh-dien-tu.jpg" />
+</div>
+<div class="container">
+    <div class="baogia">
+        <div class="baogia-title">
+            <h1>@Model.Title</h1>
+        </div>
+        <div class="baogia-content">
+            <div class="bao-wow col-lg-9">
+                <div class="baogia-wow ">
+                    <div class="baogia-txt">
+                        <span>@Html.Raw(Model.Text)</span>
+                    </div>
+                    <span><a title="@Model.Title" href="@Model.FileDownload" class="col-lg-3">Tải về</a></span>
+                </div>
+            </div>
+            <div class="baogia-main-service col-lg-3">
+                <div class="brand-main-title">
+                    <h4>dịch vụ chính</h4>
+                </div>
+                <div class="brand-main-content">
+                    <span><p><a href="/icheck">icheck</a></p></span>
+                    <span><p><a href="/cong-thanh-toan">cổng thanh toán</a></p></span>
+                    <span><p><a href="/hoa-don-dien-tu">hóa đơn điện tử</a></p></span>
+                    <span><p><a href="/digital-marketing">digital marketing</a></p></span><span><p><a href="/bao-hanh-dien-tu">bảo hành điện tử</a></p></span>
+                    <span><p><a href="/sms-brandname">sms brandname</a></p></span>
+                    <a target="_blank" href="http://2tip.vn/tip-vang"><img src="/Assets/client/img/service-main-banner.png" class="img-responsive" alt="banner"></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="facebook"></div>
+    </div>
+    <div class="tinlienquan">
+        <div class="tinlienquan-title">
+            <h4>các tin liên quan</h4>
+        </div>
+        <div class="tinlienquan-list">
+            @foreach (var item in itemservice)
+            {
+                <div class="tinlienquan-item">
+                    <img src="/Assets/client/img/bao-gia_07.png" class="img-responsive" alt="ic-">
+                    <a title="@item.Title" href="/bao-hanh-dien-tu/@item.Url-@item.Id">
+                        <h3>@item.Title</h3>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

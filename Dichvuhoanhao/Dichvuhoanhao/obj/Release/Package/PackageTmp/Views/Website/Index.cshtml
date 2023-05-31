@@ -1,0 +1,91 @@
+﻿@model PagedList.IPagedList<Dichvuhoanhao.Entity.ItemService>
+@using PagedList.Mvc;
+@{
+    ViewBag.Description = ViewBag.des;
+    ViewBag.Title = ViewBag.title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Dichvuhoanhao.Entity.Function> function = ViewBag.function;
+    Dichvuhoanhao.Entity.Service s = ViewBag.service;
+}
+<style>
+    
+    .tag{
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+        .tag a {
+            color:white;
+            background-color: #337ab7;
+            padding:3px;
+            font-style:italic;
+            border-radius:4px;
+            font-size:11px;
+        }
+    .title-web {
+        font-size: 14px;
+        margin-top: 5px;
+        font-weight:bold;
+        text-align:center;
+    }
+</style>
+<div class="banner">
+    <img class="img-responsive" alt="thiet ke website" src="~/Assets/client/img/thiet-ke-website.jpg" />
+</div>
+<div class="container">
+    <div class="brand-service">
+        <div class="brand-title">
+            <h1>@s.Name</h1>
+        </div>
+        <div class="brand-service-list">
+            @foreach (var item in function)
+            {
+                <div class="brand-list-item col-md-3">
+                    <a href="@item.LinkDetail" title="@item.Title">
+                        <img alt="@item.Title" src="@item.Icon" class="img-responsive img-circle">
+                    </a>
+                    <a title="@item.Title" href="@item.LinkDetail"><h2>@item.Title</h2></a>
+                </div>
+
+            }
+        </div>
+    </div>
+    <div class="brand-content">
+        <div class="brand-content-row col-md-9">
+            <div class="content-list ">
+                <div class="tag col-md-12">
+                    <a href="" title="">Bất động sản</a>
+                    <a href="" title="">Bất động sản</a>
+                </div>
+                <div class="content-list-item col-md-12 row">
+                    @foreach (var item in Model)
+                    {
+
+                        <div class="col-md-4">
+                            <a href="@item.Url" title="@item.Title">
+                                <img src="@item.Icon" alt="@item.Title" />
+                            </a>
+                            <a href="@item.Url" title="@item.Title">
+                                <p class="title-web">@item.Title</p>
+                            </a>
+                            <p>@item.Description</p>
+                        </div>
+
+                    }
+                </div>
+                @* phan trang danh sach *@
+                <div class="phantrang">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchString = @ViewBag.SearchString }))
+                </div>
+
+            </div>
+        </div>
+        <div class="brand-main-service col-md-3">
+            <div class="brand-main-title">
+                <h4>dịch vụ chính</h4>
+            </div>
+            @{Html.RenderAction("LoadQuangcao", "Home");}
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,26 @@
+﻿@model List<Dichvuhoanhao.Entity.Skype>
+
+
+<div class="skype-title">
+    <h2>hổ trợ trực tuyến</h2>
+</div>
+<div class="slide-holder">
+    <div class="slide-pager">
+        <div class="slide-control-prev">«</div>
+        <div class="slide-control-next">»</div>
+    </div>
+    <div class="slide-container">
+        <div class="slide-stage">
+            @foreach (var item in Model)
+            {
+                <div class="slide-image">                    
+                    <a href="@item.LinkSkype" title="@item.SkypeName">
+                        <img src="@item.Image" class="img-responsive img-thumbnail" alt="@item.SkypeName" />
+                        <p class="sk-txt">@item.SkypeName</p>
+                    </a>
+                    <a><i style="font-size:25px" class="fa sk-icon">&#xf17e;</i></a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

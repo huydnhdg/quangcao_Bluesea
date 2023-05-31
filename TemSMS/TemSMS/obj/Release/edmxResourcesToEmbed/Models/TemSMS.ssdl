@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TemSMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="Product" Type="varchar" MaxLength="500" />
+    <Property Name="Url" Type="varchar" MaxLength="500" />
+    <Property Name="Tags" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Setuped">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="Url" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Slide">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="Alt" Type="varchar" MaxLength="500" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityContainer Name="TemSMSModelStoreContainer">
+    <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Setuped" EntityType="Self.Setuped" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Slide" EntityType="Self.Slide" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+  </EntityContainer>
+</Schema>

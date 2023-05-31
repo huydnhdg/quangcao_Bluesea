@@ -1,0 +1,65 @@
+﻿@model List<Dichvuhoanhao.Entity.Service>
+@{
+    ViewBag.Description = "Thông tin liên hệ - Yêu cầu hỗ trợ qua email.";
+    ViewBag.Title = "Thông tin liên hệ - Phản hồi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #googleMap {
+        height: 500px;
+        margin:50px;
+    }
+</style>
+@section scripts{
+    <script src="/Assets/client/js/controller/contactController.js"></script>
+
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBqJY8QlW-E7-AOjJBE98ILrxUsS7AFhjA&callback=initMap"></script>
+<script>
+    var myCenter = new google.maps.LatLng(21.013727, 105.798320);
+        function initialize() {
+            var mapProp = {
+                center: myCenter,
+                zoom: 17,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            var marker = new google.maps.Marker({
+                position: myCenter,
+                animation: google.maps.Animation.BOUNCE
+            });
+            marker.setMap(map);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+}
+
+<div class="sendmail">
+    <div class="sendmail-title">
+        <h2>bạn vui lòng để lại thông tin để được hổ trợ tốt nhất</h2>
+    </div>
+    <div class="sendmail-content">
+        <div id="getfly-optin-form-iframe-1581665025814" style="max-width:500px;margin:0 auto"></div> <script type="text/javascript"> (function(){ var r = window.document.referrer != ""? window.document.referrer: window.location.origin; var regex = /(https?:\/\/.*?)\//g; var furl = regex.exec(r); r = furl ? furl[0] : r; var f = document.createElement("iframe"); const url_string = new URLSearchParams(window.location.search); var utm_source, utm_campaign, utm_medium, utm_content, utm_term; if((!url_string.has('utm_source') || url_string.get('utm_source') == '') && document.cookie.match(new RegExp('utm_source' + '=([^;]+)')) != null){ r+= "&" +document.cookie.match(new RegExp('utm_source' + '=([^;]+)'))[0]; } else { r+= url_string.get('utm_source') != null ? "&utm_source=" + url_string.get('utm_source') : "";} if((!url_string.has('utm_campaign') || url_string.get('utm_campaign') == '') && document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)')) != null){ r+= "&" +document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)'))[0]; } else { r+= url_string.get('utm_campaign') != null ? "&utm_campaign=" + url_string.get('utm_campaign') : "";} if((!url_string.has('utm_medium') || url_string.get('utm_medium') == '') && document.cookie.match(new RegExp('utm_medium' + '=([^;]+)')) != null){ r+= "&" +document.cookie.match(new RegExp('utm_medium' + '=([^;]+)'))[0]; } else { r+= url_string.get('utm_medium') != null ? "&utm_medium=" + url_string.get('utm_medium') : "";} if((!url_string.has('utm_content') || url_string.get('utm_content') == '') && document.cookie.match(new RegExp('utm_content' + '=([^;]+)')) != null){ r+= "&" +document.cookie.match(new RegExp('utm_content' + '=([^;]+)'))[0]; } else { r+= url_string.get('utm_content') != null ? "&utm_content=" + url_string.get('utm_content') : "";} if((!url_string.has('utm_term') || url_string.get('utm_term') == '') && document.cookie.match(new RegExp('utm_term' + '=([^;]+)')) != null){ r+= "&" +document.cookie.match(new RegExp('utm_term' + '=([^;]+)'))[0]; } else { r+= url_string.get('utm_term') != null ? "&utm_term=" + url_string.get('utm_term') : "";} f.setAttribute("src", "https://bluesea.getflycrm.com/api/forms/viewform/?key=hlfzCPaLOeDIH5E3bG3kv8Fw5RBsqTfpNkAbBFmGyKEbzIPl1U&referrer="+r); f.style.width = "500px";f.style.height = "500px";f.setAttribute("frameborder","0");f.setAttribute("marginheight","0"); f.setAttribute("marginwidth","0");var s = document.getElementById("getfly-optin-form-iframe-1581665025814");s.appendChild(f); })(); </script>
+    </div>
+</div>
+
+<div class="bando">
+    <div class="bando-title">
+        <h1>thông tin liên hệ</h1>
+    </div>
+    <div class="bando-content">
+        <div class="bando-add">
+            <div class="bando-add-title">
+                <h3>CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG BIỂN XANH</h3>
+            </div>
+            <div class="bando-add-address">
+                <p>TRỤ SỞ: SỐ 91 TRUNG KÍNH - TRUNG HÒA - CẦU GIẤY - HÀ NỘI</p>
+                <p>TEL:84.4.3767.2210 hoặc 0912573734 hoặc 04.3.767.2005 Fax: 84.4.3767.2005</p>
+		<p>Website: www.bluesea.vn Email:kd@bluesea.vn</p><br>
+
+                <p>CHI NHÁNH:205B HOÀNG HOA THÁM - PHƯỜNG 6 - QUẬN BÌNH THẠNH - TP.HCM</p>
+                <p>TEL:84.8.3515.8577 Fax: 84.8.3515.3123 Email:kinhdoanh@bluesea.vn</p>
+            </div>
+        </div>
+        <div class="maps" id="googleMap"></div>
+    </div>
+</div>

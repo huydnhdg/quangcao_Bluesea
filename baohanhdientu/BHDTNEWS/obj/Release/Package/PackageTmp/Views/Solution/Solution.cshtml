@@ -1,0 +1,201 @@
+﻿@model BHDTNEWS.Models.Article
+@{
+    /**/
+
+    ViewBag.Title = "Giải pháp - Bảo Hành Điện Tử";    
+    Layout = "~/Views/Shared/_LayoutBHDT.cshtml";
+    IEnumerable<BHDTNEWS.Models.Article> footerNews = ViewBag.footerNews;
+    IEnumerable<BHDTNEWS.Models.Video> footerVideos = ViewBag.footerVideos;
+    BHDTNEWS.Models.Config config = ViewBag.config;
+}
+
+<h1 class="hidden" style="display: none;">@ViewBag.Title</h1>
+
+<section class="news_section ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <a href="http://baohanhdientu.vip/"><img alt="bao-hanh-dien-tu" src="images/bhdt/section6_slider_1.jpg" style="border-style:solid; border-width:0px; width:100%;padding-top: 20px;" /></a>
+            </div>
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-6">
+                <p class="solution_paragraph_title">GIẢI PHÁP BẢO HÀNH ĐIỆN TỬ</p>
+                <p>Giải pháp Bảo hành điện tử toàn diện giải quyết các vấn đề từ khi xuất hàng cho đại lý đến việc quản lý các trạm bảo hành trên toàn quốc, hỗ trợ khách hàng từ khâu đăng ký bảo hành điện tử cho sản phẩm đến giải quyết các vấn đề hư hỏng của sản phẩm. Mở rộng bán hàng từ sản phẩm mới đến linh kiện thay thế, triển khai hệ thống chăm sóc khách hàng hiệu quả từ website và tổng đài của doanh nghiệp.</p>
+            </div>
+        </div>
+        <div class="row">
+            <p>&nbsp;</p>
+        </div>
+        <div class="row flex-column-reverse flex-md-row">
+            <div class="col-md-5">
+                <div class="card-body">
+                    <p class="solution_paragraph_title">QUẢN LÝ BẢO HÀNH TẬP TRUNG</p>
+                    <p>- Doanh nghiệp sẽ có được một hệ thống quản lý sản phẩm, hàng hóa theo chuẩn mới, định danh rõ ràng trên từng sản phẩm bằng mã serial duy nhất, có công cụ tự động tạo mã sản phẩm theo chuẩn riêng của từng doanh nghiệp.</p>
+                    <p>- Triển khai chương trình bảo hành điện tử toàn diện từ giải pháp kích hoạt bảo hành, quản lý sửa chữa sản phẩm hư hỏng sau bán hàng đến website của doanh nghiệp và tích hợp hệ thống tổng đài chăm sóc khách hảng, bán hàng online, tích hợp cổng thanh toán...đồng bộ, duy nhất trên một nền tảng, phân quyền chức năng và dữ liệu cho các bộ phận sử dụng trên toàn hệ thống.</p>
+                    <p>- Nến tảng mới đảm bảo hoạt động xuyên suốt với số lượng truy cập lớn, dữ liệu lớn, triển khai rộng và toàn diện trên khắp cả nước.</p>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <div class="card-body">
+                    <a href="http://baohanhdientu.vip/"><img alt="bao-hanh-dien-tu" src="images/bhdt/bao-hanh-dien-tu-1.jpg" class="solution_img" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p>&nbsp;</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <a href="http://baohanhdientu.vip/"><img alt="bao-hanh-dien-tu" src="images/bhdt/bao-hanh-dien-tu-2.jpg" style="border-style:solid; border-width:0px; width:100%;padding-top: 20px;" /></a>
+            </div>
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-6">
+                <p class="solution_paragraph_title">QUẢN LÝ DỮ LIỆU RÕ RÀNG VÀ THUẬN TIỆN KHI TRA CỨU</p>
+                <p>- Dữ liệu của doanh nghiệp được phân tán tại các cửa hàng, trạm ủy quyền, đại lý... nhưng vẫn tập trung tại trung tâm hay tổng công ty giúp lãnh đạo có được cái nhìn tổng quát toàn thị trường tiêu thụ.</p>
+                <p>- Thu thập đầy đủ lịch sử của một sản phẩm đã bán ra và hành vi của từng khách hàng ở từng vị trí cụ thể.</p>
+                <p>- Triển khai các báo cáo chi tiết dựa vào dữ liệu đã thu thập được.</p>
+            </div>
+        </div>
+        <div class="row">
+            <p>&nbsp;</p>
+        </div>
+        <div class="row flex-column-reverse flex-md-row">
+            <div class="col-md-5">
+                <div class="card-body">
+                    <p class="solution_paragraph_title">TÙY BIẾN THEO TÌNH HÌNH THỰC TẾ CỦA DOANH NGHIỆP</p>
+                    <p>- Nền tảng của hệ thống có khả năng mở rộng theo yêu cầu của từng doanh nghiệp và kết nối đến tất cả các hệ thống khác như: DMS, CRM, ERP, hệ thống quản lý bán hàng, kế toán... thông qua kết nối API.</p>
+                    <p>- Cung cấp thư viện API để các hệ thống khác đồng bộ và sử dụng dữ liệu chung.</p>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <div class="card-body">
+                    <a href="http://baohanhdientu.vip/"><img alt="bao-hanh-dien-tu" src="images/bhdt/bao-hanh-dien-tu-3.jpg" class="solution_img" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="container footer">
+    <div class="container-fluid px-lg-5">
+        <div class="row">
+            <div class="col-md-12 py-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/">Trang chủ</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="~/gioi-thieu">Giới Thiệu</a></li>
+                                            <li class="short_new_title"><a class="short_new_title" href="~/giai-phap">Giải Pháp</a></li>
+                                            <li class="short_new_title"><a href="~/dung-thu">Dùng Thử</a></li>
+                                            <li class="short_new_title"><a href="~/dang-ky">Đăng Ký Sử Dụng</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/bang-gia">Báo Giá</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Cơ Bản</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Nâng Cao</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước VIP</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Super VIP</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/tin-tuc">Tin tức</a></h2>
+                                        <ul class="list-unstyled">
+                                            @foreach (var oldFooter in footerNews)
+                                            {
+                                                <li class="short_new_title">
+                                                    <a href="@Url.Action("NewsDetail","News",new {rewrite=oldFooter.Link})" class="d-block">
+                                                        @oldFooter.Title
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/kenh-youtube">Kênh Youtube</a></h2>
+                                        <ul class="list-unstyled">
+                                            @foreach (var oldFooterVideo in footerVideos)
+                                            {
+                                                <li class="short_new_title">
+                                                    <a href="@Url.Action("YoutubeChannelDetail", "YoutubeChannel", new { id = oldFooterVideo.Id })" class="d-block">
+                                                        @oldFooterVideo.Title
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="padding-bottom: 40px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_phone.png);background-repeat: no-repeat; background-position-x: 16px; background-position-y: 8px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 58px; padding-bottom: 8px;"><a class="footer_heading_title" style="color: #fff;margin-bottom: 30px;" href="#">Điện thoại</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="tel:02437672210">0243 767 2210</a></li>
+                                            <li class="short_new_title">
+                                                <span style="color: #fff;">Hotline:</span><br />
+                                                <a class="short_new_title" href="tel:@config.Hotline">@config.Hotline</a><span style="color: #fff;"> - </span>
+                                                <a class="short_new_title" href="tel:@config.PhoneNumber">@config.PhoneNumber</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_email.png);background-repeat: no-repeat; background-position-x: 20px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 80px; padding-bottom: 8px;"><a class="footer_heading_title" style="color: #fff;" href="#">Email</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="mail:baohanh@bluesea.vn">baohanh@bluesea.vn</a></li>
+                                            <li class="short_new_title"><a href="mail:xuanhung@bluesea.vn">xuanhung@bluesea.vn</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_location.png);background-repeat: no-repeat; background-position-x: 16px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 48px; padding-bottom: 9px;"><a class="footer_heading_title" style="color: #fff;" href="#">Địa chỉ</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="">
+                                                <span style="color: #fff;">Head Office:</span><br />
+                                                <span style="color: #fff;">91 Trung Kính, Trung Hòa,<br /><span>Cầu Giấy, Hà Nội</span></span>
+                                            </li>
+                                            <br />
+                                            <li class="">
+                                                <span style="color: #fff;">Brand Office:</span><br />
+                                                <span style="color: #fff;">205B Hoàng Hoa Thám, P.6,<br /><span>Bình Thạnh, TP.HCM</span></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_icon.png);background-repeat: no-repeat; background-position-x: 16px;background-position-y: 1px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 68px;padding-bottom: 9px;"><a class="footer_heading_title" style="color: #fff;" href="#">Facebook</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <div id="fb-root"></div>                                                
+                                                <div class="fb-page" data-href="https://www.facebook.com/BaoHanhDienTuBlueSea/" data-tabs="timeline" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/BaoHanhDienTuBlueSea/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/BaoHanhDienTuBlueSea/">Bảo Hành Điện Tử</a></blockquote></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

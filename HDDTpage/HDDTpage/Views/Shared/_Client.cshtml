@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hóa Đơn Điện Tử</title>
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
+
+    <title>Hóa đơn điện tử VNPT</title>
+    <meta name="description" content="Hóa đơn điện tử vnpt giúp doanh nghiệp tiết kiệm thời gian, chi phí, bảo mật an toàn, chính xác.">
+    <meta name="keywords" content="Hóa đơn điện tử, hoa don dien tu, hóa đơn điện tử vnpt, hoa don dien tu vnpt, hóa đơn vnpt, hoa don vnpt, einvoice">
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/hover.css" rel="stylesheet" />
+    <link href="~/Content/css/slidequestion.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="EBDLaPwnhyZ5jX3u1XGjEEayiU3nWr8hMe80K-ux9Tg" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=193745777786651";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script type="text/javascript" src="http://js.vinasales.vn/analytics.php?token=ZUxuMGNXUzJoanhSMUkzdXRHWGdubVBNSFBEbUN6VGVmYlJOZHk0MC82eFk1dytwSXplN01JRXFhcWJJYTcrbDBuMWp2OC9rSDFiTDk0ZkkyZ2F2Z0E9PQ=="></script>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=193745777786651";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <script type="text/javascript">
+        (function (d, s, id) {
+            var z = d.createElement(s);
+            z.type = "text/javascript"; z.id = id; z.async = true;
+            z.src = "//static.zotabox.com/9/9/99d77bf8eb772902e69232aac5dbb2d5/widgets.js";
+            var sz = d.getElementsByTagName(s)[0]; sz.parentNode.insertBefore(z, sz)
+        }(document, "script", "zb-embed-code"));</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="~/">
+                    <img src="~/images/logo-left.png" alt="" class="img-responsive logo-left" />
+                </a>
+                <img src="~/images/logo-right.png" alt="" class="img-responsive logo-right" />
+            </div>
+            <div class="hotline">
+                <p>Hotline: 0912.433.003</p>
+            </div>
+        </div>
+    </header>
+    <div class="container body-content">
+        <nav id="mainNav" class="navbar navbar-default navbar-custom">
+            <div class="menu">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a title="Trang chủ" class="page-scroll" href="~/">TRANG CHỦ</a>
+                        </li>
+                        <li>
+                            <a title="Giới thiệu" class="page-scroll" href="~/#aboutme">GIỚI THIỆU</a>
+                        </li>
+                        <li>
+                            <a title="" class="page-scroll" href="~/#whychoice">TẠI SAO CHỌN VNPT</a>
+                        </li>
+                        <li>
+                            <a title="" class="page-scroll" href="~/#bill">HĐĐT LÀ GÌ</a>
+                        </li>
+                        <li>
+                            <a title="" class="page-scroll" href="~/#compare">KHÁC BIỆT</a>
+                        </li>
+                        <li>
+                            <a title="" class="page-scroll" href="http://hoadondientu24h.vn/tin-tuc/bang-gia-dang-ky-dich-vu-chu-ky-so-dien-tu-vnpt-ca">CHỮ KÝ SỐ</a>
+                        </li>
+                        <li>
+                            <a title="" class="page-scroll" href="~/quy-trinh">QUY TRÌNH</a>
+                        </li>
+                        <li>
+                            <a title="" class="page-scroll" href="~/#question">THẮC MẮC</a>
+                        </li>
+                        <li>
+                            <a title="" class="page-scroll" href="~/tin-tuc">TIN TỨC</a>
+                        </li>
+                        <li>
+                            <a title="" class="page-scroll" href="~/#contact">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="col-md-9 content">
+            @RenderBody()
+        </div>
+        <div class="col-md-3 ads"></div>
+    </div>
+    <footer>
+        <div class="container">
+            <hr />
+            <h5>
+                <span>TẬP ĐOÀN BƯU CHÍNH VIỄN THÔNG VIỆT NAM<br /></span>
+                @*Giấy phép số 06/GP-TTĐT Bộ thông tin và truyền thông. Trưởng Ban biên tập: Đinh Minh Sơn<br />
+                    Đơn vị thực hiện: Công ty Phát Triển Dịch vụ Truyền Thông - 57 Huỳnh Thúc Kháng - Hà Nội*@
+            </h5>
+        </div>
+    </footer>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/js/slidequestion.js"></script>
+    <script src="~/Scripts/js/customer.js"></script>
+
+    <script lang="javascript">var _vc_data = {id : 5404390, secret : 'e269f4189114bf711ba1cc092d37e01e'};(function() {var ga = document.createElement('script');ga.type = 'text/javascript';ga.src = '//live.vnpgroup.net/client/tracking.js';var s = document.getElementsByTagName('script');s[0].parentNode.insertBefore(ga, s[0]);})();</script>
+</body>
+</html>

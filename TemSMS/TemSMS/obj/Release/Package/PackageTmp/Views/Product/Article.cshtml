@@ -1,0 +1,39 @@
+﻿@model TemSMS.Models.Article
+@{
+    ViewBag.Title = Model.Title;
+    ViewBag.Description = Model.Description;
+    ViewBag.Keyword = Model.Description;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string s = Model.Tags;
+    string[] tags = null;
+    if (!String.IsNullOrEmpty(s))
+    {
+        tags = s.Split('|');
+    }
+}
+<h1 style="color:transparent;font-size:0;">@ViewBag.Title</h1>
+<section id="article">
+    <div class="content">
+        <div class="title"><h2 style="text-transform:uppercase;">@Model.Title</h2></div>
+        <div class="time">@Model.Time</div>
+        @*<div class="des">@Model.Description</div>*@
+        <div class="main-article">
+            @Html.Raw(Model.Text)
+
+
+            <div class="tags">
+                Tags:
+                @if (tags != null)
+                {
+                    foreach (var tag in tags)
+                    {
+                        @*<a href="/tim-kiem?keywords=@tag"><i>@tag</i></a>*@
+                        <a style="background-color: darkgrey;padding:0 5px;margin:0 5px;" href="/tim-kiem?keywords=@tag"><i>@tag </i></a>
+                    }
+                }
+            </div>
+        </div>
+
+    </div>
+</section>

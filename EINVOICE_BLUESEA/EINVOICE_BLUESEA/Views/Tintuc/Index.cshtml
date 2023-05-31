@@ -1,0 +1,64 @@
+﻿@model IEnumerable<EINVOICE_BLUESEA.Models.News>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="sloganNone" class="HoTro"></div>
+<div id="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li>
+                <a href="/" class="home" title="Trang chủ">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="active">Tin tức</li>
+
+        </ol>
+    </div>
+</div>
+<div class="mySection light">
+    <div class="container">
+        <h2 class="mySectionTitle text-center">
+            Tin tức B-INVOICE
+        </h2>
+        <hr class="mySectionLineShort">
+        <div class="row">
+            <div class="col-sm-4 col-md-3">
+                <div class="blogSelCat">
+                    <div class="btn-group bootstrap-select" style="width: 100%;">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-6"></div>
+            <div class="col-sm-4 col-md-3">
+                <div class="blogSearch">
+                    @using (Html.BeginForm("Search", "Tintuc", FormMethod.Get))
+                    {
+                        @Html.TextBox("keyword", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Tìm kiếm" })
+                        <button type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    }
+                </div>
+            </div>
+        </div>
+        <hr class="mySectionLineFull">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-6 col-md-3">
+                <div class="blogRoll" data-wow="fadeInUp">
+                    <a href="/tin-tuc/@item.Alt">
+                        <img class="blogRollImg lazy" src="@item.Thumnail" data-original="@item.Thumnail" alt="@item.Description" style="display: inline-block;">
+                    </a>
+                    <h4 class="blogRollTitle"><a href="/tin-tuc/@item.Alt">@item.Title</a></h4>
+                    <div class="blogRollSubText">
+                        <span>Ngày đăng: @item.Createdate</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

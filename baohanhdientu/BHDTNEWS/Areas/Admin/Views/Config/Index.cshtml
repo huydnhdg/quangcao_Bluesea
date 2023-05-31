@@ -1,0 +1,61 @@
+﻿@model BHDTNEWS.Models.Config
+@{
+    ViewBag.Title = "Index";
+}
+
+    <div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary"></h6>
+                <a href="/admin/config/edit/1" class="btn btn-success" style="float:right;"><i class="fa fa-edit" aria-hidden="true"></i> Sửa</a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <tr>
+                            <td>Hotline</td>
+                            <td>@Model.Hotline</td>
+                        </tr>
+                        <tr>
+                            <td>ComName</td>
+                            <td>@Model.ComName</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>@Model.Address</td>
+                        </tr>
+                        <tr>
+                            <td>PhoneNumber</td>
+                            <td>@Model.PhoneNumber</td>
+                        </tr>
+                        <tr>
+                            <td>Logo</td>
+                            <td>@Model.Logo</td>
+                        </tr>
+                        <tr>
+                            <td>Fanpage</td>
+                            <td>@Model.Fanpage</td>
+                        </tr>
+                        <tr>
+                            <td>Youtube</td>
+                            <td>@Model.Youtube</td>
+                        </tr>
+                        <tr>
+                            <td>Gplus</td>
+                            <td>@Model.Gplus</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>@Model.Email</td>
+                        </tr>
+                        <tr>
+                            <td>Website</td>
+                            <td>@Model.Website</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+

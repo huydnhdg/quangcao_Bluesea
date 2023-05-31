@@ -1,0 +1,9 @@
+﻿@model IEnumerable<EINVOICE_BLUESEA.Models.News>
+
+    <div>
+        <h2 style="border-bottom:1px solid #fff">Tin tức</h2>
+        @foreach (var item in Model)
+        {
+            <p><span class="active"><a href="~/tin-tuc/@item.Alt">@item.Title</a> </span></p>
+        }
+    </div>

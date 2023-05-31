@@ -1,0 +1,77 @@
+﻿@model PagedList.IPagedList<Dichvuhoanhao.Entity.Function>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/CMS/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-6" style="width:100%">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="color:dodgerblue;">
+                - Có 5 dịch vụ, mỗi dịch vụ có 4 chức năng cố định (1-cong thanh toan 2-sms 3-digital 4-hoá đơn điện tử 5-icheck)<br />
+                - Có thể tìm kiếm theo dịch vụ để xem từng dịch vụ<br />
+                - Để edit chức năng có thể vào "Sửa"
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+
+                @using (Html.BeginForm("Index", "Funtion", FormMethod.Get))
+                {
+                    <div class="row form-group">
+                        <div class="col-lg-12">
+                            <div class="col-md-5">
+                                <input type="text" value="@ViewBag.SearchString" name="searchString" class="form-control" />
+                            </div>
+                            <div class="col-md-5">
+                                <button class="btn btn-success" type="submit">Tìm kiếm</button>
+                                <a href="/CMS/Funtion/Create" class="btn btn-primary">Thêm mới</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Tittle</th>
+                                <th>Icon</th>
+                                <th>Service</th>
+                                @*<th>Status</th>*@
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr id="row_@item.Id">
+                                    <td>@item.Title</td>
+                                    <td><img src="@Html.Raw(item.Icon)" width="50" /></td>
+                                    <td>@item.Service</td>
+                                    @*<td><a href="#" class="btn-active" data-id="@item.Id">@Html.Raw(item.Status ? "Kích hoạt" : "Khoá")</a></td>*@
+
+                                    <td>
+                                        <a href="/CMS/Funtion/Edit/@item.Id">Sửa</a>
+                                        @*|
+                                                 @Ajax.ActionLink("Xóa", "Delete", new { @id = item.Id }, new AjaxOptions
+                                            {
+                                                Confirm = "Bạn có muốn xóa bản ghi này?",
+                                                OnComplete = "$('#row_" + @item.Id + "').remove()",
+                                                HttpMethod = "Delete"
+                                            })*@
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchString = @ViewBag.SearchString }))
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+</div>
+

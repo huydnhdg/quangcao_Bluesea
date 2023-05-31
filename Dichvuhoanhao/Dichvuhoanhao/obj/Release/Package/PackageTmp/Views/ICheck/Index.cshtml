@@ -1,0 +1,64 @@
+﻿@model PagedList.IPagedList<Dichvuhoanhao.Entity.ItemService>
+@using PagedList.Mvc;
+@{
+    ViewBag.Description = ViewBag.des;
+    ViewBag.Title = ViewBag.title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Dichvuhoanhao.Entity.Function> function = ViewBag.function;
+    Dichvuhoanhao.Entity.Service s = ViewBag.service;
+}
+<div class="banner">
+    <img class="img-responsive" alt="sms brandname" src="http://quangcaohieuqua.com.vn/Data/images/Icheck/tem-chong-hang-gia-icheck(3).png" />
+</div>
+<div class="container">
+    <div class="brand-service">
+        <div class="brand-title">
+            <h1>@s.Name</h1>
+        </div>
+        <div class="brand-service-list">
+            @foreach (var item in function)
+            {
+                <div class="brand-list-item col-md-3">
+                    <a href="@item.LinkDetail" title="@item.Title">
+                        <img alt="@item.Title" src="@item.Icon" class="img-responsive img-circle">
+                    </a>
+                    <a title="@item.Title" href="@item.LinkDetail"><h2>@item.Title</h2></a>
+                </div>
+
+            }
+        </div>
+    </div>
+    <div class="brand-content">
+        <div class="brand-content-row col-md-9">
+            <div class="content-list ">
+                @foreach (var item in Model)
+            {
+                    <div class="content-list-item">
+                        <div class="col-md-2 col-md-2 col-sm-2 col-xs-2">
+                            <img alt="@item.Title" src="@item.Icon" class="img-responsive">
+                        </div>
+                        <div class="col-md-10 col-md-10 col-sm-10 col-xs-10">
+                            <a title="@item.Title" href="/icheck/@item.Url-@item.Id"><h3>@item.Title</h3></a>
+                            <p>
+                                @item.Description
+                            </p>
+                        </div>
+                    </div>
+                }
+                @* phan trang danh sach *@
+                <div class="phantrang">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchString = @ViewBag.SearchString }))
+                </div>
+
+            </div>
+        </div>
+        <div class="brand-main-service col-md-3">
+            <div class="brand-main-title">
+                <h4>dịch vụ chính</h4>
+            </div>
+            @{Html.RenderAction("LoadQuangcao", "Home");}
+        </div>
+    </div>
+</div>
+
+

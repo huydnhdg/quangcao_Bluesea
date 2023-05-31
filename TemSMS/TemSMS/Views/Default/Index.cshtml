@@ -1,0 +1,295 @@
+﻿@model List<TemSMS.Models.Setuped>
+@{
+    ViewBag.Title = "Thuê đầu số SMS";
+    ViewBag.Description = "Chuyên cho thuê đầu số SMS triển khai các chương trình xác thực hàng chính hãng SMS, tem chống giả sms, bảo hành điện từ sms và lập trình chương trình khuyến mại SMS";
+    ViewBag.Keywords = "Thuê đầu số SMS, cho thuê đầu số SMS, thue dau so sms, xác thực chính hãng SMS, tem xác thực chính hãng, tem chống hàng giả sms, tem chống giả sms, tem sms";
+}
+@section scripts{
+    <script>
+        $(function () {
+            $("#big-image img:eq(0)").nextAll().hide();
+            $(".small-images img").click(function (e) {
+                var index = $(this).index();
+                $("#big-image img").eq(index).show().siblings().hide();
+            });
+        });
+        $(function () {
+            $("#big-image-1 img:eq(0)").nextAll().hide();
+            $(".small-images-1 img").click(function (e) {
+                var index = $(this).index();
+                $("#big-image-1 img").eq(index).show().siblings().hide();
+            });
+        });
+    </script>
+}
+<h1 style="color:transparent;font-size:0;">@ViewBag.Title</h1>
+<section id="khuyenmai">
+    <div class="content">
+        <div class="title">
+            <h2>LẬP TRÌNH CHƯƠNG TRÌNH TRÚNG THƯỞNG QUA SMS</h2>
+        </div>
+        <div class="one">
+            <div class="col-lg-6" id="big-image">
+                <div class="big-image">
+                    @*@foreach (var item in Model)
+                        {
+                            if (item.Type.Contains("khuyenmai"))
+                            {
+                                <img src="@item.Image" alt="@item.Title" class="img-responsive hvr-shrink wow bounceInDown" data-wow-duration="1s" />
+                            }
+                        }*@
+                    <img src="~/images/trungthuong1.png" class="img-responsive hvr-shrink" alt="" />
+                    <img src="~/images/trungthuong2.png" class="img-responsive hvr-shrink" alt="" />
+                    <img src="~/images/trungthuong3.png" class="img-responsive hvr-shrink" alt="" />
+                    
+                </div>
+                <div class="row small-images">
+                    @*@foreach (var item in Model)
+                        {
+                            if (item.Type == "khuyenmai1")
+                            {
+                                <img src="@item.Image" class="img-responsive hvr-shrink wow bounceInLeft col-lg-4 col-sm-4 col-xs-4 col-md-4" data-wow-duration="4s" alt="@item.Title" />
+                            }
+                            else if (item.Type == "khuyenmai2")
+                            {
+                                <img src="@item.Image" class="img-responsive hvr-shrink wow bounceInLeft col-lg-4 col-sm-4 col-xs-4 col-md-4" data-wow-duration="3s" alt="@item.Title" />
+                            }
+                            else if (item.Type == "khuyenmai3")
+                            {
+                                <img src="@item.Image" class="img-responsive hvr-shrink wow bounceInLeft col-lg-4 col-sm-4 col-xs-4 col-md-4" data-wow-duration="2s" alt="@item.Title" />
+                            }
+
+                        }*@
+                    <img src="~/images/trungthuong1.png" class="img-responsive hvr-shrink wow bounceInLeft col-lg-4 col-sm-4 col-xs-4 col-md-4" data-wow-duration="4s" alt="" />
+                    <img src="~/images/trungthuong2.png" class="img-responsive hvr-shrink wow bounceInLeft col-lg-4 col-sm-4 col-xs-4 col-md-4" data-wow-duration="3s" alt="" />
+                    <img src="~/images/trungthuong3.png" class="img-responsive hvr-shrink wow bounceInLeft col-lg-4 col-sm-4 col-xs-4 col-md-4" data-wow-duration="2s" alt="" />
+                    
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <ul style="text-align:justify;">
+                    <li>
+                        <h5 class="hvr-backward">MIỄN PHÍ LẦP TRÌNH KỊCH BẢN CTKM QUA SMS</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward">KHÁCH HÀNG TỰ IN PHIẾU TRÚNG THƯỞNG HOẶC THUÊ IN TRỌN GÓI</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward">CHÚNG TÔI TRỰC TIẾP SỞ HỮU ĐẦU SỐ VÀ HỆ THỐNG</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward">ĐẢM BẢO KHÔNG QUA BẤT CỨ TRUNG GIAN NÀO</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward">TIẾT KIỆM CHI PHÍ VÀ THỜI GIAN CHO DOANH NGHIỆP</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward">HỖ TRỢ MIỄN PHÍ GIẢI PHÁP TẶNG TIỀN VÀO TÀI KHOẢN ĐIỆN THOẠI KHÁCH HÀNG THAM GIA NHẮN TIN</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward">HỖ TRỢ KỸ THUẬT TRỰC TIẾP TRONG 24H LÀM VIỆC</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward">
+                            TRẢ THƯỞNG CHƯƠNG TRÌNH KHUYẾN MÃI THÔNG QUA CÁC GIẢI PHÁP:
+                        </h5>
+                        <p style="color:black;">
+                            - CỘNG TIỀN VÀO TÀI KHOẢN CHÍNH CỦA KHÁCH HÀNG<br />
+                            - GỬI MÃ SỐ DỰ THƯỞNG CTKM THÔNG QUA BRANDNAME CỦA NHÃN HÀNG TÍCH ĐIỂM NHẬN QUÀ
+                        </p>
+                    </li>
+                </ul>
+                <a href="~/tin-tuc/lap-trinh-chuong-trinh-khuyen-mai" title="" class="xemthem">Xem thêm >></a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="temxacthuc">
+    <div class="content">
+        <div class="title">
+            <h2>TEM XÁC THỰC SẢN PHẨM SMS</h2>
+        </div>
+        <div class="one">
+
+            <div class="col-lg-6">
+                <ul style="text-align:justify;">
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="1s">MIỄN PHÍ LẦP TRÌNH, TẠO MÃ SỐ SẢN PHẨM MIỄN PHÍ</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="2s">KHÁCH HÀNG TỰ IN TEM HOẶC THUÊ IN TRỌN GÓI</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="3s">CHÚNG TÔI TRỰC TIẾP SỞ HỮU ĐẦU SỐ 8077 VÀ HỆ THỐNG</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="4s">ĐẢM BẢO KHÔNG QUA BẤT CỨ TRUNG GIAN NÀO</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="5s">TIẾT KIỆM CHI PHÍ VÀ THỜI GIAN CHO DOANH NGHIỆP</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="6s">HỖ TRỢ KỸ THUẬT TRỰC TIẾP TRONG 24H LÀM VIỆC</h5>
+                    </li>
+                </ul>
+                <a href="~/tin-tuc/tem-xac-thuc" title="" class="xemthem">Xem thêm >></a>
+            </div>
+            <div class="col-lg-6">
+                <img src="~/images/smart.png" class="img-responsive hvr-shrink" alt="" />
+            </div>
+        </div>
+        <div class="two">
+            <h3 class="text-center" style="font-weight:bold;margin-bottom:25PX;">CÁC LOẠI TEM XÁC THỰC SẢN PHẨM</h3>
+            <div class="col-lg-4">
+                <div class="box">
+                    <div class="title">
+                        <h4>TEM CHỐNG GIẢ SMS</h4>
+                    </div>
+                    <a href="http://thuedauso.vn/tin-tuc/tem-chong-hang-gia-sms">
+                        <img src="~/images/tem-chong-gia-sms-8x77.jpg" alt="" class="img-responsive hvr-shrink wow bounceInLeft" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <div class="title">
+                        <h4>TEM XÁC THỰC SẢN PHẨM</h4>
+                    </div>
+                    <a href="http://thuedauso.vn/tin-tuc/tem-xac-thuc-san-pham-bang-sms">
+                        <img src="~/images/tem-xac-thuc-san-pham-sms.png" alt="" class="img-responsive hvr-shrink wow bounceInUp" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <div class="title">
+                        <h4>TEM BHDT BẰNG SMS</h4>
+                    </div>
+                    <a href="http://thuedauso.vn/tin-tuc/tem-bao-hanh-dien-tu-bang-sms">
+                        <img src="~/images/tem-bao-hanh-dien-tu-sms-7.png" alt="" class="img-responsive hvr-shrink wow bounceInRight" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-12 banner">
+                <img src="~/images/banner-tw.png" alt="" class="img-responsive" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="baohanh">
+    <div class="content">
+        <div class="title">
+            <h2>BẢO HÀNH ĐIỆN TỬ SMS</h2>
+        </div>
+        <div class="one">
+            <div class="col-lg-6">
+                <div class="big-image" id="big-image-1">
+                    <img src="~/images/bh1.png" alt="" class="img-responsive hvr-shrink" />
+                    <img src="~/images/bh2.png" alt="" class="img-responsive hvr-shrink" />
+                    <img src="~/images/bh3.png" alt="" class="img-responsive hvr-shrink" />
+                </div>
+                <div class="row small-images-1">
+                    <img src="~/images/bh1.png" alt="" class="img-responsive hvr-shrink wow bounceInUp col-lg-4 col-sm-4 col-xs-4 col-md-4" data-wow-duration="2s" />
+                    <img src="~/images/bh2.png" alt="" class="img-responsive hvr-shrink wow bounceInUp col-lg-4 col-sm-4 col-xs-4 col-md-4" data-wow-duration="3s" />
+                    <img src="~/images/bh3.png" alt="" class="img-responsive hvr-shrink wow bounceInUp col-lg-4 col-sm-4 col-xs-4 col-md-4" data-wow-duration="3s" />
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <ul style="text-align:justify;">
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="1s">KÍCH HOẠT BẢO HÀNH ĐIỆN TỬ THEO MÃ SẢN PHẨM</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="2s">HỖ TRỢ HỆ THỐNG THỐNG KÊ SẢN PHẨM KÍCH HOẠT TRỰC TUYẾN</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="3s">HỖ TRỢ HỆ THỐNG CHO KHÁCH HÀNG KIỂM TRA TÌNH TRẠNG BẢO HÀNH QUA SMS</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="4s">HỖ TRỢ HỆ THỐNG KÍCH HOẠT BẢO HÀNH TRỰC TUYẾN QUA WEBSITE CHO ĐẠI LÝ CỦA DOANH NGHIỆP</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="5s">MIỄN PHÍ LẬP TRÌNH THEO KỊCH BẢN CỦA DOANH NGHIỆP</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="5s">MIỄN PHÍ THUÊ ĐẦU SỐ</h5>
+                    </li>
+                    <li>
+                        <h5 class="hvr-backward wow bounceInRight" data-wow-duration="7s">GIÁ DỊCH VỤ 1.000.000 ĐỒNG TIỀN PHÍ KHỞI TẠO DỊCH VỤ</h5>
+                    </li>
+                </ul>
+                <a href="~/tin-tuc/bao-hanh-dien-tu" title="" class="xemthem">Xem thêm >></a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="dathuchien">
+    <div class="content">
+        <div class="title">
+            <h2>CÁC CHƯƠNG TRÌNH ĐÃ THỰC HIỆN</h2>
+        </div>
+        <div class="one">
+            <div class="slide-holder">
+                <div class="slide-pager">
+                    <div class="slide-control-prev">«</div>
+                    <div class="slide-control-next">»</div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide-stage">
+                        @foreach (var item in Model)
+                        {
+                            <div class="slide-image">
+                                <ul>
+                                    <li>
+                                        <a href="@item.Url">
+                                            <img src="@item.Image" class="img-responsive" alt="@item.Title" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span style="color:black;">@item.Title</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                        @*<div class="slide-image">
+                                <ul>
+                                    <li>
+                                        <a href="~/tin-tuc/lap-trinh-chuong-trinh-khuyen-mai-sms">
+                                            <img src="~/images/dathuchien.png" class="img-responsive" alt="" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>Tích điểm nhận quà Sắc Ngọc Khang</span>
+                                    </li>
+                                </ul>
+                            </div>*@
+
+                    </div>
+                </div>
+            </div>
+            @*<div class="mobile">
+                    @foreach (var item in Model)
+                    {
+                        <div class="mobile-item">
+                            <ul>
+                                <li>
+                                    <a href="@item.Url">
+                                        <img src="@item.Image" class="img-responsive" alt="@item.Title" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <span style="color:black;">@item.Title</span>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                </div>*@
+        </div>
+    </div>
+</section>
+
+

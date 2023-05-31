@@ -1,0 +1,36 @@
+﻿@model HDDTpage.Models.Article
+@{
+    ViewBag.Title = "NewsDetail";
+    Layout = "~/Views/Shared/_Client.cshtml";
+    IEnumerable<HDDTpage.Models.Article> Old = ViewBag.old;
+}
+
+<div class="title">
+    <h1>@Model.Title</h1>
+</div>
+<div class="time">
+    <p>@Model.CreateDate</p>
+</div>
+<div class="description">
+    <p>@Model.Description</p>
+</div>
+<div class="more">
+    <ul>
+        @foreach (var old in Old)
+            {
+            <li>
+                <a href="@Url.Action("NewsDetail","News",new {rewrite=old.Url})" title="@old.Title">@old.Title</a>
+            </li>
+        }
+    </ul>
+</div>
+<div class="text">
+    @Html.Raw(Model.Text)
+</div>
+<div class="tags">
+
+</div>
+<div class="social">
+
+</div>
+

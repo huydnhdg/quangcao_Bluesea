@@ -1,0 +1,25 @@
+﻿@model HDDTpage.Models.Article
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Client.cshtml";
+}
+
+<div class="title">
+    <h1>@Model.Title</h1>
+</div>
+<div class="time">
+    <p>@Model.CreateDate</p>
+</div>
+<div class="description">
+    <p>@Model.Description</p>
+</div>
+<div class="text">
+    @Html.Raw(Model.Text)
+</div>
+<div class="tags">
+
+</div>
+<div class="social">
+
+</div>
+

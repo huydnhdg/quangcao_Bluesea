@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EINVOICE_BLUESEA.Models.Partner>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">DataTable with default features</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Tiêu đề</th>
+                    <th>Ảnh đại diện</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td>
+                            <img width="100" src="@item.Thumnail" />
+                        </td>
+                        <td>
+                            <a class="btn" href="/admin/partner/edit/@item.Id"><i class="fa fa-edit fa-fw"></i></a>
+                            <a class="btn" href="/admin/partner/delete/@item.Id"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+

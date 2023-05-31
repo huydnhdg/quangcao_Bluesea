@@ -1,0 +1,95 @@
+﻿@model TemSMS.Models.Setuped
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<section class="content-header">
+    <h1>
+        Setup
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Setup</a></li>
+        <li class="active">Delete</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="text-danger">BẠN CÓ CHẮC CHẮN MUỐN XÓA KHÔNG ?</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>@Html.DisplayNameFor(model => model.Title):</label>
+                            </div>
+                            <div class="col-xs-10">
+                                @Html.DisplayFor(model => model.Title)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr style="border-top-color:lightblue" />
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>
+                                    @Html.DisplayNameFor(model => model.Time):
+                                </label>
+                            </div>
+                            <div class="col-xs-10">
+                                @Html.DisplayFor(model => model.Time)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr style="border-top-color:lightblue" />
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>
+                                    @Html.DisplayNameFor(model => model.Image):
+                                </label>
+                            </div>
+                            <div class="col-xs-10">
+                                @*@Html.DisplayFor(model => model.Image)*@
+                                <img style="width:70px;height:70px;" src="@(Model.Image == null ? "/Content/cms/dist/img/no-img.png" : Model.Image)" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border-top-color:lightblue" />
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>
+                                    @Html.DisplayNameFor(model => model.Url):
+                                </label>
+                            </div>
+                            <div class="col-xs-10">
+                                @Html.DisplayFor(model => model.Url)
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border-top-color:lightblue" />
+                    <div class="box-footer col-xs-12">
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-actions no-color">
+                                <input type="submit" value="Xóa" class="btn btn-danger" /> |
+                                @Html.ActionLink("Hủy", "Index")
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

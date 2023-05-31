@@ -1,0 +1,239 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="slogan" class="TinhNang Index">
+    <div class="slogan">
+        <div class="h1">Tiết kiệm chi phí và loại bỏ rắc rối với <br> B-INVOICE <br></div>
+        <div class="h3">Sử dụng đơn giản - Phát hành nhanh chóng – chính xác, bảo mật</div>
+    </div>
+</div>
+
+<div class="mySection bgImg">
+    <div class="container mySectionText">
+        <h1 class="mySectionTitle text-center">MÔ HÌNH TRIỂN KHAI DỊCH VỤ HÓA ĐƠN ĐIỆN TỬ B-INVOICE</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <h3><i class="fa fa-caret-right" aria-hidden="true"></i>Phương án 1: Dùng cho doanh nghiệp xuất hóa đơn bằng cách viết tay trên hóa đơn giấy, số lượng hóa đơn ít.</h3>
+                <a href="/img/quy-trinh-phat-hanh-hoa-don-dien-tu-vnpt-usb-token.png" data-lightbox="hddt" data-title="quy trình phát hành hóa đơn điện tử BLUESEA usb token">
+                    <img class="img-responsive animated fadeIn" data-wow="fadeIn" src="~/img/token.jpg" width="1000" height="496" atl="quy trình phát hành hoá đơn điện tử BLUESEA qua usb token">
+                </a>
+                <p class="TinhNangText">
+                    <strong>1.</strong>	Khách hàng sử dụng trình duyệt web & thiết bị ký số USB token để phát hành hóa đơn.<br>
+                    <strong>2.</strong>	Hệ thống B-INVOICE sẽ ký số, cập nhật trạng thái hóa đơn, lưu trữ xuống DB khách hàng & hệ thống portal hóa đơn điện tử.<br>
+                    <strong>3.</strong>	Thông báo, gửi hóa đơn cho người mua hàng, có 2 cách sau:<br>
+                    <strong class="TinhNangSubtext">a.</strong>	Gửi Email thông báo cho người mua hàng về việc phát hành hóa đơn.<br>
+                    <strong class="TinhNangSubtext">b.</strong>	Chuyển đổi hóa đơn giấy từ hóa đơn điện tử, IN + ký, đóng dấu để đi đường hoặc khi khách hàng yêu cầu.<br>
+                    <strong>4.</strong>	Khách hàng nhận được thông báo phát hành, truy cập Portal để xem, tải hóa đơn.<br>
+                    <strong>5.</strong> Khách hàng ký số trả lại ( nếu cần).
+                </p>
+                <h3>
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>Dùng cho doanh nghiệp phát hành hóa đơn thông qua phần mềm bán hàng, PM kế toán, hệ thống ERP, CRM có nghiệp vụ phức tạp, số lượng hóa đơn phát hành nhiều.
+                </h3>
+                <a href="/img/quy-trinh-phat-hanh-hoa-don-dien-tu-vnpt-hsm.png" data-lightbox="hddt" data-title="quy trình phát hành hóa đơn điện tử BLUESEA hsm">
+                    <img class="img-responsive animated fadeIn" data-wow="fadeIn" src="~/img/giai_phap_2.jpg" width="1000" height="429" alt="quy trình phát hành hóa đơn điện tử b-invoice qua hsm">
+                </a>
+                <p class="TinhNangText">
+                    <strong>1.</strong>	Tích hợp việc phát hành hóa đơn điện tử vào hệ thống ERP, CRM, PM kế toán … của đơn vị bán hàng thông qua các hàm API mà hệ thống B-INVOICE cung cấp.<br>
+                    <strong>2.</strong>	Hệ thống B-INVOICE sẽ ký số, cập nhật trạng thái hóa đơn, lưu trữ xuống DB khách hàng & phát hành hóa đơn lên hệ thống portal hóa đơn điện tử.<br>
+                    <strong>3.</strong>	Thông báo, gửi hóa đơn cho người mua hàng, có 2 cách sau:<br>
+                    <strong class="TinhNangSubtext">a.</strong>	Gửi Email thông báo cho người mua hàng về việc phát hành hóa đơn.<br>
+                    <strong class="TinhNangSubtext">b.</strong>	Chuyển đổi hóa giấy từ hóa đơn điện tử, IN + ký, đóng dấu để đi đường hoặc khi khách hàng yêu cầu.<br>
+                    <strong>4.</strong>	Khách hàng nhận được thông báo phát hành, truy cập Portal để xem, tải hóa đơn.<br>
+                    <strong>5.</strong> Khách hàng ký số trả lại ( nếu cần).
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="mySection">
+    <div class="container mySectionText">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="mySectionSubTitle"><i class="fa fa-caret-right" aria-hidden="true"></i> ĐỊNH DẠNG HÓA ĐƠN ĐIỆN TỬ B-INVOICE?</h2>
+                <strong>Định dạng của hóa đơn điện tử là XML, kiểm tra bằng lượt đồ XML (schema).</strong>
+                <p class="item">
+                    -	Định dạng hiển thị bằng xslt. <br>
+                    -	Định dạng chữ ký số tuân theo chuẩn xades - Là chuẩn ký XML được quy định bởi Bộ thông tin và truyền thông.<br>
+                    -	Hóa đơn điện tử của BLUESEA có dung lượng nhỏ, dễ lưu trữ với số lượng lớn; Dễ dàng xử lý, tùy chỉnh tùy theo yêu cầu hóa đơn của doanh nghiệp, tích hợp đơn giản với các hệ thống khác như ERP, CRM
+                </p>
+            </div>
+        </div>
+        <h2 class="mySectionSubTitle"><i class="fa fa-caret-right" aria-hidden="true"></i> CẤU TRÚC HÓA ĐƠN ĐIỆN TỬ B-INVOICE GỒM CÓ</h2>
+        <div id="cautruc" data-children=".item" class="">
+            <div class="item ">
+                <div class="text-info" data-toggle="collapse" data-parent="#cautruc" href="#generalinfo" aria-expanded="false" aria-controls="generalinfo">
+                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> GENERAL INFO
+                </div>
+                <div id="generalinfo" class="collapse" role="tabpanel">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="mb-3 info ">
+                                <span class="info-title3">ArisingDate </span> : Ngày Tháng năm của HÓA ĐƠN.<br>
+                                <span class="info-title3">InvoiceName </span> :  Tên HÓA ĐƠN.<br>
+                                <span class="info-title3">SerialNo </span> : Kí hiệu HÓA ĐƠN.<br>
+                                <span class="info-title3">InvoicePattern </span> : Kí hiệu mẫu HÓA ĐƠN.<br>
+                                <span class="info-title3">InvoiceNo </span> : Số HÓA ĐƠN.<br>
+                                <span class="info-title3">KindofPayment</span> : Hình thức thanh toán.
+                            </p>
+                        </div>
+                        <div class="col-sm-5">
+                            <img class="img-responsive" src="/img/GENERAL-INFO.png" width="881" height="188">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="item ">
+                <div class="text-info" data-toggle="collapse" data-parent="#cautruc" href="#supplierinfo" aria-expanded="false" aria-controls="supplierinfo">
+                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> SUPPLIER INFO
+                </div>
+                <div id="supplierinfo" class="collapse " role="tabpanel">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="mb-3 info">
+                                <span class="info-title3">Kind of Payment </span> : Hình thức thanh toán.<br>
+                                <span class="info-title3">ComName </span> : Tên đơn vị bán hàng.<br>
+                                <span class="info-title3">ComTax Code </span> : Mã số thuế của đơn vị bán hàng.<br>
+                                <span class="info-title3">ComAddress </span> : Địa chỉ đơn vị bán hàng.<br>
+                                <span class="info-title3">ComPhone </span> : Số điện thoại của đơn vị bán hàng.<br>
+                                <span class="info-title3">ComBankNo </span> : Số tài khoản ngân hàng của đơn vị bán hàng.<br>
+                                <span class="info-title3">ComBankName </span> : Tên ngân hàng mở tài khoản của đơn vị bán hàng.<br>
+                            </p>
+                        </div>
+                        <div class="col-sm-5">
+                            <img class="img-responsive" src="/img/SUPPLIER-INFO.png" width="881" height="188">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item ">
+                <div class="text-info" data-toggle="collapse" data-parent="#cautruc" href="#buyerinfo" aria-expanded="false" aria-controls="buyerinfo">
+                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> BUYER INFO
+                </div>
+                <div id="buyerinfo" class="collapse " role="tabpanel">
+                    <p class="mb-3 info">
+                        <span class="info-title3">Buyer </span> : Tên người mua (khách hàng).<br>
+                        <span class="info-title3">CusCode </span> : Mã khách hàng.<br>
+                        <span class="info-title3">CusName </span> : Công ty người mua.<br>
+                        <span class="info-title3">CusTaxCode </span> : Mã số thuế khách hàng.<br>
+                        <span class="info-title3">CusPhone </span> : Số điện thoại khách hàng.<br>
+                        <span class="info-title3">CusAddress </span> : Địa chỉ khách hàng.<br>
+                        <span class="info-title3">CusBankNo </span> : Số tài khoản của khách hàng.<br>
+                        <span class="info-title3">CusBankName </span> : Tên ngân hàng mở tài khoản của khách hàng.<br>
+
+                    </p>
+                </div>
+            </div>
+            <div class="item ">
+                <div class="text-info" data-toggle="collapse" data-parent="#cautruc" href="#itemsinfo" aria-expanded="false" aria-controls="itemsinfo">
+                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> ITEMS INFO
+                </div>
+                <div id="itemsinfo" class="collapse " role="tabpanel">
+                    <p class="mb-3 info">
+                        <span class="info-title1">Products : Danh sách hàng hóa – dịch vụ. </span>
+                        <span class="info-title2">Thông tin hàng hóa – dịch vụ.</span>
+                        <span class="info-title3">Code </span> : Mã sản phẩm.<br>
+                        <span class="info-title3">Remark </span> : Thông tin ghi chú.<br>
+                        <span class="info-title3">Total </span> : Tổng giá trị của sản phẩm (chưa bao gồm thuế VAT).<br>
+                        <span class="info-title3">ProdName </span> : Tên sản phẩm – dịch vụ.<br>
+                        <span class="info-title3">ProdUnit </span> : Đơn vị tính.<br>
+                        <span class="info-title3">ProdQuantity </span> : Số lượng.<br>
+                        <span class="info-title3">ProdPrice </span> : Đơn giá.<br>
+                        <span class="info-title3">Discount </span> : Phần trăm chiết khấu của hàng hóa dịch vụ.<br>
+                        <span class="info-title3">DiscountAmount </span> : Số tiền chiết khấu của hàng hóa dịch vụ.<br>
+                        <span class="info-title3">VATRate </span> : Thuế suất VAT của hàng hóa dịch vụ.<br>
+                        <span class="info-title3">VATAmount</span> : Tiền thuế VAT của hàng hóa dịch vụ.<br>
+                        <span class="info-title3">Amount </span> : Thành tiền của hàng hóa dịch vụ (Đã bao gồm thuế VAT).
+                    </p>
+                </div>
+            </div>
+            <div class="item ">
+                <div class="text-info" data-toggle="collapse" data-parent="#cautruc" href="#singnaturesinfo" aria-expanded="false" aria-controls="singnaturesinfo">
+                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> SINGNATURES INFO
+                </div>
+                <div id="singnaturesinfo" class="collapse " role="tabpanel">
+                    <p class="mb-3 info">
+                        <span class="info-title3">SignDate </span> : Ngày xuất HÓA ĐƠN.<br>
+                        <span class="info-title3">SignatureValue </span> : Thông tin chữ ký số
+                    </p>
+                </div>
+            </div>
+            <blockquote class="text-danger ">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Trên là các trường dữ liệu cơ bản, được BLUESEA sử dụng cho mẫu hóa đơn phổ biến của cơ quan thuế ban hành.
+                Trường hợp các doanh nghiệp cần thiết kế mẫu hóa đơn riêng theo yêu cầu, BLUESEA sẽ khảo sát và bổ sung các trường dữ liệu để đảm bảo yêu cầu quản trị tại doanh nghiệp.
+
+            </blockquote>
+        </div>
+    </div>
+</div>
+<div class="mySection bgImg arrowDown">
+    <div class="container mySectionText">
+        <h2 class="mySectionSubTitle"><i class="fa fa-caret-right" aria-hidden="true"></i> QUI TRÌNH ĐĂNG KÝ VÀ HOÀN TẤT HỢP ĐỒNG DỊCH VỤ <abbr title="Hóa Đơn Điện Tử">HĐĐT</abbr></h2>
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <li>
+                        <strong>Bước 1: </strong>Sau khi tiếp nhận thông tin đăng ký của <abbr title="Khách hàng">KH</abbr>, khách hàng sẽ nhận được 01 form mẫu phiếu đăng ký
+                        <abbr title="Hóa Đơn Điện Tử">HĐĐT</abbr>, và bảng giá chi tiết dịch vụ <span class="myTextVnpt myTextI">(thời gian tối đa 30 phút)</span>.
+                    </li>
+                    <li>
+                        <strong>Bước 2: </strong>Sau khi khách hàng nhận được form mẫu đăng ký điền đầy đủ thông tin theo yêu cầu và gửi lại cho <abbr title="Tập đoàn Bưu chính Viễn thông Việt Nam">BLUESEA</abbr>
+                        , gửi kèm giấy phép kinh doanh, Mẫu hóa đơn đang sử dụng, Logo công ty,...
+                    </li>
+                    <li>
+                        <strong>Bước 3: </strong>Khách hàng tiến hành lập hợp đồng và ký hợp đồng, thanh toán dịch vụ
+                    </li>
+                    <li>
+                        <strong>Bước 4: </strong>BLUESEA  tiến hành triển khai sau khi nhận đủ các giấy tờ liên
+                        <span class="myTextVnpt myTextI">(Tùy theo hệ thống khách hàng, với mẫu hóa đơn cơ bản không tích hợp, triển khai trong 1h).</span>.
+                    </li>
+                    <li>
+                        <strong>Bước 5: </strong>Thời gian tích hợp hệ thống (nếu có) – tùy mô hình doanh nghiệp, hệ thống phần mềm kế toán của doanh nghiệp.
+                    </li>
+                    <li>
+                        <strong>Bước 6: </strong>Khách hàng đăng ký nộp tờ đăng ký sử dụng hóa đơn, thông báo phát hành trực tiếp cơ quan thuế hoặc qua cổng điện tử cơ quan thuế
+                        <span class="myTextBLUESEA myTextI">(thời gian xét duyệt 2 ngày)</span>.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="mySection light vnptBg">
+        <div class="container mySectionText">
+            <h2 class="mySectionSubTitle">
+                <i class="fa fa-caret-right" aria-hidden="true"></i> ĐẶC ĐIỂM, THẾ MẠNH CỦA GIẢI PHÁP B-INVOICE
+            </h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul>
+                        <li>Phát hành nhanh chóng theo lô lớn.</li>
+                        <li>Dễ dàng trong việc lưu trữ.</li>
+                        <li>
+                            Tích hợp trực tiếp vào một loạt các hệ thống <abbr title="ERP là cụm từ Enterprise Resource Planning tạm dịch là hệ thống hoạch định tài nguyên doanh nghiệp">ERP</abbr>
+                            bao gồm SAP, Sun Systems, Dynamics NAV, GP &amp; AX, Proactis và nhiều hơn nữa.
+                        </li>
+                        <li>
+                            Hóa đơn được miễn phí lưu trữ 10 năm tại 2 <abbr title="Trung tâm dữ liệu Internet ">IDC</abbr> <abbr title="Tập đoàn Bưu chính Viễn thông Việt Nam">BLUESEA</abbr>
+                            đạt chuẩn Tier3 thế giới
+                            <ul>
+                                <li>Hà Nội: <abbr title="Trung tâm dữ liệu Internet ">IDC</abbr> Nam Thăng Long</li>
+                                <li><abbr title="Hồ Chí Minh">HCM</abbr>: <abbr title="Trung tâm dữ liệu Internet ">IDC</abbr> Tân Thuận</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Thiết bị ký số chuyên dụng tốc độ cao HSM (Hardware security Modules) giúp cho việc phát hành hóa đơn nhiều điểm đồng thời, nhưng dữ liệu hóa đơn vẫn lưu trữ
+                            tập trung và theo nguyên tắc thời gian liên tục, liền dãy.
+                        </li>
+                        <li>Hạ tầng, dịch vụ trải khắp Việt Nam – 63 tỉnh thành phố.</li>
+                        <li>Tổng đài 800126 – với hơn 200 chuyên viên chăm sóc khách hàng 24/24.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>*@
+@{ Html.RenderAction("loadPurble", "Home");}

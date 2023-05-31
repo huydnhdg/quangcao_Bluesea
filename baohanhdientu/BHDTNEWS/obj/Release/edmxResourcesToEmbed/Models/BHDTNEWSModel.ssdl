@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BHDTNEWSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Link" Type="varchar" MaxLength="500" />
+    <Property Name="ShortDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="CountView" Type="int" Nullable="false" />
+    <Property Name="FullContent" Type="nvarchar(max)" />
+    <Property Name="Createdate" Type="datetime" />
+    <Property Name="CateId" Type="bigint" />
+    <Property Name="tags" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Banner">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Link" Type="varchar" MaxLength="500" />
+    <Property Name="ShortDescription" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Createdate" Type="datetime" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="ImageThumbnail" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Config">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Hotline" Type="nvarchar" MaxLength="50" />
+    <Property Name="ComName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Logo" Type="varchar" MaxLength="500" />
+    <Property Name="Fanpage" Type="varchar" MaxLength="500" />
+    <Property Name="Youtube" Type="varchar" MaxLength="500" />
+    <Property Name="Gplus" Type="varchar" MaxLength="500" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Website" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Company" Type="nvarchar" MaxLength="100" />
+    <Property Name="Note" Type="nvarchar" MaxLength="500" />
+    <Property Name="Createdate" Type="datetime" />
+    <Property Name="Editdate" Type="datetime" />
+    <Property Name="PackageId" Type="bigint" />
+  </EntityType>
+  <EntityType Name="NewsCate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Link" Type="varchar" MaxLength="500" />
+    <Property Name="ShortDescription" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="Createdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Package">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Package" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="nvarchar" MaxLength="50" />
+    <Property Name="Discount" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dauso" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cuphap" Type="nvarchar" MaxLength="50" />
+    <Property Name="Webwap" Type="nvarchar" MaxLength="50" />
+    <Property Name="Quantity" Type="nvarchar" MaxLength="50" />
+    <Property Name="Slug" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShortName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ServiceDemo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ComName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ProdName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Hotline" Type="varchar" MaxLength="50" />
+    <Property Name="ProdCode" Type="varchar" MaxLength="50" />
+    <Property Name="TimeWarranti" Type="nvarchar" MaxLength="50" />
+    <Property Name="Createdate" Type="datetime" />
+    <Property Name="Editdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Video">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Link" Type="varchar" MaxLength="500" />
+    <Property Name="ShortDescription" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Createdate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="BHDTNEWSModelStoreContainer">
+    <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Banner" EntityType="Self.Banner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Config" EntityType="Self.Config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewsCate" EntityType="Self.NewsCate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Package" EntityType="Self.Package" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceDemo" EntityType="Self.ServiceDemo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Video" EntityType="Self.Video" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

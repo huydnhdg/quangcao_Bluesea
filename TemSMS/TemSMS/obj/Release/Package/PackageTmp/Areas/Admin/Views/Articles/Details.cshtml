@@ -1,0 +1,135 @@
+﻿@model TemSMS.Models.Article
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<section class="content-header">
+    <h1>
+        Acticle
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Acticle</a></li>
+        <li class="active">Chi tiết</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header with-border"></div>
+
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>@Html.DisplayNameFor(model => model.Title):</label>
+                            </div>
+                            <div class="col-xs-10">
+                                @Html.DisplayFor(model => model.Title)
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border-top-color:lightblue" />
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>@Html.DisplayNameFor(model => model.Product):</label>
+                            </div>
+                            <div class="col-xs-10">
+                                @Html.DisplayFor(model => model.Product)
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border-top-color:lightblue" />
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>
+                                    @Html.DisplayNameFor(model => model.Time):
+                                </label>
+                            </div>
+                            <div class="col-xs-10">
+                                @Html.DisplayFor(model => model.Time)
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border-top-color:lightblue" />
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>
+                                    @Html.DisplayNameFor(model => model.Description):
+                                </label>
+                            </div>
+                            <div class="col-xs-10">
+                                @Html.DisplayFor(model => model.Description)
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border-top-color:lightblue" />
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>
+                                    @Html.DisplayNameFor(model => model.Image):
+                                </label>
+                            </div>
+                            <div class="col-xs-10">
+                                @*@Html.DisplayFor(model => model.Image)*@
+                                <img style="width:70px;height:70px;" src="@(Model.Image == null ? "/Content/cms/dist/img/no-img.png" : Model.Image)" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border-top-color:lightblue" />
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>
+                                    @Html.DisplayNameFor(model => model.Url):
+                                </label>
+                            </div>
+                            <div class="col-xs-10">
+                                @Html.DisplayFor(model => model.Url)
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border-top-color:lightblue" />
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>
+                                    @Html.DisplayNameFor(model => model.Tags):
+                                </label>
+                            </div>
+                            <div class="col-xs-10">
+                                @Html.DisplayFor(model => model.Tags)
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border-top-color:lightblue" />
+                    <div class="form-group">
+                        <label>
+                            @Html.DisplayNameFor(model => model.Text)
+                        </label>
+                        <div>
+                            @*@Html.DisplayFor(model => model.ContentNews)*@
+                            @Html.TextAreaFor(model => model.Text, new { @id = "editor1", @name = "editor1", @readonly = true })
+                        </div>
+                    </div>
+                    <hr style="border-top-color:lightblue" />
+                    <div class="box-footer col-xs-12">
+                        @Html.ActionLink("Sửa", "Edit", new { id = Model.Id }) |
+                        @Html.ActionLink("Trở về", "Index")
+                    </div>
+                    @*<p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

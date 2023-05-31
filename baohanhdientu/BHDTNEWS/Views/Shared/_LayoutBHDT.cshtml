@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167534190-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-167534190-1');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 662154615 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-662154615"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-662154615');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 623657657 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-623657657"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-623657657');
+    </script>
+
+    <meta name="google-site-verification" content="Xo8iSqMkpVGZ9FHv7LbNQuMGXfeoeoK9YlzAvUQ1bCY" />
+
+    <meta name="description" content='@(ViewBag.Description ?? "Bảo hành điện tử là giải pháp bảo hành tích hợp đầu số SMS, website, ứng dụng di động (Mobile Application) thay thế bảo hành bằng giấy")'>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/css/animate.css" rel="stylesheet" />
+    <link href="~/Content/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Content/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="~/Content/css/magnific-popup.css" rel="stylesheet" />
+    <link href="~/Content/css/flaticon.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/css/bhdt.css" rel="stylesheet" />
+    <link href="~/Content/css/responsive-tabs.css" rel="stylesheet" />
+    <link href="~/Content/css/tab_style.css" rel="stylesheet" />
+    <link href="~/Content/css/procedure_style1.css" rel="stylesheet" />
+    <link href="~/Content/css/flexslider.css" rel="stylesheet" />
+    <link href="~/Content/css/flexslider-rtl-min.css" rel="stylesheet" />
+    <link href="~/Content/css/budget_tab_style.css" rel="stylesheet" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="~/images/bhdt/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/images/bhdt/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/images/bhdt/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/images/bhdt/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/images/bhdt/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/images/bhdt/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/images/bhdt/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/images/bhdt/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/bhdt/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/images/bhdt/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/bhdt/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/images/bhdt/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/bhdt/favicons/favicon-16x16.png">
+    <link rel="manifest" href="~/images/bhdt/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/images/bhdt/favicons/ms-icon-144x144.png">
+
+
+    @RenderSection("style", required: false)
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="~/">
+                <img alt="Bảo hành điện tử" style="width: 81px;padding-right: 20px;" src="~/images/bhdt/bluesea.png" />
+                <img alt="Bảo hành điện tử" src="~/images/bhdt/logo.png" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars" style="color: #0C55A5;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")"><a class="nav-item nav-link" href="~/">Trang chủ</a></li>
+                    <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")"><a class="nav-item nav-link" href="~/gioi-thieu">Giới thiệu</a></li>
+                    <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Solution" ? "active" : "")"><a class="nav-item nav-link" href="~/giai-phap">Giải pháp</a></li>
+                    <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Trial" || ViewContext.RouteData.Values["Action"].ToString() == "TrialDemo" ? "active" : "")"><a class="nav-item nav-link" href="~/dung-thu">Dùng thử</a></li>
+                    <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Price" ? "active" : "")"><a class="nav-item nav-link" href="~/bang-gia">Bảng giá</a></li>
+                    <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "News" || ViewContext.RouteData.Values["Action"].ToString() == "NewsDetail" || ViewContext.RouteData.Values["Action"].ToString() == "RelatedNews" ? "active" : "")"><a class="nav-item nav-link" href="~/tin-tuc">Tin tức</a></li>
+                    <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "YoutubeChannel" || ViewContext.RouteData.Values["Action"].ToString() == "YoutubeChannelDetail" ? "active" : "")"><a class="nav-item nav-link" href="~/kenh-youtube">Kênh Youtube</a></li>
+                    <li class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Register" || ViewContext.RouteData.Values["Action"].ToString() == "RegisterForm" || ViewContext.RouteData.Values["Action"].ToString() == "RegisterSuccess" ? "active" : "")"><a class="nav-item nav-link" href="~/dang-ky">Đăng ký sử dụng</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+    <script src="~/Scripts/js/jquery.min.js"></script>
+    <script src="~/Scripts/js/jquery-migrate-3.0.1.min.js"></script>
+
+    <script src="~/Scripts/js/popper.min.js"></script>
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/js/jquery.easing.1.3.js"></script>
+    <script src="~/Scripts/js/jquery.waypoints.min.js"></script>
+    <script src="~/Scripts/js/jquery.stellar.min.js"></script>
+    <script src="~/Scripts/js/jquery.animateNumber.min.js"></script>
+    <script src="~/Scripts/js/owl.carousel.min.js"></script>
+    <script src="~/Scripts/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Scripts/js/scrollax.min.js"></script>
+    <script src="~/Scripts/js/main.js"></script>
+    <script src="~/Scripts/js/modernizr.custom.js"></script>
+    <script src="~/Scripts/js/cbpFWTabs.js"></script>
+    <script src="~/Scripts/js/jquery.responsiveTabs.min.js" type="text/javascript"></script>
+    <!-- FlexSlider -->
+    <script defer src="~/Scripts/js/jquery.flexslider.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/js/shCore.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/shBrushXml.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/shBrushJScript.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/js/jquery.easing.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/modernizr.js"></script>
+
+    <script async src="//static.zotabox.com/f/8/f8d77fa82a26f9cedf2bef5b7746e2d0/widgets.js"></script>
+
+    @RenderSection("scripts", required: false)
+
+    <!-- Load Facebook SDK for JavaScript -->    
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v7.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="104638624465876"
+         logged_in_greeting="Bạn đang tìm hiểu dịch vụ Bảo Hành Điện Tử. Bạn cần trợ giúp gi? "
+         logged_out_greeting="Bạn đang tìm hiểu dịch vụ Bảo Hành Điện Tử. Bạn cần trợ giúp gi? ">
+    </div>
+
+</body>
+</html>

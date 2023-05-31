@@ -1,0 +1,655 @@
+﻿@model HDDTpage.Models.ViewModel.HomeModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <div class="menu">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a title="Trang chủ" class="page-scroll" href="">TRANG CHỦ</a>
+                </li>
+                <li>
+                    <a title="Giới thiệu" class="page-scroll" href="#aboutme">GIỚI THIỆU</a>
+                </li>
+                <li>
+                    <a title="" class="page-scroll" href="#whychoice">TẠI SAO CHỌN VNPT</a>
+                </li>
+                <li>
+                    <a title="" class="page-scroll" href="#bill">HĐĐT LÀ GÌ</a>
+                </li>
+                <li>
+                    <a title="" class="page-scroll" href="#compare">KHÁC BIỆT</a>
+                </li>
+                <li>
+                    <a title="" class="page-scroll" href="#signature">CHỮ KÝ SỐ</a>
+                </li>
+                <li>
+                    <a title="" class="page-scroll" href="~/quy-trinh">QUY TRÌNH</a>
+                </li>
+                <li>
+                    <a title="" class="page-scroll" href="#question">THẮC MẮC</a>
+                </li>
+                <li>
+                    <a title="" class="page-scroll" href="~/tin-tuc">TIN TỨC</a>
+                </li>
+                <li>
+                    <a title="" class="page-scroll" href="#contact">LIÊN HỆ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section id="aboutme">
+    <div class="banner">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <a href="#" title="">
+                        <img src="~/images/aboutme-banner.png" alt="" class="img-responsive" style="width:100%">
+                    </a>
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#" title="">
+                        <img src="~/images/tet-banner.png" alt="" class="img-responsive" style="width:100%">
+                    </a>
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon " aria-hidden="true"><p>‹</p></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon " aria-hidden="true"><p>›</p></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="hotnews"></div>
+    <div class="aboutme">
+        <div class="title">
+            <h1 style="font-size:0;">Hóa đơn điện tử VNPT</h1>
+            <h2 style="display:block;">VỀ CHÚNG TÔI</h2>
+        </div>
+        <div class="content">
+            <p>
+                <strong>VNPT hiện là Tập đoàn Bưu chính Viễn thông hàng đầu tại Việt Nam.<br /></strong>
+            </p>
+            <p>
+                Với trên 70 năm kinh nghiệm, hạ tầng công nghệ viễn thông tiên tiến, mạng lưới dịch vụ phủ sóng toàn bộ 63 tỉnh thành trên cả nước, VNPT tự hào là nhà cung cấp dịch vụ bưu chính, viễn thông số 1 tại Việt Nam.<br />
+            </p>
+            <div id="expandText" style="display:none;">
+                <p>
+                    Là đơn vị tiên phong cung cấp dịch vụ Hóa đơn điện tử từ năm 2013, tới giờ, Dịch vụ Hóa đơn điện tử - VNPT Invoice của VNPT đã nhận được nhiều giải thưởng lớn như Giải 3 sản phẩm triển vọng cuộc thi Nhân tài Đất Việt 2013; Giải Sao khuê năm 2014, Giấy khen Tổng cục thuế trao tặng vì đã có thành tích phối hợp triển khai giải pháp Hoá đơn điện tử của ngành thuế năm 2014, đạt chứng chỉ ISO 27001 về an toàn thông tin, vì vậy toàn bộ hệ thống cung cấp hóa đơn điện tử VNPT, chúng tôi đều đặt tại các IDC tiêu chuẩn và được thế giới công nhận.<br />
+                </p>
+                <p>
+                    Do đó, các doanh nghiệp hoàn toàn có thể yên tâm khi dữ liệu đặt tại VNPT và trên những nền tảng sẵn có, doanh nghiệp hoàn toàn yên tâm về dữ liệu chỉ mình khách hàng mới có thể biết được dữ liệu của chính họ vì dữ liệu đã được mã hóa”.
+                    Hiện nay, Hóa đơn điện tử VNPT đã được trên 500 tập đoàn, doanh nghiệp trong nhiều lĩnh vực khác nhau như: điện lực, nước sạch, hệ thống bán lẻ, ngân hàng, siêu thị, bệnh viện... sử dụng với hàng ngàn hóa đơn được xuất mỗi ngày.
+                </p>
+            </div>
+            <a href="javascript:expand();" id="displayText" style="font-size:16px; text-decoration:none;">
+                Xem thêm
+                @*<img id="down" src="~/images/chevron-down.png" alt="xem thêm" style="width:30px;margin:0 auto;" />
+                    <img id="up" src="~/images/chevron-up.png" alt="xem thêm" style="width:30px;display:none;margin:0 auto;" />*@
+            </a>
+            <script>
+                function expand() {
+
+                    var ele = document.getElementById("expandText");
+                    var text = document.getElementById("displayText");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";//nếu muốn hiện sẵn thì trong id= "expandText" style="display:block"
+                        //"show"thay đổi text theo ý bạn
+                        //document.getElementById("up").style.display = "none";
+                        //document.getElementById("down").style.display = "block";
+                        text.innerHTML = "Xem thêm";
+                    }
+                    else {
+                        ele.style.display = "block";
+                        //"hide"thay đổi text theo ý bạn
+                        //document.getElementById("down").style.display = "none";
+                        //document.getElementById("up").style.display = "block";
+                        text.innerHTML = " Ẩn";
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</section>
+<section id="whychoice">
+    <div class="title">
+        <h2>8 LÝ DO NÊN CHỌN VNPT</h2>
+        <img src="~/images/title-choice.png" class="img-responsive" />
+    </div>
+    <div class="tab">
+        <div class="tab1 col-md-6">
+            <p>VNPT</p>
+        </div>
+        <div class="tab2 col-md-6">
+            <p>ĐƠN VỊ KHÁC</p>
+        </div>
+    </div>
+    <div class="whychoice" style="font-size:14px;">
+        <ul>
+            <li>
+                <div class="col-md-5 hvr-forward vnpt">
+                    <h3>Giấy phép triển khai </h3>
+                    <p>Đơn vị được Tổng Cục Thuế cấp GIẤY PHÉP TRIỂN KHAI HOÁ ĐƠN ĐIỆN TỬ</p>
+                </div>
+                <div class="col-md-2">
+                    <div class="tron"></div>
+                    <div class="dung"></div>
+                </div>
+                <div class="col-md-5 hvr-forward other">
+                    <h3>Giấy phép triển khai</h3>
+                    <p>Triển khai HĐĐT qua giấy phép con của VNPT</p>
+                </div>
+            </li>
+            <li>
+                <div class="col-md-5 hvr-forward vnpt">
+                    <h3>Lưu trữ hóa đơn</h3>
+                    <p>
+                        •	Nhà cung cấp dịch vụ máy chủ (Server) hàng đầu Việt Nam. Đứng đầu thị phần Chữ ký số và Internet Việt Nam, băng thông Internet quốc tế lớn nhất<br />
+                        •	VNPT chịu trách nhiệm lưu trữ dữ liệu với mỗi hóa đơn trong vòng 10 năm cho khách hàng<br />
+                        •	Không cần đầu tư chi phí hệ thống: khách hàng được sử dụng hệ thống dự phòng (back up) dữ liệu tại 02 điểm Hà Nội, Hồ Chí Minh<br />
+                        •	Được sử dụng chung Hạ tầng Datacenter, máy chủ, thiết bị an toàn bảo mật, đường truyền mạng của VNPT
+
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <div class="tron"></div>
+                    <div class="dung" style="height:220px;"></div>
+                </div>
+                <div class="col-md-5 hvr-forward other">
+                    <h3>Lưu trữ hóa đơn  </h3>
+                    <p>
+                        •	Hệ thống lưu trữ hoá đơn thuê lại của VNPT<br />
+                        •	Khách hàng phải tự đầu tư hạ tầng thiết bị, chủ động vận hành quản trị, bảo quản và lưu trữ 10 năm đối với hóa đơn
+
+                    </p>
+                </div>
+            </li>
+
+            <div id="expand" style="display:none;">
+                <li>
+                    <div class="col-md-5 hvr-forward vnpt">
+                        <h3>Vận hành</h3>
+                        <p>
+                            •	Khách hàng được cấp quyền trên hệ thống HĐĐT của VNPT để sử dụng và quản trị hệ thống phát hành hóa đơn<br />
+                            •	Đảm bảo được việc số hóa đơn liền dải theo ngày
+
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="tron"></div>
+                        <div class="dung" style="height:180px;"></div>
+                    </div>
+                    <div class="col-md-5 hvr-forward other">
+                        <h3>Vận hành</h3>
+                        <p>
+                            •	Xuất hiện khả năng bị mất hóa đơn tại máy trạm và trên đường truyền tới máy chủ (trong trường hợp KH dùng máy chủ lưu trữ tập trung)<br />
+                            •	Không phân quyền rộng rãi và chi tiết tới từng user sử dụng hệ thống được<br />
+                            •	Hóa đơn được ký, phát hành, cấp số tại máy trạm nên không đảm bảo được việc số hóa đơn liền dải theo ngày
+
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-md-5 hvr-forward vnpt">
+                        <h3>UY TÍN</h3>
+                        <p>
+                            •	Nhà cung cấp dịch vụ internet tốt nhất, các giải thưởng uy tín về CNTT và phần mềm tại ViệtNam: Sao Khuê, Cúp vàng CNTT...<br />
+                            •	Tập đoàn VNPT là Công ty trách nhiệm Hữu hạn một thành viên do Nhà nước làm chủ sở hữu đảm bảo hoạt động ổn định lâu dài.
+
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="tron"></div>
+                        <div class="dung" style="height:120px;"></div>
+                    </div>
+                    <div class="col-md-5 hvr-forward other">
+                        <h3>Rủi Ro</h3>
+                        <p>
+                            Hoá đơn theo quy định phải lưu trữ 10 năm, nếu công ty giải thể sẽ không có ai thực hiện các trách nhiệm như đã nêu trong hợp đồng
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-md-5 hvr-forward vnpt">
+                        <h3>Chữ ký số </h3>
+                        <p>
+                            Sử dụng Token hoặc Sử dụng chung thiết bị ký số HSM - Thiết bị ký số chuyên dụng, tốc độ cao VNPT để ký số hóa đơn phát hành. (Với trường hợp sử dụng chung thiết bị ký số HSM của VNPT).
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="tron"></div>
+                        <div class="dung" style="height:100px;"></div>
+                    </div>
+                    <div class="col-md-5 hvr-forward other">
+                        <h3>Chữ ký số</h3>
+                        <p>Sử dụng Token</p>
+                    </div>
+                </li>
+            </div>
+
+
+            <li>
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-2">
+                    <div class="tron"></div>
+                </div>
+                <div class="col-md-5">
+                </div>
+            </li>
+        </ul>
+        <a href="javascript:expandd();" id="display" style="font-size:16px; text-decoration:none;">
+            Xem thêm
+            @*<img id="downn" src="~/images/chevron-down.png" alt="xem thêm" style="width:30px;margin:0 auto;" />
+                <img id="upp" src="~/images/chevron-up.png" alt="xem thêm" style="width:30px;display:none;margin:0 auto;" />*@
+        </a>
+        <script>
+            function expandd() {
+
+                var ele = document.getElementById("expand");
+                var text = document.getElementById("display");
+                if (ele.style.display == "block") {
+                    ele.style.display = "none";//nếu muốn hiện sẵn thì trong id= "expandText" style="display:block"
+                    //"show"thay đổi text theo ý bạn
+                    //document.getElementById("upp").style.display = "none";
+                    //document.getElementById("downn").style.display = "block";
+                    text.innerHTML = "Xem thêm";
+                }
+                else {
+                    ele.style.display = "block";
+                    //"hide"thay đổi text theo ý bạn
+                    //document.getElementById("downn").style.display = "none";
+                    //document.getElementById("upp").style.display = "block";
+                    text.innerHTML = " Ẩn";
+                }
+            }
+        </script>
+    </div>
+</section>
+<section id="bill">
+    <div class="bill">
+        <div class="col-md-6">
+            <div class="tivi pc">
+                <img class="img-responsive" alt="" src="~/images/hoa-don-dien-tu-vnpt.jpg" />
+                <h4>E-invoice - phần mềm được tổng cục thuế lựa chọn thí điểm cho áp dụng</h4>
+            </div>
+        </div>
+        <div class="col-md-6 margin20">
+            <div class="title">
+                <h2>HÓA ĐƠN ĐIỆN TỬ LÀ GÌ?</h2>
+                <img src="~/images/title-why.png" class="img-responsive" />
+            </div>
+            <div class="tivi mobile">
+                <img class="img-responsive" alt="" src="~/images/hoa-don-dien-tu-vnpt.jpg" />
+                <h4>E-invoice - phần mềm được tổng cục thuế lựa chọn thí điểm cho áp dụng</h4>
+            </div>
+            <div class="content">
+                <p>
+                    <strong>Hóa đơn điện tử</strong> là tập hợp các thông điệp dữ liệu điện tử về bán hàng hoá, cung ứng dịch vụ, được khởi tạo, lập, gửi, nhận, lưu trữ và quản lý bằng phương tiện điện tử.
+                </p>
+                <p style="font-style:italic;">
+                    <strong>Hóa đơn điện tử phải đáp ứng các nội dung quy định tại Điều 6 Thông tư 32 này.</strong>
+                </p>
+                <p>
+                    <strong>Phương pháp tạo Hóa đơn điện tử:</strong><br />
+                    •	Được khởi tạo, lập, gửi, nhận, lưu trữ và quản lý bằng phương tiện điện tử.<br />
+                    •	Có thể chuyển đổi thành hóa đơn giấy trong nhu cầu lưu thông hàng hóa, quản lý hóa đơn của người mua.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="compare">
+    <div class="compare">
+        <div class="title">
+            <h2>SO SÁNH HDDT & HÓA ĐƠN GIẤY</h2>
+            <img src="~/images/title-compare.png" class="img-responsive" />
+        </div>
+        <div class="slider">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="~/images/slide1.jpg" alt="Hóa đơn điện tử vs Hóa đơn giấy" class="img-responsive">
+                    </div>
+                    <div class="item">
+                        <img src="~/images/slide2.jpg" alt="Hóa đơn điện tử vs Hóa đơn giấy" class="img-responsive">
+                    </div>
+                    <div class="item">
+                        <img src="~/images/slide3.jpg" alt="Hóa đơn điện tử vs Hóa đơn giấy" class="img-responsive">
+                    </div>
+                    <div class="item">
+                        <img src="~/images/slide4.jpg" alt="Hóa đơn điện tử vs Hóa đơn giấy" class="img-responsive">
+                    </div>
+                    <div class="item">
+                        <img src="~/images/slide5.jpg" alt="Hóa đơn điện tử vs Hóa đơn giấy" class="img-responsive">
+                    </div>
+                    <div class="item">
+                        <img src="~/images/slide6.jpg" alt="Hóa đơn điện tử vs Hóa đơn giấy" class="img-responsive">
+                    </div>
+                    <div class="item">
+                        <img src="~/images/slide7.jpg" alt="Hóa đơn điện tử vs Hóa đơn giấy" class="img-responsive">
+                    </div>
+                    <div class="item">
+                        <img src="~/images/slide8.jpg" alt="Hóa đơn điện tử vs Hóa đơn giấy" class="img-responsive">
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="imgleft">
+                        <img src="~/images/control-left.png" alt="turn left" />
+                    </span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="imgright">
+                        <img src="~/images/control-right.png" alt="turn right" />
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="signature">
+    <div class="signature">
+        <div class="col-md-6">
+            <div class="image pc">
+                <img class="img-responsive" alt="" src="~/images/chu-ky-so-hoa-don-dien-tu-vnpt.jpg" />
+            </div>
+        </div>
+        <div class="col-md-6 margin20">
+            <div class="title">
+                <h2>CHỮ KÝ SỐ HDDT LÀ GÌ?</h2>
+                <img src="~/images/title-what.png" class="img-responsive" />
+            </div>
+            <div class="image mobile">
+                <img class="img-responsive" alt="" src="~/images/chu-ky-so-hoa-don-dien-tu-vnpt.jpg" />
+            </div>
+            <div class="content">
+                <p>
+                    Chữ ký số ký Hóa đơn điện tử: <strong>USB Token</strong> hoặc <strong>Chữ ký số HSM</strong>
+                </p>
+                <p>
+                    <strong>1. USB Token:</strong> Khách hàng có thể dùng Token đang kê khai thuế để ký HDDT<br />
+                    <strong>* Nhóm doanh nghiệp:</strong>  Phù hợp các doanh nghiệp có quy mô nhỏ, xuất ít hóa đơn, mới thành lập.
+                </p>
+                <p>
+                    <strong>2. Chữ ký số HSM:</strong>Thiết bị ký số chuyên dụng, tốc độ cao VNPT để ký số hóa đơn phát hành. Có thể ký đơn lẻ hoặc ký hàng loạt theo lô, khả năng thực hiện 1200 chữ ký số/giây, hỗ trợ tối tối đa lên tới 16 thiết bị cùng sử dụng 1 lúc.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="question" style="font-size:14px;">
+    <div class="question">
+        <div class="title">
+            <h2>CÂU HỎI THƯỜNG GẶP</h2>
+            <img src="~/images/title-question.png" class="img-responsive" />
+        </div>
+        <div class="slide-holder pc">
+            <div class="slide-pager">
+                <div class="slide-control-prev">«</div>
+                <div class="slide-control-next">»</div>
+            </div>
+            <div class="slide-container">
+                <div class="slide-stage">
+                    @foreach (var question in Model.Question)
+                    {
+                        <div class="slide-image">
+                            <a href="@Url.Action("QuestionDetail","Question",new {rewrite=question.Url })" title="@question.Title">
+                                <ul>
+                                    <li>
+                                        <img src="@question.Image" class="img-responsive" alt="@question.Title" />
+                                        <p><strong>@question.Title</strong></p>
+                                    </li>
+                                    <li>
+                                        <span>@question.Description</span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+            @foreach (var mquestion in Model.Question)
+            {
+                <div class="mobile-item">
+                    <a href="@Url.Action("QuestionDetail","Question",new {rewrite=mquestion.Url })" title="@mquestion.Title">
+                        <ul>
+                            <li>
+                                <img src="@mquestion.Image" class="img-responsive" alt="@mquestion.Title" />
+                                <p><strong>@mquestion.Title</strong></p>
+                            </li>
+                            <li>
+                                <span>@mquestion.Description</span>
+                            </li>
+                        </ul>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<section id="customer">
+    <div class="customer">
+        <div class="title">
+            <h2>KHÁCH HÀNG CỦA CHÚNG TÔI</h2>
+        </div>
+        <div class="slide-holder1">
+            <div class="slide-container1">
+                <div class="slide-stage1">
+                    <div class="slide-image1">
+                        <a href="" title="">
+                            <img src="~/images/chotot.png" class="img-responsive" alt="" />
+                        </a>
+                    </div>
+                    <div class="slide-image1">
+                        <a href="" title="">
+                            <img src="~/images/VT1.jpg" class="img-responsive" alt="" />
+                        </a>
+                    </div>
+                    <div class="slide-image1">
+                        <a href="" title="">
+                            <img src="~/images/vtrl.png" class="img-responsive" alt="" />
+                        </a>
+                    </div>
+                    <div class="slide-image1">
+                        <a href="" title="">
+                            <img src="~/images/erw.jpg" class="img-responsive" alt="" />
+                        </a>
+                    </div>
+                    <div class="slide-image1">
+                        <a href="" title="">
+                            <img src="~/images/fshare.jpg" class="img-responsive" alt="" />
+                        </a>
+                    </div>
+                    <div class="slide-image1">
+                        <a href="" title="">
+                            <img src="~/images/logo-vdc.gif" class="img-responsive" alt="" />
+                        </a>
+                    </div>
+                    <div class="slide-image1">
+                        <a href="" title="">
+                            <img src="~/images/samsung_logo_seo.jpg" class="img-responsive" alt="" />
+                        </a>
+                    </div>
+                    <div class="slide-image1">
+                        <a href="" title="">
+                            <img src="~/images/scb.jpg" class="img-responsive" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@*<section id="customer">
+        <div class="customer">
+            <div class="title">
+                <h2>KHÁCH HÀNG NÓI VỀ CHÚNG TÔI</h2>
+                <img src="~/images/title-customer.png" class="img-responsive" />
+            </div>
+            <div class="slide-holder2 pc">
+                <div class="slide-pager2">
+                    <div class="slide-control-prev2">«</div>
+                    <div class="slide-control-next2">»</div>
+                </div>
+                <div class="slide-container2">
+                    <div class="slide-stage2">
+                        @foreach (var customer in Model.Customer)
+                        {
+                            <div class="slide-image2">
+                                <ul>
+                                    <li>
+                                        <img src="@customer.Image" class="img-responsive img-circle" alt="@customer.Title" />
+                                    </li>
+                                    <li>
+                                        <span>@customer.Description</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="mobile">
+                @foreach (var mcustomer in Model.Customer)
+                {
+                    <div class="mobile-item">
+                        <ul>
+                            <li>
+                                <img src="@mcustomer.Image" class="img-responsive" alt="@mcustomer.Title" />
+                            </li>
+                            <li>
+                                <span>@mcustomer.Description</span>
+                            </li>
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>*@
+<section id="contact" style="font-size:14px;">
+    <div class="contact">
+        <div class="title">
+            <h2>LIÊN HỆ</h2>
+            <img src="~/images/title-contact.png" class="img-responsive" />
+        </div><div class="content">
+            <div class="ct-img col-md-4">
+                <a title="" href="">
+                    <img src="~/images/logo-left.png" alt="" class="img-responsive" />
+                </a>
+                <p style="font-size:21px;color:#337ab7;"><strong><br />VNPT VinaPhone</strong></p>
+                <p>BAN KHÁCH HÀNG TỔ CHỨC VÀ DOANH NGHIỆP</p>
+                <p>Địa chỉ: Số 216 Trần Duy Hưng, Phường Trung Hòa, Quận Cầu Giấy, TP. Hà Nội</p>
+                <p>Chi nhánh HCM: Số 42, Phạm Ngọc Thạch, Phường 6, Quận 3, Hồ Chí Minh</p>
+                <p><strong>Hotline: <span style="color:red;"> 0912.433.003</span>  - Email: <span style="color:red;">vthuyen@evnpt.vn</span></strong></p>
+            </div>
+            <div class="ct-social col-md-3">
+                <div class="fb-page"
+                     data-href="https://www.facebook.com/hoadondien24h/"
+                     data-width="340"
+                     data-hide-cover="false"
+                     data-show-facepile="true">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="getfly-optin-form-iframe-1581665405970"></div>
+                <script type="text/javascript">(function () { var r = window.document.referrer != "" ? window.document.referrer : window.location.origin; var regex = /(https?:\/\/.*?)\//g; var furl = regex.exec(r); r = furl ? furl[0] : r; var f = document.createElement("iframe"); const url_string = new URLSearchParams(window.location.search); var utm_source, utm_campaign, utm_medium, utm_content, utm_term; if ((!url_string.has('utm_source') || url_string.get('utm_source') == '') && document.cookie.match(new RegExp('utm_source' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_source' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_source') != null ? "&utm_source=" + url_string.get('utm_source') : ""; } if ((!url_string.has('utm_campaign') || url_string.get('utm_campaign') == '') && document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_campaign') != null ? "&utm_campaign=" + url_string.get('utm_campaign') : ""; } if ((!url_string.has('utm_medium') || url_string.get('utm_medium') == '') && document.cookie.match(new RegExp('utm_medium' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_medium' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_medium') != null ? "&utm_medium=" + url_string.get('utm_medium') : ""; } if ((!url_string.has('utm_content') || url_string.get('utm_content') == '') && document.cookie.match(new RegExp('utm_content' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_content' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_content') != null ? "&utm_content=" + url_string.get('utm_content') : ""; } if ((!url_string.has('utm_term') || url_string.get('utm_term') == '') && document.cookie.match(new RegExp('utm_term' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_term' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_term') != null ? "&utm_term=" + url_string.get('utm_term') : ""; } f.setAttribute("src", "https://bluesea.getflycrm.com/api/forms/viewform/?key=eG7iWGC1h1yh5EylO84V34xTdJ0s3PSB9uCSJ5Ol4q3mxugyOx&referrer=" + r); f.style.width = "500px"; f.style.height = "500px"; f.setAttribute("frameborder", "0"); f.setAttribute("marginheight", "0"); f.setAttribute("marginwidth", "0"); var s = document.getElementById("getfly-optin-form-iframe-1581665405970"); s.appendChild(f); })();</script>
+            </div>
+            @*<div class="ct-form col-md-4">
+                    <div class="bao-form">
+                        <div class="title">
+                            <h2>THÔNG TIN</h2>
+                            <img src="~/images/title-info.png" />
+                        </div>
+                        <div class="form-wrap">
+                            <form id="form-contact" class="form" method="post">
+                                <div class="">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <input type="text" name="full-name" id="full-name" required="required" data-error="{'required':true, 'letterOnly':true}" data-message="{'required':'Họ và tên là bắt buộc', 'letterOnly':'Vui lòng nhập tên hợp lệ'}" placeholder="Họ và tên(*)" class="form-control error" maxlength="50" aria-required="true">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" name="phone-number" id="phone-number" required="required" data-error="{'required':true, 'minlenght': 7}" data-message="{'required':'Số điện thoại là bắt buộc', 'minlenght': 'Vui lòng nhập ít nhất 7 số'}" placeholder="Điện thoại(*)" class="form-control error" maxlength="13" aria-required="true">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" name="email" id="email" required="required" data-error="{'email': true}" data-message="{'email': 'Vui lòng nhập email hợp lệ'}" placeholder="Email(*)" class="form-control valid" maxlength="70">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="company" id="company" required="required" data-error="{'required':true, 'letterOnly':true}" data-message="{'required':'Tên công ty là bắt buộc', 'letterOnly':'Vui lòng nhập tên công ty'}" placeholder="Công ty(*)" class="form-control error" maxlength="500" aria-required="true">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="text" id="text" rows="3" placeholder="Ghi chú"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <button id="btnSend" type="submit" class="btn btn-primary btn-submit">
+                                                Gửi
+                                            </button>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>*@
+        </div>
+    </div>
+</section>
+@*begin modal*@
+<div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h3 style="color:rgb(0, 102, 178); text-align:center; font-size:16px;font-weight:bold;" class="modal-title" id="lineModalLabel">ĐỂ ĐƯỢC TƯ VẤN MIỄN PHÍ VUI LÒNG ĐĂNG KÍ NGAY</h3>
+                @*<img style="margin:0 auto;" class="img-responsive" alt="3c mobifone" src="~/Assets/client/img/3cmobifone.png" />*@
+            </div>
+            <div class="modal-body">
+                <!-- content goes here -->
+                <div class="form-wrap" style="max-height:450px;">
+                    <div id="getfly-optin-form-iframe-1581665507481"></div>
+                    <script type="text/javascript">(function () { var r = window.document.referrer != "" ? window.document.referrer : window.location.origin; var regex = /(https?:\/\/.*?)\//g; var furl = regex.exec(r); r = furl ? furl[0] : r; var f = document.createElement("iframe"); const url_string = new URLSearchParams(window.location.search); var utm_source, utm_campaign, utm_medium, utm_content, utm_term; if ((!url_string.has('utm_source') || url_string.get('utm_source') == '') && document.cookie.match(new RegExp('utm_source' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_source' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_source') != null ? "&utm_source=" + url_string.get('utm_source') : ""; } if ((!url_string.has('utm_campaign') || url_string.get('utm_campaign') == '') && document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_campaign') != null ? "&utm_campaign=" + url_string.get('utm_campaign') : ""; } if ((!url_string.has('utm_medium') || url_string.get('utm_medium') == '') && document.cookie.match(new RegExp('utm_medium' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_medium' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_medium') != null ? "&utm_medium=" + url_string.get('utm_medium') : ""; } if ((!url_string.has('utm_content') || url_string.get('utm_content') == '') && document.cookie.match(new RegExp('utm_content' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_content' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_content') != null ? "&utm_content=" + url_string.get('utm_content') : ""; } if ((!url_string.has('utm_term') || url_string.get('utm_term') == '') && document.cookie.match(new RegExp('utm_term' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_term' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_term') != null ? "&utm_term=" + url_string.get('utm_term') : ""; } f.setAttribute("src", "https://bluesea.getflycrm.com/api/forms/viewform/?key=LyfQNmMptVT3X6dD4tdRpEoJk549TlgJXT0f8wPdPP7INe3rDC&referrer=" + r); f.style.width = "500px"; f.style.height = "500px"; f.setAttribute("frameborder", "0"); f.setAttribute("marginheight", "0"); f.setAttribute("marginwidth", "0"); var s = document.getElementById("getfly-optin-form-iframe-1581665507481"); s.appendChild(f); })();</script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+@*end modal*@
+<div class="fx-btn-register" style="position:fixed;bottom:50%;right:10px;">
+    <a class="page-scroll" href="#contact">
+        <img src="~/images/icondangkyngay.png" class="img-responsive" style="max-width:150px" />
+    </a>
+</div>

@@ -1,0 +1,286 @@
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\ApplicationInsights.config
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\csc.exe
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\System.Collections.Immutable.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\System.Reflection.Metadata.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\vbc.exe
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\VBCSCompiler.exe
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\VBCSCompiler.exe.config
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.dll.config
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.pdb
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\CKFinder.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.SqlServer.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Agent.Intercept.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.DependencyCollector.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Web.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.WindowsServer.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.ApplicationInsights.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.Web.Infrastructure.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.Mvc.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Helpers.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Mvc.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Razor.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Deployment.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Razor.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\CKFinder.pdb
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.SqlServer.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.DependencyCollector.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Web.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.WindowsServer.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.ApplicationInsights.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.Mvc.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Razor.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Deployment.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Razor.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Helpers.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Mvc.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.pdb
+E:\bluesea.net\bluservice\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.csprojResolveAssemblyReference.cache
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\ApplicationInsights.config
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\csc.exe
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\System.Collections.Immutable.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\System.Reflection.Metadata.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\vbc.exe
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\VBCSCompiler.exe
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\VBCSCompiler.exe.config
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.dll.config
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.pdb
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\CKFinder.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.SqlServer.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.DependencyCollector.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Web.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.WindowsServer.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.ApplicationInsights.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.Web.Infrastructure.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.Mvc.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Helpers.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Mvc.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Razor.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Deployment.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Razor.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\CKFinder.pdb
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.SqlServer.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.DependencyCollector.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Web.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.WindowsServer.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.ApplicationInsights.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.Mvc.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Razor.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Deployment.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Razor.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Helpers.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Mvc.xml
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.dll
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.pdb
+D:\Cong Viec\Trang quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.csprojResolveAssemblyReference.cache
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\ApplicationInsights.config
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\csc.exe
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\System.Collections.Immutable.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\System.Reflection.Metadata.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\vbc.exe
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\VBCSCompiler.exe
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\roslyn\VBCSCompiler.exe.config
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Dichvuhoanhao.dll.config
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Dichvuhoanhao.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Dichvuhoanhao.pdb
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\CKFinder.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\EntityFramework.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\EntityFramework.SqlServer.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.AI.Agent.Intercept.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.AI.DependencyCollector.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.AI.Web.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.AI.WindowsServer.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.ApplicationInsights.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.Web.Infrastructure.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\PagedList.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\PagedList.Mvc.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Helpers.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Mvc.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Razor.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Webpages.Deployment.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Webpages.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Webpages.Razor.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\CKFinder.pdb
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\EntityFramework.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\EntityFramework.SqlServer.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.AI.DependencyCollector.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.AI.Web.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.AI.WindowsServer.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.ApplicationInsights.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\PagedList.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\PagedList.Mvc.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Razor.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Webpages.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Webpages.Deployment.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Webpages.Razor.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Helpers.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\bin\System.Web.Mvc.xml
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.dll
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.pdb
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.csprojAssemblyReference.cache
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.csproj.CoreCompileInputs.cache
+E:\bluesea.net\bluservice\Dichvuhoanhao-daipa\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.csproj.CopyComplete
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\ApplicationInsights.config
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\csc.exe
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\System.Collections.Immutable.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\System.Reflection.Metadata.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\vbc.exe
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\VBCSCompiler.exe
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\VBCSCompiler.exe.config
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.dll.config
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.pdb
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\CKFinder.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.SqlServer.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Agent.Intercept.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.DependencyCollector.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Web.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.WindowsServer.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.ApplicationInsights.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.Web.Infrastructure.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.Mvc.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Helpers.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Mvc.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Razor.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Deployment.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Razor.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\CKFinder.pdb
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.SqlServer.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.DependencyCollector.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Web.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.WindowsServer.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.ApplicationInsights.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.Mvc.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Razor.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Deployment.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Razor.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Helpers.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Mvc.xml
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.csproj.CoreCompileInputs.cache
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.csproj.CopyComplete
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.dll
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.pdb
+E:\github\quangcaohieuqua\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.csprojAssemblyReference.cache
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\ApplicationInsights.config
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\csc.exe
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\vbc.exe
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\VBCSCompiler.exe
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.dll.config
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Dichvuhoanhao.pdb
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\CKFinder.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.SqlServer.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Web.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.Mvc.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Helpers.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Mvc.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Razor.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Razor.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\CKFinder.pdb
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\EntityFramework.SqlServer.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.Web.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\PagedList.Mvc.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Razor.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Webpages.Razor.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Helpers.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\bin\System.Web.Mvc.xml
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.csproj.AssemblyReference.cache
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.csproj.CoreCompileInputs.cache
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.csproj.CopyComplete
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.dll
+C:\Users\Bluesea1\Source\Repos\quangcao_Bluesea\Dichvuhoanhao\Dichvuhoanhao\obj\Debug\Dichvuhoanhao.pdb

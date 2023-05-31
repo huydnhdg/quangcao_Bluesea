@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9a4cd10ca2974b479c5a3593ca014817" Name="Diagram1">
+        <EntityTypeShape EntityType="BHDTNEWSModel.NewsCate" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHDTNEWSModel.Config" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="BHDTNEWSModel.ServiceDemo" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BHDTNEWSModel.Contact" Width="1.5" PointX="3.375" PointY="7" />
+        <EntityTypeShape EntityType="BHDTNEWSModel.Package" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="BHDTNEWSModel.Banner" Width="1.5" PointX="5.25" PointY="7.375" />
+        <EntityTypeShape EntityType="BHDTNEWSModel.Video" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="BHDTNEWSModel.Article" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

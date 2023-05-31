@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="TemSMSModelStoreContainer" CdmEntityContainer="TemSMSEntities">
+    <EntitySetMapping Name="Slides">
+      <EntityTypeMapping TypeName="TemSMSModel.Slide">
+        <MappingFragment StoreEntitySet="Slide">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Alt" ColumnName="Alt" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="TemSMSModel.Article">
+        <MappingFragment StoreEntitySet="Article">
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setupeds">
+      <EntityTypeMapping TypeName="TemSMSModel.Setuped">
+        <MappingFragment StoreEntitySet="Setuped">
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

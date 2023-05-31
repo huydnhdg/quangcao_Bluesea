@@ -1,0 +1,147 @@
+﻿@model IEnumerable<TemSMS.Models.Article>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    function searchData() {
+
+        var product = $("#Product option:selected").val();
+        var url = '@Url.Action("Index", "Articles")' + "?product=" + product;
+        window.location.href = url;
+    }
+</script>
+
+<section class="content-header">
+    <h1>
+        Acticle
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Acticle</a></li>
+        @*<li class="active">Data tables</li>*@
+    </ol>
+</section>
+<table>
+    <tr>
+        <td>@Html.DropDownList("Product", null, htmlAttributes: new { @class = "form-control" })</td>
+        <td><a onclick="searchData();" class="btn btn-primary">Lọc theo Product</a></td>
+    </tr>
+</table>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <p>
+                            @Html.ActionLink("Tạo mới", "Create")
+                        </p>
+                    </div>
+
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Title)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Description)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Image)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Time)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Url)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Product)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Tags)
+                                    </th>
+                                    <th class="col-xs-1"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Title)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td>
+                                        @*@Html.DisplayFor(modelItem => item.Image)*@
+                                        <img style="width:50px;height:50px;" src="@(item.Image == null ? "/Content/cms/dist/img/no-img.png" : item.Image)" alt="" />
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Time)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Url)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Product)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tags)
+                                    </td>
+                                    <td class="col-xs-1 text-center">
+                                        @Html.ActionLink("Sửa", "Edit", new { id = item.Id })
+                                        <hr style="border-top:1px solid orange;margin:0;" />
+                                        @Html.ActionLink("Chi tiết", "Details", new { id = item.Id })
+                                        <hr style="border-top:1px solid orange; margin:0;" />
+                                        @Html.ActionLink("Xóa", "Delete", new { id = item.Id })
+                                    </td>
+                                </tr>
+
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Title)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Description)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Image)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Time)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Url)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Product)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Tags)
+                                    </th>
+                                    <th class="col-xs-1"></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+</section>
+<!-- /.content -->

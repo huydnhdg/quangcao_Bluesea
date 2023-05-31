@@ -1,0 +1,38 @@
+﻿@model IEnumerable<TemSMS.Models.Article>
+@{
+    ViewBag.Title = "Tem xác thực sms";
+    ViewBag.Description = "Tem xác thực hàng hóa điện tử SMS là loại tem chống hàng giả được dán trên sản phẩm. Người tiêu dùng chỉ cần soạn tin SMS qua đầu số 8077 để xác thực thông tin sản phẩm.";
+    ViewBag.Keyword = "Tem xác thực sms";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1 style="color:transparent;font-size:0;">@ViewBag.Title</h1>
+<section id="product">
+    <div class="content">
+        <div class="title"><h2>TEM XÁC THỰC SMS</h2></div>
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-sm-4 col-md-4 col-xs-6" style="padding-top:15px;min-height:380px;max-height:380px;">
+                <a href="@Url.Action("Article", "Product", new { rewrite = item.Url })" title="@item.Title">
+                    <img src="@item.Image" class="img-responsive" style="width:100%;"/>
+                </a>
+                <div class="">
+                    <a href="@Url.Action("Article", "Product", new { rewrite = item.Url })" title="@item.Title">
+                        <h3 style="text-transform:uppercase;">
+                            @item.Title
+                        </h3>
+                    </a>
+                </div>
+                <div class="description">
+                    <p>
+                        @item.Description
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="clearfix"></div>
+    <ul class="pagination">
+        @Html.Raw((String)ViewBag.PagingHtml)
+    </ul>
+</section>
+

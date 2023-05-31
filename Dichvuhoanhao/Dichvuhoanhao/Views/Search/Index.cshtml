@@ -1,0 +1,65 @@
+﻿@model PagedList.IPagedList<Dichvuhoanhao.Entity.ItemService>
+@using PagedList.Mvc;
+@{
+    ViewBag.Description = "";
+    ViewBag.Title = "Thông tin tìm kiếm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="brand-content">
+    <div class="brand-content-row col-lg-9">
+        <div class="content-list ">
+            @foreach (var item in Model)
+            {
+                <div class="content-list-item">
+                    <div class="col-lg-2">
+                        <img alt="@item.Title" src="@item.Icon" class="img-responsive">
+                    </div>
+                    <div class="col-lg-10">
+                        @if (item.Service == 1)
+                        {
+                            <a title="@item.Title" href="/cong-thanh-toan/@item.Url-@item.Id"><h3>@item.Title</h3></a>
+                        }
+                        else if (item.Service == 2)
+                        {
+                            <a title="@item.Title" href="/sms-brandname/@item.Url-@item.Id"><h3>@item.Title</h3></a>
+                        }
+                        else if (item.Service == 3)
+                        {
+                            <a title="@item.Title" href="/digital-marketing/@item.Url-@item.Id"><h3>@item.Title</h3></a>
+                        }
+                        else if (item.Service == 4)
+                        {
+                            <a title="@item.Title" href="/hoa-don-dien-tu/@item.Url-@item.Id"><h3>@item.Title</h3></a>
+                        }
+                        else if (item.Service == 5)
+                        {
+                            <a title="@item.Title" href="/icheck/@item.Url-@item.Id"><h3>@item.Title</h3></a>
+                        }                        
+                        <p>
+                            @item.Description
+                        </p>
+                    </div>
+                </div>
+            }
+            @* phan trang danh sach *@
+            <div class="phantrang">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchString = @ViewBag.SearchString }))
+            </div>
+
+        </div>
+    </div>
+    <div class="brand-main-service col-lg-3">
+        <div class="brand-main-title">
+            <h4>dịch vụ chính</h4>
+        </div>
+        <div class="brand-main-content">
+            <span><p><a href="/icheck">icheck</a></p></span>
+            <span><p><a href="/cong-thanh-toan">cổng thanh toán</a></p></span>
+            <span><p><a href="/sms-brandname">sms brandname</a></p></span>
+            <span><p><a href="/digital-marketing">digital</a></p></span>
+            <span><p><a href="/cskh_3c">3c-tổng đài cskh</a></p></span>
+            <a target="_blank" href="http://2tip.vn/tip-vang"><img src="/Assets/client/img/service-main-banner.png" class="img-responsive" alt="banner"></a>
+        </div>
+    </div>
+</div>

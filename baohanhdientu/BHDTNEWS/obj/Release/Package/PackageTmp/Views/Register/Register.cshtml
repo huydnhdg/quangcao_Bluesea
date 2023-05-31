@@ -1,0 +1,319 @@
+﻿@model List<BHDTNEWS.Models.Package>
+@{
+    ViewBag.Title = "Đăng ký - Bảo Hành Điện Tử";    
+    Layout = "~/Views/Shared/_LayoutBHDT.cshtml";
+    IEnumerable<BHDTNEWS.Models.Article> footerNews = ViewBag.footerNews;
+    IEnumerable<BHDTNEWS.Models.Video> footerVideos = ViewBag.footerVideos;
+    BHDTNEWS.Models.Config config = ViewBag.config;
+}
+
+<h1 class="hidden" style="display: none;">@ViewBag.Title</h1>
+
+<section class="bg-light section1_bg">
+    <div class="container">
+        <div class="container">
+            <h2 class="section1_first_text"></h2>
+            <table class="table table-bordered banggia" id="banggia">
+                <thead>
+                    <tr>
+                        <th class="th_text">Gói dịch vụ</th>
+                        @foreach (var th in Model)
+                        {
+                        <th>
+                            <p class="banggia_package_name">@th.Package1</p>
+
+                            @if (th.Slug.ToLower() == "supervip")
+                            {
+                                <p class="banggia_price"><a href="tel:@config.Hotline" class="badge contact_now text-wrap">@th.Price</a></p>
+                            }
+                            else
+                            {
+                                <p class="banggia_price">@th.Price</p>
+                            }
+
+                            <a alt="Bảo hành điện tử" href="@Url.Action("RegisterForm","Register",new {id=th.Id})" class="btn btn-primary">Đăng ký</a>
+                        </th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="bold_text" style="background-color: #fff;"></td>
+                        <td class="bold_text" style="background-color: #D6EBFE;">
+                            Dành cho các
+                            Doanh nghiệp nhỏ,
+                            yêu cầu đơn giản và
+                            không cần sử dụng Web
+                        </td>
+                        <td class="bold_text" style="background-color: #D6EBFE;">
+                            Dành cho các
+                            Doanh nghiệp vừa và nhỏ,
+                            yêu cầu đơn giản và muốn
+                            sử dụng Website bảo hành
+                            điện tử
+                        </td>
+                        <td class="bold_text" style="background-color: #D6EBFE;">
+                            Dành cho doanh nghiệp
+                            Vừa và lớn, yêu cầu sự
+                            chuyên nghiệp.
+                            Có sử dụng Website
+                        </td>
+                        <td class="bold_text" style="background-color: #D6EBFE;">
+                            Dành cho doanh nghiệp
+                            Vừa và lớn, yêu cầu
+                            xây dựng những tính
+                            năng chuyên biệt cho
+                            hệ thống
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="th_text">Quản lý đại lý / <br />Nhà phân phối</td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                    </tr>
+                    <tr>
+                        <td class="th_text">Quản lý và phân quyền nhóm thành viên</td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                    </tr>
+                    <tr>
+                        <td class="th_text">Tạo chiến dịch khuyến mại qua Topup, evoucher</td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo Hành Điện Tử" src="~/images/bhdt/check_sign.png" /></td>
+                    </tr>
+                    <tr>
+                        <td class="th_text">Web/Wap</td>
+                        <td style="text-align: center;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                    </tr>
+                    <tr>
+                        <td class="th_text">Giải pháp kích hoạt bảo hành qua SMS</td>
+                        @foreach (var item in Model)
+                        {
+                            <td style="text-align: center;vertical-align:middle;"><span class="bold_text">@item.Cuphap</span></td>
+                        }
+                    </tr>
+                    <tr>
+                        <td colspan="5" style="text-align: center;">
+                            (<span class="bold_text">Lưu ý:</span> Phần XX do Doanh nghiệp tự chọn theo nhu cầu và không trùng với cú pháp đã có trên hệ thống)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="th_text">Thời gian hỗ trợ</td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                    </tr>
+                    <tr>
+                        <td class="th_text">Trang Web Quản trị (Cơ bản)</td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;">Tích hợp thêm các API theo yêu cầu</td>
+                    </tr>
+                    <tr>
+                        <td class="th_text">Send Email</td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/error_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/error_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                    </tr>
+                    <tr>
+                        <td class="th_text">Tích hợp</td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/error_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/error_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/error_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                    </tr>
+                    <tr>
+                        <td class="th_text">QR code</td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/error_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                        <td style="text-align: center;vertical-align:middle;"><img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" /></td>
+                    </tr>
+                    <tr>
+                        <td class="th_text">Số lượng mã</td>
+                        @foreach (var item in Model)
+                        {
+                            <td class="blue_color" style="text-align: center;vertical-align:middle;"><span class="bold_text">@item.Quantity</span></td>
+                        }
+                    </tr>
+                    <tr>
+                        <td class="th_text">Brandname theo giá thị trường</td>
+                        @foreach (var item in Model)
+                        {
+                            <td style="text-align: center;vertical-align:middle;">
+                                @if (@item.Discount.ToString() == "1")
+                                {
+                                    <img alt="Bảo hành điện tử" src="~/images/bhdt/check_sign.png" />
+                                }
+                                else if (@item.Discount.ToString() == "0")
+                                {
+                                    <img alt="Bảo hành điện tử" src="~/images/bhdt/error_sign.png" />
+                                }
+                                else
+                                {
+                                    @item.Discount
+                                }
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <td class="th_text">Giải pháp Top-up cộng tiền cho thuê bao kích hoạt</td>
+                        <td class="bold_text blue_color" style="text-align: center;vertical-align:middle;">Miễn phí</td>
+                        <td class="bold_text blue_color" style="text-align: center;vertical-align:middle;">Miễn phí</td>
+                        <td class="bold_text blue_color" style="text-align: center;vertical-align:middle;">Miễn phí</td>
+                        <td class="bold_text blue_color" style="text-align: center;vertical-align:middle;">Miễn phí</td>
+                    </tr>
+                    <tr>
+                        <td style="border: none !important;"></td>
+                        @foreach (var item in Model)
+                        {
+                            <td class="bold_text blue_color" style="border: none !important;text-align: center;vertical-align:middle;">
+                                @if (item.Slug.ToLower() == "supervip")
+                                {
+                                    <p class="banggia_price" style="padding-bottom: 0px;"><a href="tel:@config.Hotline" class="badge contact_now text-wrap">@item.Price</a></p>
+                                }
+                                else
+                                {
+                                    <p class="banggia_price" style="padding-bottom: 0px;">@item.Price</p>
+                                }
+
+                                <a href="@Url.Action("RegisterForm","Register",new {id=item.Id})" class="btn btn-primary">Đăng ký</a>
+                            </td>
+                        }
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<footer class="container footer">
+    <div class="container-fluid px-lg-5">
+        <div class="row">
+            <div class="col-md-12 py-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/">Trang chủ</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="~/gioi-thieu">Giới Thiệu</a></li>
+                                            <li class="short_new_title"><a class="short_new_title" href="~/giai-phap">Giải Pháp</a></li>
+                                            <li class="short_new_title"><a href="~/dung-thu">Dùng Thử</a></li>
+                                            <li class="short_new_title"><a href="~/dang-ky">Đăng Ký Sử Dụng</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/bang-gia">Báo Giá</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Cơ Bản</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Nâng Cao</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước VIP</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Super VIP</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/tin-tuc">Tin tức</a></h2>
+                                        <ul class="list-unstyled">
+                                            @foreach (var oldFooter in footerNews)
+                                            {
+                                                <li class="short_new_title">
+                                                    <a href="@Url.Action("NewsDetail","News",new {rewrite=oldFooter.Link})" class="d-block">
+                                                        @oldFooter.Title
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/kenh-youtube">Kênh Youtube</a></h2>
+                                        <ul class="list-unstyled">
+                                            @foreach (var oldFooterVideo in footerVideos)
+                                            {
+                                                <li class="short_new_title">
+                                                    <a href="@Url.Action("YoutubeChannelDetail", "YoutubeChannel", new { id = oldFooterVideo.Id })" class="d-block">
+                                                        @oldFooterVideo.Title
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="padding-bottom: 40px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_phone.png);background-repeat: no-repeat; background-position-x: 16px; background-position-y: 8px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 58px; padding-bottom: 8px;"><a class="footer_heading_title" style="color: #fff;margin-bottom: 30px;" href="#">Điện thoại</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="tel:02437672210">0243 767 2210</a></li>
+                                            <li class="short_new_title">
+                                                <span style="color: #fff;">Hotline:</span><br />
+                                                <a class="short_new_title" href="tel:@config.Hotline">@config.Hotline</a><span style="color: #fff;"> - </span>
+                                                <a class="short_new_title" href="tel:@config.PhoneNumber">@config.PhoneNumber</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_email.png);background-repeat: no-repeat; background-position-x: 20px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 80px; padding-bottom: 8px;"><a class="footer_heading_title" style="color: #fff;" href="#">Email</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="mail:baohanh@bluesea.vn">baohanh@bluesea.vn</a></li>
+                                            <li class="short_new_title"><a href="mail:xuanhung@bluesea.vn">xuanhung@bluesea.vn</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_location.png);background-repeat: no-repeat; background-position-x: 16px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 48px; padding-bottom: 9px;"><a class="footer_heading_title" style="color: #fff;" href="#">Địa chỉ</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="">
+                                                <span style="color: #fff;">Head Office:</span><br />
+                                                <span style="color: #fff;">91 Trung Kính, Trung Hòa,<br /><span>Cầu Giấy, Hà Nội</span></span>
+                                            </li>
+                                            <br />
+                                            <li class="">
+                                                <span style="color: #fff;">Brand Office:</span><br />
+                                                <span style="color: #fff;">205B Hoàng Hoa Thám, P.6,<br /><span>Bình Thạnh, TP.HCM</span></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_icon.png);background-repeat: no-repeat; background-position-x: 16px;background-position-y: 1px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 68px;padding-bottom: 9px;"><a class="footer_heading_title" style="color: #fff;" href="#">Facebook</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <div id="fb-root"></div>                                                
+                                                <div class="fb-page" data-href="https://www.facebook.com/BaoHanhDienTuBlueSea/" data-tabs="timeline" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/BaoHanhDienTuBlueSea/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/BaoHanhDienTuBlueSea/">Bảo Hành Điện Tử</a></blockquote></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+

@@ -1,0 +1,588 @@
+﻿@model List<Dichvuhoanhao.Entity.Service>
+@{
+    ViewBag.Title = ViewBag.title;
+    ViewBag.Description = ViewBag.description;
+    ViewBag.Keyword = ViewBag.keyword;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    Dichvuhoanhao.Entity.Video video = ViewBag.video;
+    List<Dichvuhoanhao.Entity.Whyme> whyme = ViewBag.whyme;
+    List<Dichvuhoanhao.Entity.Customer> customer = ViewBag.customer;
+    List<Dichvuhoanhao.Entity.ItemService> itemservice = ViewBag.itemservice;
+}
+@section scripts{
+    <script src="/Assets/client/js/slide/custom2.js"></script>
+    <script src="/Assets/client/js/controller/modalController.js"></script>
+
+
+}
+<div class="banner">
+    @{ Html.RenderAction("LoadSlider", "Home");}
+</div>
+<div class="container">
+    <h1 style="font-size:0;">@ViewBag.Title</h1>
+    <div class="video-gt">
+        <div class="why-video col-lg-8">
+            <div class="why-video-title">
+                <h2>Giới thiệu dịch vụ </h2>
+            </div>
+
+            @*<video id="vid" width="100%" controls poster="@video.Icon">
+                    <source src="@video.LinkFile" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+
+                <script>
+                    document.getElementById('vid').play();
+                </script>*@
+            <iframe width="100%" height="auto" style="min-height:400px;" src="https://www.youtube.com/embed/IRx3s3Jmatk" frameborder="0" allowfullscreen></iframe>
+            @*<video id="vid" width="100%" controls poster="@video.Icon">
+                    <source src="@video.LinkFile" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>*@
+        </div>
+    </div>
+
+    <div class="why-hot">
+        <img class="img-responsive" src="~/Assets/client/img/icon-hot.png" alt="." />
+    </div>
+    <div class="whyme">
+        <div class="whyme-title">
+            <h2>tại sao nên chọn chúng tôi</h2>
+        </div>
+        <div class="whyme-content">
+            @foreach (var item in whyme)
+            {
+                if (item.Sort == 1)
+                {
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 why-img">
+                            <img class="img-responsive" src="@item.Image" alt="@item.Title" />
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <img src="~/Assets/client/img/trang-chu_03.png" class="img-responsive" alt="w1" />
+                            </div>
+
+                            <div class="col-lg-10">
+                                <div class="wow bounceInRight" data-wow-delay="0.2s">
+                                    <div class="why-text-title">
+                                        <p>@item.Title</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow bounceInRight" data-wow-delay="0.3s">
+                                <div class="why-text-icon">
+                                    <img src="~/Assets/client/img/11.png" class="img-responsive" alt="1.1">
+                                </div>
+                            </div>
+                            <div class="wow bounceInRight" data-wow-delay="0.4s">
+                                <div class="why-text-text">
+                                    <p>
+                                        @item.Description
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if (item.Sort == 2)
+                {
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 why-img">
+                            <img class="img-responsive" src="@item.Image" alt="@item.Title" />
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <img src="~/Assets/client/img/trang-chu_05.png" class="img-responsive" alt="w2" />
+                            </div>
+
+                            <div class="col-lg-10">
+                                <div class="wow bounceInRight" data-wow-delay="0.2s">
+                                    <div class="why-text-title">
+                                        <p>@item.Title</p>
+                                    </div>
+                                </div>
+                                <div class="wow bounceInRight" data-wow-delay="0.3s">
+                                    <div class="why-text-icon">
+                                        <img src="~/Assets/client/img/12.png" class="img-responsive" alt="1.2">
+                                    </div>
+                                </div>
+                                <div class="wow bounceInRight" data-wow-delay="0.4s">
+                                    <div class="why-text-text">
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if (item.Sort == 3)
+                {
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 why-img">
+                            <img class="img-responsive" src="@item.Image" alt="@item.Title" />
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <img src="~/Assets/client/img/trang-chu_06.png" class="img-responsive" alt="w3" />
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="wow bounceInRight" data-wow-delay="0.2s">
+                                    <div class="why-text-title">
+                                        <p>@item.Title</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow bounceInRight" data-wow-delay="0.3s">
+                                <div class="why-text-icon">
+                                    <img src="~/Assets/client/img/13.png" class="img-responsive" alt="1.3">
+                                </div>
+                            </div>
+                            <div class="wow bounceInRight" data-wow-delay="0.4s">
+                                <div class="why-text-text">
+                                    <p>
+                                        @item.Description
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 why-img">
+                            <img class="img-responsive" src="@item.Image" alt="@item.Title" />
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="min-height:217px;">
+                                <img src="~/Assets/client/img/trang-chu_07.png" class="img-responsive" alt="w4" />
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="wow bounceInRight" data-wow-delay="0.2s">
+                                    <div class="why-text-title">
+                                        <p>@item.Title</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wow bounceInRight" data-wow-delay="0.3s">
+                                <div class="why-text-icon">
+                                    <img src="~/Assets/client/img/14.png" class="img-responsive" alt="1.4">
+                                </div>
+                            </div>
+                            <div class="wow bounceInRight" data-wow-delay="0.4s">
+                                <div class="why-text-text">
+                                    <p>
+                                        @item.Description
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="service">
+        <div class="service-title">
+            <h2>các dịch vụ của chúng tôi</h2>
+        </div>
+
+
+        @foreach (var item in Model)
+        {
+            if (item.Url.Contains("bao-hanh-dien-tu"))
+            {
+                <div class="service-content">
+                    <div class="service-row">
+                        <a title="@item.Name" href="@item.Url"><h3>@item.Name</h3></a>
+                        <div class="service-big col-lg-6 col-md-6">
+                            <div class="wow fadeInLeftBig" data-wow-delay="0.2s">
+                                <img src="@item.BigImage" class="img-responsive" alt="@item.Name">
+                                <div class="service-big-title">
+                                    <div class="service-big-tit">
+                                        <a title="@item.Name" href="@item.Url"><p>@item.Name</p></a>
+                                    </div>
+                                    <div class="service-big-description">
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-list col-lg-6 col-md-6">
+
+                            @for (int i = 0; i < itemservice.Count; i++)
+                            {
+
+                                if (item.Id == itemservice[i].Service)
+                                {
+                                    <div class="service-item">
+                                        <div class="wow bounceInRight" data-wow-delay="0.3s">
+                                            <div class="hvr-wobble-horizontal">
+                                                <div class="service-icon col-lg-3 col-md-3 col-xs-3 col-sm-3">
+                                                    <a title="@item.Name" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">
+                                                        <img src="@itemservice[i].Icon" class="img-responsive" alt="@itemservice[i].Title">
+                                                    </a>
+                                                </div>
+                                                <div class="service-text col-lg-9 col-md-9 col-xs-9 col-sm-9">
+                                                    <h4><a title="@itemservice[i].Title" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">@itemservice[i].Title</a></h4>
+                                                    <p>
+                                                        @itemservice[i].Description
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="service-more">
+                        <a title="@item.Name" href="@item.Url"><p>xem thêm >></p></a>
+                    </div>
+                </div>
+            }
+        }
+        @foreach (var item in Model)
+        {
+            if (item.Url.Contains("tich-diem-doi-qua"))
+            {
+                <div class="service-content">
+                    <div class="service-row">
+                        <a title="@item.Name" href="@item.Url"><h3>@item.Name</h3></a>
+                        <div class="service-big col-lg-6 col-md-6">
+                            <div class="wow fadeInLeftBig" data-wow-delay="0.2s">
+                                <img src="@item.BigImage" class="img-responsive" alt="@item.Name">
+                                <div class="service-big-title">
+                                    <div class="service-big-tit">
+                                        <a title="@item.Name" href="@item.Url"><p>@item.Name</p></a>
+                                    </div>
+                                    <div class="service-big-description">
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-list col-lg-6 col-md-6">
+
+                            @for (int i = 0; i < itemservice.Count; i++)
+                            {
+
+                                if (item.Id == itemservice[i].Service)
+                                {
+                                    <div class="service-item">
+                                        <div class="wow bounceInRight" data-wow-delay="0.3s">
+                                            <div class="hvr-wobble-horizontal">
+                                                <div class="service-icon col-lg-3 col-md-3 col-xs-3 col-sm-3">
+                                                    <a title="@item.Name" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">
+                                                        <img src="@itemservice[i].Icon" class="img-responsive" alt="@itemservice[i].Title">
+                                                    </a>
+                                                </div>
+                                                <div class="service-text col-lg-9 col-md-9 col-xs-9 col-sm-9">
+                                                    <h4><a title="@itemservice[i].Title" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">@itemservice[i].Title</a></h4>
+                                                    <p>
+                                                        @itemservice[i].Description
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="service-more">
+                        <a title="@item.Name" href="@item.Url"><p>xem thêm >></p></a>
+                    </div>
+                </div>
+            }
+        }
+        @foreach (var item in Model)
+        {
+            if (item.Url.Contains("cong-thanh-toan"))
+            {
+                <div class="service-content">
+                    <div class="service-row">
+                        <a title="@item.Name" href="@item.Url"><h3>@item.Name</h3></a>
+                        <div class="service-big col-lg-6 col-md-6">
+                            <div class="wow fadeInLeftBig" data-wow-delay="0.2s">
+                                <img src="@item.BigImage" class="img-responsive" alt="@item.Name">
+                                <div class="service-big-title">
+                                    <div class="service-big-tit">
+                                        <a title="@item.Name" href="@item.Url"><p>@item.Name</p></a>
+                                    </div>
+                                    <div class="service-big-description">
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-list col-lg-6 col-md-6">
+
+                            @for (int i = 0; i < itemservice.Count; i++)
+                            {
+
+                                if (item.Id == itemservice[i].Service)
+                                {
+                                    <div class="service-item">
+                                        <div class="wow bounceInRight" data-wow-delay="0.3s">
+                                            <div class="hvr-wobble-horizontal">
+                                                <div class="service-icon col-lg-3 col-md-3 col-xs-3 col-sm-3">
+                                                    <a title="@item.Name" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">
+                                                        <img src="@itemservice[i].Icon" class="img-responsive" alt="@itemservice[i].Title">
+                                                    </a>
+                                                </div>
+                                                <div class="service-text col-lg-9 col-md-9 col-xs-9 col-sm-9">
+                                                    <h4><a title="@itemservice[i].Title" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">@itemservice[i].Title</a></h4>
+                                                    <p>
+                                                        @itemservice[i].Description
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="service-more">
+                        <a title="@item.Name" href="@item.Url"><p>xem thêm >></p></a>
+                    </div>
+                </div>
+            }
+        }
+        @foreach (var item in Model)
+        {
+            if (item.Url.Contains("thiet-ke-website"))
+            {
+                <div class="service-content">
+                    <div class="service-row">
+                        <a title="@item.Name" href="@item.Url"><h3>@item.Name</h3></a>
+                        <div class="service-big col-lg-6 col-md-6">
+                            <div class="wow fadeInLeftBig" data-wow-delay="0.2s">
+                                <img src="@item.BigImage" class="img-responsive" alt="@item.Name">
+                                <div class="service-big-title">
+                                    <div class="service-big-tit">
+                                        <a title="@item.Name" href="@item.Url"><p>@item.Name</p></a>
+                                    </div>
+                                    <div class="service-big-description">
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-list col-lg-6 col-md-6">
+
+                            @for (int i = 0; i < itemservice.Count; i++)
+                            {
+
+                                if (item.Id == itemservice[i].Service)
+                                {
+                                    <div class="service-item">
+                                        <div class="wow bounceInRight" data-wow-delay="0.3s">
+                                            <div class="hvr-wobble-horizontal">
+                                                <div class="service-icon col-lg-3 col-md-3 col-xs-3 col-sm-3">
+                                                    <a title="@item.Name" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">
+                                                        <img src="@itemservice[i].Icon" class="img-responsive" alt="@itemservice[i].Title">
+                                                    </a>
+                                                </div>
+                                                <div class="service-text col-lg-9 col-md-9 col-xs-9 col-sm-9">
+                                                    <h4><a title="@itemservice[i].Title" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">@itemservice[i].Title</a></h4>
+                                                    <p>
+                                                        @itemservice[i].Description
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="service-more">
+                        <a title="@item.Name" href="@item.Url"><p>xem thêm >></p></a>
+                    </div>
+                </div>
+            }
+        }
+        @foreach (var item in Model)
+        {
+            if (item.Url.Contains("hoa-don-dien-tu"))
+            {
+                <div class="service-content">
+                    <div class="service-row">
+                        <a title="@item.Name" href="@item.Url"><h3>@item.Name</h3></a>
+                        <div class="service-big col-lg-6 col-md-6">
+                            <div class="wow fadeInLeftBig" data-wow-delay="0.2s">
+                                <img src="@item.BigImage" class="img-responsive" alt="@item.Name">
+                                <div class="service-big-title">
+                                    <div class="service-big-tit">
+                                        <a title="@item.Name" href="@item.Url"><p>@item.Name</p></a>
+                                    </div>
+                                    <div class="service-big-description">
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-list col-lg-6 col-md-6">
+
+                            @for (int i = 0; i < itemservice.Count; i++)
+                            {
+
+                                if (item.Id == itemservice[i].Service)
+                                {
+                                    <div class="service-item">
+                                        <div class="wow bounceInRight" data-wow-delay="0.3s">
+                                            <div class="hvr-wobble-horizontal">
+                                                <div class="service-icon col-lg-3 col-md-3 col-xs-3 col-sm-3">
+                                                    <a title="@item.Name" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">
+                                                        <img src="@itemservice[i].Icon" class="img-responsive" alt="@itemservice[i].Title">
+                                                    </a>
+                                                </div>
+                                                <div class="service-text col-lg-9 col-md-9 col-xs-9 col-sm-9">
+                                                    <h4><a title="@itemservice[i].Title" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">@itemservice[i].Title</a></h4>
+                                                    <p>
+                                                        @itemservice[i].Description
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="service-more">
+                        <a title="@item.Name" href="@item.Url"><p>xem thêm >></p></a>
+                    </div>
+                </div>
+            }
+        }
+        @foreach (var item in Model)
+        {
+            if (item.Url.Contains("sms-brandname"))
+            {
+                <div class="service-content">
+                    <div class="service-row">
+                        <a title="@item.Name" href="@item.Url"><h3>@item.Name</h3></a>
+                        <div class="service-big col-lg-6 col-md-6">
+                            <div class="wow fadeInLeftBig" data-wow-delay="0.2s">
+                                <img src="@item.BigImage" class="img-responsive" alt="@item.Name">
+                                <div class="service-big-title">
+                                    <div class="service-big-tit">
+                                        <a title="@item.Name" href="@item.Url"><p>@item.Name</p></a>
+                                    </div>
+                                    <div class="service-big-description">
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-list col-lg-6 col-md-6">
+
+                            @for (int i = 0; i < itemservice.Count; i++)
+                            {
+
+                                if (item.Id == itemservice[i].Service)
+                                {
+                                    <div class="service-item">
+                                        <div class="wow bounceInRight" data-wow-delay="0.3s">
+                                            <div class="hvr-wobble-horizontal">
+                                                <div class="service-icon col-lg-3 col-md-3 col-xs-3 col-sm-3">
+                                                    <a title="@item.Name" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">
+                                                        <img src="@itemservice[i].Icon" class="img-responsive" alt="@itemservice[i].Title">
+                                                    </a>
+                                                </div>
+                                                <div class="service-text col-lg-9 col-md-9 col-xs-9 col-sm-9">
+                                                    <h4><a title="@itemservice[i].Title" href="@item.Url/@itemservice[i].Url-@itemservice[i].Id">@itemservice[i].Title</a></h4>
+                                                    <p>
+                                                        @itemservice[i].Description
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="service-more">
+                        <a title="@item.Name" href="@item.Url"><p>xem thêm >></p></a>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <div class="customer">
+        <div class="customer-title">
+            <h2>khách hàng nói về chúng tôi</h2>
+        </div>
+        <div class="slide-holder2">
+            <div class="slide-pager2">
+                <div class="slide-control-prev2">«</div>
+                <div class="slide-control-next2">»</div>
+            </div>
+            <div class="slide-container2">
+                <div class="slide-stage2">
+                    @foreach (var item in customer)
+                    {
+                        <div class="slide-image2">
+
+                            <ul>
+                                <li>
+                                    <img alt="@item.FullName" src="@item.Image" class="img-responsive img-circle">
+                                </li>
+                                <li>
+                                    <p>@item.Description</p>
+                                </li>
+                                <li>
+                                    <a title="@item.FullName" href="@item.WebsiteAddress">@item.WebsiteAddress</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*modal*@
+    <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    @*<h3 style="color:#1462ac; text-align:center; font-size:23px;" class="modal-title" id="lineModalLabel">TĂNG DOANH SỐ CUỐI NĂM VỚI TỔNG ĐÀI CLOUD CONTACT CENTER</h3>*@
+                    <h3 style="color:#1462ac; text-align:center; font-size:23px;" class="modal-title" id="lineModalLabel">ĐĂNG KÝ NGAY ĐỂ ĐƯỢC HỖ TRỢ</h3>
+                    @*<img style="margin:0 auto;" class="img-responsive" alt="3c mobifone" src="~/Assets/client/img/3cmobifone.png" />*@
+                </div>
+                <div class="modal-body" style="max-height:450px">
+
+                    <div id="getfly-optin-form-iframe-1581665224695"></div>
+                    <script type="text/javascript">(function () { var r = window.document.referrer != "" ? window.document.referrer : window.location.origin; var regex = /(https?:\/\/.*?)\//g; var furl = regex.exec(r); r = furl ? furl[0] : r; var f = document.createElement("iframe"); const url_string = new URLSearchParams(window.location.search); var utm_source, utm_campaign, utm_medium, utm_content, utm_term; if ((!url_string.has('utm_source') || url_string.get('utm_source') == '') && document.cookie.match(new RegExp('utm_source' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_source' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_source') != null ? "&utm_source=" + url_string.get('utm_source') : ""; } if ((!url_string.has('utm_campaign') || url_string.get('utm_campaign') == '') && document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_campaign') != null ? "&utm_campaign=" + url_string.get('utm_campaign') : ""; } if ((!url_string.has('utm_medium') || url_string.get('utm_medium') == '') && document.cookie.match(new RegExp('utm_medium' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_medium' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_medium') != null ? "&utm_medium=" + url_string.get('utm_medium') : ""; } if ((!url_string.has('utm_content') || url_string.get('utm_content') == '') && document.cookie.match(new RegExp('utm_content' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_content' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_content') != null ? "&utm_content=" + url_string.get('utm_content') : ""; } if ((!url_string.has('utm_term') || url_string.get('utm_term') == '') && document.cookie.match(new RegExp('utm_term' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_term' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_term') != null ? "&utm_term=" + url_string.get('utm_term') : ""; } f.setAttribute("src", "https://bluesea.getflycrm.com/api/forms/viewform/?key=WKJYUKv29BNJHq59C9p1u87HntYVJV7MDS3FEJGXcP7TZeMpMW&referrer=" + r); f.style.width = "500px"; f.style.height = "500px"; f.setAttribute("frameborder", "0"); f.setAttribute("marginheight", "0"); f.setAttribute("marginwidth", "0"); var s = document.getElementById("getfly-optin-form-iframe-1581665224695"); s.appendChild(f); })();</script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

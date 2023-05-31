@@ -1,0 +1,53 @@
+﻿
+@{
+    var sms = ViewBag.sms;
+    var icheck = ViewBag.icheck;
+    var hddt = ViewBag.hddt;
+    var dauso = ViewBag.dauso;
+    var digital = ViewBag.digital;
+    var cskh_3c = ViewBag.cskh3c;
+    var contactCenter = ViewBag.contactCenter;
+    var callCenter = ViewBag.callCenter;
+}
+
+<ul class="nav navbar-nav">
+    <li><a class="hvr-pulse-shrink" href="/bao-hanh-dien-tu">Bảo hành điện tử</a></li>
+    <li><p>|</p></li>
+    <li><a class="hvr-pulse-shrink" href="/tich-diem-doi-qua">Tích điểm đổi quà</a></li>
+    <li><p>|</p></li>
+    <li><a class="hvr-pulse-shrink" href="/cong-thanh-toan">Cổng thanh toán</a></li>
+    <li><p>|</p></li>
+
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle hvr-pulse-shrink" data-toggle="dropdown">Thiết kế Website <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="/digital-marketing">Digital Marketing</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="/thiet-ke-website">Thiết kế Website</a></li>
+
+
+        </ul>
+    </li>
+    <li><p>|</p></li>
+    <li><a class="hvr-pulse-shrink" href="/sms-brandname">SMS BrandName</a></li>
+
+    <li><p>|</p></li>
+    <li><a class="hvr-pulse-shrink" href="/hoa-don-dien-tu">Hóa đơn điện tử</a></li>
+
+
+    <li><p>|</p></li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle hvr-pulse-shrink" data-toggle="dropdown">Báo giá <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@dauso.Link">Cổng thanh toán</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@sms.Link">SMS BrandName</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@digital.Link">Digital Marketing</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@hddt.Link">Hóa đơn điện tử</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="@icheck.Link">iCheck</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://quangcaohieuqua.com.vn/bao-hanh-dien-tu/bang-gia-dich-vu-bao-hanh-dien-tu-394">Bảo hành điện tử</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="/thiet-ke-website/bao-gia-501">Thiết kế Website</a></li>
+            
+        </ul>
+    </li>
+    <li><p>|</p></li>
+    <li><a class="hvr-pulse-shrink" href="/lien-he">Liên hệ</a></li>
+</ul>

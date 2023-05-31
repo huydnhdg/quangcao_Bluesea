@@ -1,0 +1,46 @@
+﻿@model IEnumerable<EINVOICE_BLUESEA.Models.Khachhang>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">DataTable with default features</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Số điện thoại</th>
+                    <th>Mã số thuế</th>
+                    <th>Email</th>
+                    <th>Công ty</th>
+                    <th>Số hóa đơn</th>
+                    <th>Nội dung</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Phone</td>
+                        <td>
+                            @item.Taxcode
+                        </td>
+                        <td>@item.Email</td>
+                        <td>@item.Company</td>
+                        <td>@item.Invoice</td>
+                        <td>@item.Note</td>
+                        <td></td>
+                    </tr>
+                }
+
+            </tbody>
+            
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+

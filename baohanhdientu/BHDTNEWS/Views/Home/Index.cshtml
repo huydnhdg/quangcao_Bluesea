@@ -1,0 +1,1050 @@
+﻿@{
+    ViewBag.Title = "Bảo Hành Điện Tử - BLUESEA";
+    Layout = "~/Views/Shared/_LayoutBHDT.cshtml";
+    IEnumerable<BHDTNEWS.Models.Article> footerNews = ViewBag.footerNews;
+    IEnumerable<BHDTNEWS.Models.Video> footerVideos = ViewBag.footerVideos;
+    IEnumerable<BHDTNEWS.Models.Package> packagesList = ViewBag.packagesList;
+    IEnumerable<BHDTNEWS.Models.Banner> bannersList = ViewBag.bannersList;
+    BHDTNEWS.Models.Config config = ViewBag.config;
+}
+<style>
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' width='50' height='50' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
+        width: 50px;
+        height: 50px;
+    }
+
+    .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/></svg>");
+        width: 50px;
+        height: 50px;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        width: 3%;
+    }
+
+    .carousel-indicators li {
+        height: 5px;
+        background-color: red;
+    }
+
+    .section4_contact_button {
+        width: auto;
+    }
+
+    .section4_content_img {
+        width: 400px;
+    }
+</style>
+<h1 class="hidden" style="display: none;">@ViewBag.Title</h1>
+
+<div id="demo" class="carousel slide" data-ride="carousel" data-interval="5000">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/banner1.jpg" alt="banner bao hanh dien tu" width="100%">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/banner2.jpg" alt="banner bao hanh dien tu" width="100%">
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+<!--Section 1-->
+<section class="section1_bg">
+
+    @*<div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="services-2">
+                        <div class="pl-4">
+                            <p class="section1_left_first_text1">
+                                Giải pháp bảo hành
+                                <br />
+                                <span class="section1_left_first_text2">Của cách mạng <span style="white-space: pre;">công nghiệp </span><span class="section1_left_first_text_4_0">4.0</span></span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="services-2">
+                        <div class="text_homepage pl-4 section1_blue_text">
+                            <p><a href="@config.Website">BaoHanhDienTu.VIP</a> là nền tảng cung cấp DV bảo hành điện tử lớn nhất Việt Nam, cung cấp công cụ bảo hành trực tuyến mạnh mẽ cho hàng trăm doanh nghiệp trong mọi lĩnh vực: điện tử, công nghệ, thiết bị công nghiệp, sản phẩm tiêu dùng,... </p>
+                        </div>
+                    </div>
+                    <div data-scroll-index='1' class="services-2 w-100 d-flex section1_phone_button_mobile_area">
+                        <div class="heading_text pl-4 section1_phone_div" style="background: url(/images/bhdt/txt_phone_bg.png) no-repeat">
+                            <form action="@Url.Action("TrialForm","Home")" method="POST" id="frmRegisterHeader">
+                                <input type="text" id="phone" onfocus="this.placeholder=''" onblur="this.placeholder='NHẬP SỐ ĐIỆN THOẠI'" class="section1_phone_input" name="phone" placeholder="NHẬP SỐ ĐIỆN THOẠI" />
+                                <button class="btn btn-primary-outline section1_phone_button checkmobile" id="register" name="register">
+                                    <img alt="Bảo hành điện tử" class="section1_phone_button_img" src="~/images/bhdt/registerButton.png" />
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="section1_right_img img">
+                        <img alt="Bảo hành điện tử" class="img img-responsive" src="~/images/bhdt/section1_right.png" />
+                    </div>
+                </div>
+            </div>
+        </div>*@
+</section>
+
+<!-- Section 2-->
+<section class="">
+    <div class="container section1_bg popular_program_area section__padding">
+        <div class="row">
+            <div class="col-sm-12 justify-content-center text-center">
+
+                <div class="heading-section text-center ftco-animate responsive" style="padding-top:50px;">
+                    <h2 class="section2_header_title">Giải pháp bảo hành <span style="white-space: pre;">ưu việt nhất</span></h2>
+                    <span class="section2_header_content">BlueSea mang tới cho doanh nghiệp chiếc chìa khóa mở cửa thành công bằng giải pháp <span class="pre_wrap">bảo hành 4.0 toàn diện</span></span>
+                    <br /><span class="section2_header_content">nâng cấp trải nghiệm bảo hành cho người dùng
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="horizontalTab" style="font-family: Arial;">
+                    <ul>
+                        <li style="text-align: center;" class="r-tabs-state-active">
+                            <a href="#tab-1" style="padding-top: 48px;">
+                                Giải pháp toàn diện <span class="pre_wrap">và linh hoạt không giới hạn</span>
+                            </a>
+                        </li>
+                        <li style="text-align: center;">
+                            <a href="#tab-2" style="padding-top: 48px;">
+                                Giữ chân khách hàng trung thành
+                            </a>
+                        </li>
+                        <li style="text-align: center;">
+                            <a href="#tab-3" style="padding-top: 48px;">
+                                Dễ dàng quản lý, tra cứu mọi lúc mọi nơi
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="tab-1">
+                        <section>
+                            <div class="section2_tab1_content_bg">
+                                <div class="d-flex justify-content-end no-gutter">
+                                    <div class="col-md-6 pl-md-5 py-md-5">
+                                        <div class="services-2 w-100 d-flex">
+                                            <div class="heading_text pl-4">
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex">
+                                            <div class="heading_text pl-4 section2_text">
+                                                <p style="height: 100px;">Chúng tôi nỗ lực để đảm bảo rằng Doanh nghiệp có quyền tự do và linh hoạt tạo ra những trải nghiệm bảo hành thuận tiện không giới hạn .</p>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex">
+                                            <div class="heading_text pl-4">
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex section1_phone_button_mobile_area">
+                                            <div class="heading_text pl-4 section2_phone_div">
+                                                <form action="@Url.Action("TrialForm","Home")" method="POST" id="frmRegisterMiddle">
+                                                    <input type="text" onfocus="this.placeholder=''" onblur="this.placeholder='NHẬP SỐ ĐIỆN THOẠI'" id="phone" class="section2_phone_input" name="phone" placeholder="NHẬP SỐ ĐIỆN THOẠI" />
+                                                    <button class="btn btn-primary-outline section2_tab_content_phone_button checkmobile_middle_area" id="register" name="register">
+                                                        <img alt="Bảo hành điện tử" class="section1_tab_content_phone_button_img" src="~/images/bhdt/registerButton.png" />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex section2_padding_bottom">
+                                            <div class="heading_text pl-4">
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="tab-2">
+                        <section>
+                            <div class="section2_tab1_content_bg">
+                                <div class="d-flex justify-content-end no-gutter">
+                                    <div class="col-md-6 pl-md-5 py-md-5">
+                                        <div class="services-2 w-100 d-flex">
+                                            <div class="heading_text pl-4">
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex">
+                                            <div class="heading_text pl-4 section2_text">
+                                                <p style="height: 100px;">Khách hàng sẽ nhớ đến và mua hàng của bạn nếu họ biết sản phẩm được bảo hành chu đáo, thuận tiện. Quy trình báo kích hoạt, thực hiện bảo hành nhanh chóng đơn giản qua đó nâng cao lòng trung thành của họ đối với thương hiệu của bạn.<br /></p>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex">
+                                            <div class="heading_text pl-4">
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex section1_phone_button_mobile_area">
+                                            <div class="heading_text pl-4 section2_phone_div">
+                                                <form action="@Url.Action("TrialForm","Home")" method="POST" id="frmRegisterMiddle">
+                                                    <input type="text" onfocus="this.placeholder=''" onblur="this.placeholder='NHẬP SỐ ĐIỆN THOẠI'" id="phone" class="section2_phone_input" name="phone" placeholder="NHẬP SỐ ĐIỆN THOẠI" />
+                                                    <button class="btn btn-primary-outline section2_tab_content_phone_button checkmobile_middle_area" id="register" name="register">
+                                                        <img alt="Bảo hành điện tử" class="section1_tab_content_phone_button_img" src="~/images/bhdt/registerButton.png" />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex section2_padding_bottom">
+                                            <div class="heading_text pl-4">
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="tab-3">
+                        <section>
+                            <div class="section2_tab1_content_bg">
+                                <div class="d-flex justify-content-end no-gutter">
+                                    <div class="col-sm-6 pl-md-5 py-md-5">
+                                        <div class="services-2 w-100 d-flex">
+                                            <div class="heading_text pl-4">
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex">
+                                            <div class="heading_text pl-4 section2_text">
+                                                <p style="height: 100px;">Giải pháp của chúng tôi có khả năng tùy biến cao, tất cả được thực hiện trên môi trường mạng, cho phép bạn dễ dàng lưu trữ thông tin, tra cứu bảo hành cho khách hàng nhanh chóng mọi lúc mọi nơi.</p>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex">
+                                            <div class="heading_text pl-4">
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex section1_phone_button_mobile_area">
+                                            <div class="heading_text pl-4 section2_phone_div">
+                                                <form action="@Url.Action("TrialForm","Home")" method="POST" id="frmRegisterMiddle">
+                                                    <input type="text" onfocus="this.placeholder=''" onblur="this.placeholder='NHẬP SỐ ĐIỆN THOẠI'" id="phone" class="section2_phone_input" name="phone" placeholder="NHẬP SỐ ĐIỆN THOẠI" />
+                                                    <button class="btn btn-primary-outline section2_tab_content_phone_button checkmobile_middle_area" id="register" name="register">
+                                                        <img alt="Bảo hành điện tử" class="section1_tab_content_phone_button_img" src="~/images/bhdt/registerButton.png" />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="services-2 w-100 d-flex">
+                                            <div class="heading_text pl-4">
+                                                <p style="height: 85px;">&nbsp;</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- /tabs -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ./Section 2-->
+<!-- Section 3-->
+<section class="section1_bg">
+    <div class="pricing-container">
+        <div class="pricing-switcher section3_switch_bg">
+            <p class="section3_switch_title">Vận hành <span class="pre_wrap">như thế nào</span></p>
+            <p class="fieldset">
+                <input type="radio" name="duration-1" value="monthly" id="monthly-1" checked>
+                <label for="monthly-1" class="left_label section3_company"></label>
+                <!--<div style="color:red; ">|</div>-->
+                <input type="radio" name="duration-1" value="yearly" id="yearly-1">
+                <label for="yearly-1" class="right_label section3_customer pricing_switcher_right_label"></label>
+                <span class="switch"></span>
+            </p>
+        </div>
+        <ul class="pricing-list bounce-invert section3_content_bg">
+            <li>
+                <ul class="pricing-wrapper">
+                    <li data-type="monthly" class="is-visible">
+                        <header class="pricing-header">
+                            <h5>1. Ký hợp đồng với BlueSea</h5>
+                            <p class="section3_content_text">
+                                Để lại liên hệ của bạn tại đây hoặc gọi ngay
+                                <span class="pre_wrap"><br />Hotline: <a style="color: red;font-weight: bold;" href="tel:@config.Hotline">@config.Hotline</a> - <a style="color: red;font-weight: bold;" href="tel:@config.PhoneNumber">@config.PhoneNumber</a></span>
+                            </p>
+                        </header>
+                        <div class="pricing-body">
+                            <img src="images/bhdt/section3_content_1.jpg" alt="Bảo Hành Điện Tử" class="section3_content_1_img" />
+                        </div>
+                    </li>
+                    <li data-type="yearly" class="is-hidden">
+                        <header class="pricing-header">
+                            <h5>1. Mua sản phẩm, <span class="pre_wrap"><br />kiểm tra tem bảo hành</span></h5>
+                            <p class="section3_content_text">
+                                Kiểm tra chi tiết tem bảo hành và để lấy mã số sản phẩm
+                            </p>
+                        </header>
+                        <div class="pricing-body">
+                            <img src="images/bhdt/section3_content_cus_1.jpg" alt="Bảo Hành Điện Tử" class="section3_content_cus_1_img" />
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="exclusive">
+                <ul class="pricing-wrapper">
+                    <li data-type="monthly" class="is-visible">
+                        <header class="pricing-header">
+                            <h5 class="section3_selected_item_title">2. Chọn phương án triển khai</h5>
+                            <p class="section3_content_text">Chúng tôi sẽ tư vấn để chọn phương án tối ưu theo tình hình thực tế và ngân sách của bạn</p>
+                        </header>
+                        <div class="pricing-body">
+                            <img src="images/bhdt/section3_content_2.jpg" class="section3_content_2_img" />
+                        </div>
+                    </li>
+                    <li data-type="yearly" class="is-hidden">
+                        <header class="pricing-header">
+                            <h5 class="section3_selected_item_title">2. Nhắn tin SMS <span class="pre_wrap"><br />hoặc kích hoạt qua website</span></h5>
+                            <p class="section3_content_text">Nhắn tin theo cú pháp quy định hoặc truy cập vào địa chỉ Website của của nhà sản xuất.</p>
+                        </header>
+                        <div class="pricing-body">
+                            <img src="images/bhdt/section3_content_cus_2.jpg" class="section3_content_2_img" />
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="pricing-wrapper">
+                    <li data-type="monthly" class="is-visible">
+                        <header class="pricing-header">
+                            <h5>3. Áp dụng bảo hành điện tử</h5>
+                            <p class="section3_content_text">Tiến hành in tem bảo hành tích hợp bảo hành điện tử trên toàn hệ thống của doanh nghiệp</p>
+                        </header>
+                        <div class="pricing-body">
+                            <img src="images/bhdt/section3_content_3.png" alt="Bảo Hành Điện Tử" class="section3_content_3_img" />
+                        </div>
+                    </li>
+                    <li data-type="yearly" class="is-hidden">
+                        <header class="pricing-header">
+                            <h5>3. Nhận kết quả kích hoạt <span class="pre_wrap">bảo hành thành công</span></h5>
+                            <p class="section3_content_text">Xem kết quả kích hoạt bảo hành và thời gian bảo hành của sản phẩm</p>
+                        </header>
+                        <div class="pricing-body">
+                            <img src="images/bhdt/section3_content_3.png" alt="Bảo Hành Điện Tử" class="section3_content_3_img" />
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div> <!-- .cd-pricing-container -->
+</section>
+<!-- ./Section 3-->
+<!-- Section 4 -->
+<section>
+    <div class="container section1_bg">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="section4_switch_title">Lựa chọn <span class="pre_wrap">ngân sách phù hợp</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_content_left.jpg" class="section4_content_img responsive" />
+            </div>
+            <div class="col-sm-8">
+                <div class="tab section4_tab_area">
+                    @foreach (var item in packagesList)
+                    {
+                        if (item.Slug == "Standard")
+                        {
+                            <button class="tablinks active" style="font-family: Arial;" onclick="openCity(event, '@item.Slug')">@item.ShortName</button>
+                        }
+                        else
+                        {
+                            <button class="tablinks" style="font-family: Arial;" onclick="openCity(event, '@item.Slug')">@item.ShortName</button>
+                        }
+                    }
+                </div>
+
+                @foreach (var item in packagesList)
+                {
+                    if (item.Slug == "Standard")
+                    {
+                        <div id="@item.Slug" class="tabcontent" style="display: block;">
+                            <div class="">
+                                <div class="col-md-12">&nbsp;</div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <label class="section_4_tick">
+                                        <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_tick.png" />
+                                    </label>
+                                    <span class="section4_content_label">Giá : </span>
+                                    <span class="section4_content_value">@item.Price</span>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <label class="section_4_tick">
+                                        <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_tick.png" />
+                                    </label>
+                                    <span class="section4_content_label">Đầu số SMS : </span>
+                                    @if (item.Dauso == "1")
+                                    {
+                                        <span class="section4_content_value">Có</span>
+                                    }
+                                    else if (item.Dauso == "0")
+                                    {
+                                        <span class="section4_content_value">Không</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="section4_content_value">@item.Dauso</span>
+                                    }
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <label class="section_4_tick">
+                                        <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_tick.png" />
+                                    </label>
+                                    <span class="section4_content_label">Cú pháp kích hoạt bảo hành : </span>
+                                    <span class="section4_content_value">@item.Cuphap</span>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <label class="section_4_tick">
+                                        <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_tick.png" />
+                                    </label>
+                                    <span class="section4_content_label">Web/Wap : </span><span class="section4_content_value">Có</span>
+                                    @*<span class="section4_content_label">APP : </span>
+                                        @if (item.Webwap == "1")
+                                        {
+                                            <span class="section4_content_value">Có</span>
+                                        }
+                                        else if (item.Webwap == "0")
+                                        {
+                                            <span class="section4_content_value">Không</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="section4_content_value">@item.Webwap</span>
+                                        }*@
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <label class="section_4_tick">
+                                        <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_tick.png" />
+                                    </label>
+                                    <span class="section4_content_label">Số lượng mã : </span>
+                                    <span class="section4_content_value">@item.Quantity</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div id="@item.Slug" class="tabcontent">
+                            <div class="">
+                                <div class="col-md-12">&nbsp;</div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <label class="section_4_tick">
+                                        <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_tick.png" />
+                                    </label>
+                                    <span class="section4_content_label">Giá : </span>
+                                    <span class="section4_content_value">@item.Price</span>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <label class="section_4_tick">
+                                        <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_tick.png" />
+                                    </label>
+                                    <span class="section4_content_label">Đầu số SMS : </span>
+                                    @if (item.Dauso == "1")
+                                    {
+                                        <span class="section4_content_value">Có</span>
+                                    }
+                                    else if (item.Dauso == "0")
+                                    {
+                                        <span class="section4_content_value">Không</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="section4_content_value">@item.Dauso</span>
+                                    }
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <label class="section_4_tick">
+                                        <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_tick.png" />
+                                    </label>
+                                    <span class="section4_content_label">Cú pháp kích hoạt bảo hành : </span>
+                                    <span class="section4_content_value">@item.Cuphap</span>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <label class="section_4_tick">
+                                        <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_tick.png" />
+                                    </label>
+
+                                    <span class="section4_content_label">Web/Wap : </span><span class="section4_content_value">Có</span>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <label class="section_4_tick">
+                                        <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_tick.png" />
+                                    </label>
+
+                                    <span class="section4_content_label">APP : </span>
+                                    @if (item.Webwap == "1")
+                                    {
+                                        <span class="section4_content_value">Có</span>
+                                    }
+                                    else if (item.Webwap == "0")
+                                    {
+                                        <span class="section4_content_value">Không</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="section4_content_value">@item.Webwap</span>
+                                    }
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <label class="section_4_tick">
+                                        <img alt="Bảo hành điện tử" src="~/images/bhdt/section4_tick.png" />
+                                    </label>
+                                    <span class="section4_content_label">Số lượng mã : </span>
+                                    <span class="section4_content_value">@item.Quantity</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        @*<div class="row">
+                <div class="col-sm-8"></div>
+                <div data-scroll-nav='1' class="col-sm-4 section4_contact_button_position">
+                    <a class="" href="~/bang-gia">Xem tất cả tính năng</a>
+                </div>
+            </div>*@
+        <div class="row">
+            <div class="col-sm-8"></div>
+            <div data-scroll-nav='1' class="col-sm-4 section4_contact_button_position">
+                <a class="btn btn-info section4_contact_button" href="tel:0945152826">Liên hệ</a>
+                <a class="btn btn-info section4_contact_button" href="~/bang-gia" style="padding-right:15px;">Xem tính năng</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ./Section 4 -->
+<!-- Section 5 -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="section4_switch_title">BlueSea đang <span class="pre_wrap">đồng hành cùng</span> <span class="pre_wrap">nhãn hàng</span></p>
+            </div>
+        </div>
+        <div class="row section5_bg">
+            <div class="col-sm-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ./Section 5 -->
+<!-- Section 6 -->
+<section>
+    <div class="section5_bg">
+        <div class="">
+            <div id="primary-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        @foreach (var item in bannersList)
+                        {
+                            <li class="splide__slide" style="cursor: pointer;" onclick="slider('@item.Link')">
+                                <img data-u="image" data-splide-lazy="@item.Image" />
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+            <div id="secondary-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        @foreach (var item in bannersList)
+                        {
+                            <li class="splide__slide">
+                                <img data-u="image" src="@item.ImageThumbnail" />
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ./Section 6 -->
+<!-- Section 7 -->
+<section>
+    <div class="container section7_bg">
+        <div class="row">
+            <div class="col-sm-2"><p style="width: 100px"></p></div>
+            <div class="col-sm-8">
+                <marquee class="section7_text_1" width="90%" direction="right" height="100px" behavior="alternate">
+                    Bạn vẫn còn câu hỏi?
+                </marquee>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <marquee class="" width="90%" direction="right" behavior="alternate">
+                    <div class="">
+                        <a href="tel:@config.Hotline"><img alt="Bảo hành điện tử" class="" src="~/images/bhdt/section7_contact_now.png" /></a>
+                    </div>
+                </marquee>
+            </div>
+            <div class="col-sm-6">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-11">
+                <marquee class="section7_text_3" width="90%" direction="right" behavior="alternate">
+                    Hoặc gọi Hotline: <a style="color: #FF0707;" href="tel:@config.Hotline">@config.Hotline</a> - <a style="color: #FF0707;" href="tel:@config.PhoneNumber">@config.PhoneNumber</a>
+                </marquee>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ./Section 7 -->
+
+<footer class="container footer">
+    <div class="container-fluid px-lg-5">
+        <div class="row">
+            <div class="col-md-12 py-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/">Trang chủ</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="~/gioi-thieu">Giới Thiệu</a></li>
+                                            <li class="short_new_title"><a class="short_new_title" href="~/giai-phap">Giải Pháp</a></li>
+                                            <li class="short_new_title"><a href="~/dung-thu">Dùng Thử</a></li>
+                                            <li class="short_new_title"><a href="~/dang-ky">Đăng Ký Sử Dụng</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/bang-gia">Báo Giá</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Cơ Bản</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Nâng Cao</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước VIP</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Super VIP</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/tin-tuc">Tin tức</a></h2>
+                                        <ul class="list-unstyled">
+                                            @foreach (var oldFooter in footerNews)
+                                            {
+                                                <li class="short_new_title">
+                                                    <a href="@Url.Action("NewsDetail","News",new {rewrite=oldFooter.Link})" class="d-block">
+                                                        @oldFooter.Title
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/kenh-youtube">Kênh Youtube</a></h2>
+                                        <ul class="list-unstyled">
+                                            @foreach (var oldFooterVideo in footerVideos)
+                                            {
+                                                <li class="short_new_title">
+                                                    <a href="@Url.Action("YoutubeChannelDetail", "YoutubeChannel", new { id = oldFooterVideo.Id })" class="d-block">
+                                                        @oldFooterVideo.Title
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="padding-bottom: 40px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_phone.png);background-repeat: no-repeat; background-position-x: 16px; background-position-y: 8px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 58px; padding-bottom: 8px;"><a class="footer_heading_title" style="color: #fff;margin-bottom: 30px;" href="#">Điện thoại</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="tel:02437672210">0243 767 2210</a></li>
+                                            <li class="short_new_title">
+                                                <span style="color: #fff;">Hotline:</span><br />
+                                                <a class="short_new_title" href="tel:@config.Hotline">@config.Hotline</a><span style="color: #fff;"> - </span>
+                                                <a class="short_new_title" href="tel:@config.PhoneNumber">@config.PhoneNumber</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_email.png);background-repeat: no-repeat; background-position-x: 20px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 80px; padding-bottom: 8px;"><a class="footer_heading_title" style="color: #fff;" href="#">Email</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="mail:baohanh@bluesea.vn">baohanh@bluesea.vn</a></li>
+                                            <li class="short_new_title"><a href="mail:xuanhung@bluesea.vn">xuanhung@bluesea.vn</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_location.png);background-repeat: no-repeat; background-position-x: 16px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 48px; padding-bottom: 9px;"><a class="footer_heading_title" style="color: #fff;" href="#">Địa chỉ</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="">
+                                                <span style="color: #fff;">Head Office:</span><br />
+                                                <span style="color: #fff;">91 Trung Kính, Trung Hòa,<br /><span>Cầu Giấy, Hà Nội</span></span>
+                                            </li>
+                                            <br />
+                                            <li class="">
+                                                <span style="color: #fff;">Brand Office:</span><br />
+                                                <span style="color: #fff;">205B Hoàng Hoa Thám, P.6,<br /><span>Bình Thạnh, TP.HCM</span></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_icon.png);background-repeat: no-repeat; background-position-x: 16px;background-position-y: 1px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 68px;padding-bottom: 9px;"><a class="footer_heading_title" style="color: #fff;" href="#">Facebook</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <div id="fb-root"></div>
+                                                <div class="fb-page" data-href="https://www.facebook.com/BaoHanhDienTuBlueSea/" data-tabs="timeline" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/BaoHanhDienTuBlueSea/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/BaoHanhDienTuBlueSea/">Bảo Hành Điện Tử</a></blockquote></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+@*begin modal*@
+<div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" style="border: none;" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></a>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" style="padding-left: 35px; padding-right: 35px;">
+                    <h3 style="color:rgb(0, 102, 178); text-align:center; font-size:16px;font-weight:bold; font-family: Arial;" class="modal-title" id="lineModalLabel">ĐỂ ĐƯỢC TƯ VẤN MIỄN PHÍ VUI LÒNG ĐĂNG KÍ NGAY</h3>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <!-- content goes here -->
+                <div class="form-wrap" style="max-height:450px;">
+                    <div id="getfly-optin-form-iframe-1591327845229"></div>
+                    <script type="text/javascript">(function () { var r = window.document.referrer != "" ? window.document.referrer : window.location.origin; var regex = /(https?:\/\/.*?)\//g; var furl = regex.exec(r); r = furl ? furl[0] : r; var f = document.createElement("iframe"); const url_string = new URLSearchParams(window.location.search); var utm_source, utm_campaign, utm_medium, utm_content, utm_term; if ((!url_string.has('utm_source') || url_string.get('utm_source') == '') && document.cookie.match(new RegExp('utm_source' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_source' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_source') != null ? "&utm_source=" + url_string.get('utm_source') : ""; } if ((!url_string.has('utm_campaign') || url_string.get('utm_campaign') == '') && document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_campaign' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_campaign') != null ? "&utm_campaign=" + url_string.get('utm_campaign') : ""; } if ((!url_string.has('utm_medium') || url_string.get('utm_medium') == '') && document.cookie.match(new RegExp('utm_medium' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_medium' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_medium') != null ? "&utm_medium=" + url_string.get('utm_medium') : ""; } if ((!url_string.has('utm_content') || url_string.get('utm_content') == '') && document.cookie.match(new RegExp('utm_content' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_content' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_content') != null ? "&utm_content=" + url_string.get('utm_content') : ""; } if ((!url_string.has('utm_term') || url_string.get('utm_term') == '') && document.cookie.match(new RegExp('utm_term' + '=([^;]+)')) != null) { r += "&" + document.cookie.match(new RegExp('utm_term' + '=([^;]+)'))[0]; } else { r += url_string.get('utm_term') != null ? "&utm_term=" + url_string.get('utm_term') : ""; } f.setAttribute("src", "https://bluesea.getflycrm.com/api/forms/viewform/?key=T3OlQtu5PnJHL4ptNdyAG1r1OR2tWET15STqu2bWFVkAzLwOGq&referrer=" + r); f.style.width = "100%"; f.style.height = "500px"; f.setAttribute("frameborder", "0"); f.setAttribute("marginheight", "0"); f.setAttribute("marginwidth", "0"); var s = document.getElementById("getfly-optin-form-iframe-1591327845229"); s.appendChild(f); })();</script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+@*end modal*@
+
+@section style
+{
+    <link href="~/Content/css/splide-sea-green.min.css" rel="stylesheet" />
+    <style>
+        .splide__slide img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+}
+
+@section scripts
+{
+    <script type="text/javascript">
+        function slider(link) {
+            var win = window.open(link, '_blank');
+            win.focus();
+        }
+    </script>
+    <script src="~/Scripts/js/splide.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            var secondarySlider = new Splide('#secondary-slider', {
+                type: 'loop',
+                fixedWidth: 150,
+                height: 150,
+                gap: 10,
+                cover: true,
+                isNavigation: true,
+                autoplay: true,
+                interval: 2500,
+                focus: 'center',
+                breakpoints: {
+                    '600': {
+                        fixedWidth: 86,
+                        height: 60,
+                    }
+                },
+            }).mount();
+
+            var primarySlider = new Splide('#primary-slider', {
+                type: 'loop',
+                heightRatio: 0.458,
+                pagination: true,
+                drag: true,
+                lazyLoad: 'nearby',
+                preloadPages: '3',
+                arrows: true,
+                cover: true,
+            }); // do not call mount() here.
+
+            primarySlider.sync(secondarySlider).mount();
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        setTimeout(function () {
+            $('#squarespaceModal').modal('show');
+
+        }, 30000);
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            SyntaxHighlighter.all();
+        });
+        $(window).load(function () {
+            $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: true,
+                itemWidth: 210,
+                itemMargin: 5,
+                asNavFor: '#slider'
+            });
+
+            $('#slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: true,
+                sync: "#carousel",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#horizontalTab').responsiveTabs({
+                startCollapsed: 'accordion',
+                collapsible: true,
+                rotate: false
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            //hide the subtle gradient layer (.pricing-list > li::after) when pricing table has been scrolled to the end (mobile version only)
+            checkScrolling($('.pricing-body'));
+            $(window).on('resize', function () {
+                window.requestAnimationFrame(function () { checkScrolling($('.pricing-body')) });
+            });
+            $('.pricing-body').on('scroll', function () {
+                var selected = $(this);
+                window.requestAnimationFrame(function () { checkScrolling(selected) });
+            });
+
+            function checkScrolling(tables) {
+                tables.each(function () {
+                    var table = $(this),
+                        totalTableWidth = parseInt(table.children('.pricing-features').width()),
+                        tableViewport = parseInt(table.width());
+                    if (table.scrollLeft() >= totalTableWidth - tableViewport - 1) {
+                        table.parent('li').addClass('is-ended');
+                    } else {
+                        table.parent('li').removeClass('is-ended');
+                    }
+                });
+            }
+
+            //switch from monthly to annual pricing tables
+            bouncy_filter($('.pricing-container'));
+
+            function bouncy_filter(container) {
+                container.each(function () {
+                    var pricing_table = $(this);
+                    var filter_list_container = pricing_table.children('.pricing-switcher'),
+                        filter_radios = filter_list_container.find('input[type="radio"]'),
+                        pricing_table_wrapper = pricing_table.find('.pricing-wrapper');
+
+                    //store pricing table items
+                    var table_elements = {};
+                    filter_radios.each(function () {
+                        var filter_type = $(this).val();
+                        table_elements[filter_type] = pricing_table_wrapper.find('li[data-type="' + filter_type + '"]');
+                    });
+
+                    //detect input change event
+                    filter_radios.on('change', function (event) {
+                        event.preventDefault();
+                        //detect which radio input item was checked
+                        var selected_filter = $(event.target).val();
+
+                        //give higher z-index to the pricing table items selected by the radio input
+                        show_selected_items(table_elements[selected_filter]);
+
+                        //rotate each pricing-wrapper
+                        //at the end of the animation hide the not-selected pricing tables and rotate back the .pricing-wrapper
+
+                        if (!Modernizr.cssanimations) {
+                            hide_not_selected_items(table_elements, selected_filter);
+                            pricing_table_wrapper.removeClass('is-switched');
+                        } else {
+                            pricing_table_wrapper.addClass('is-switched').eq(0).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function () {
+                                hide_not_selected_items(table_elements, selected_filter);
+                                pricing_table_wrapper.removeClass('is-switched');
+                                //change rotation direction if .pricing-list has the .bounce-invert class
+                                if (pricing_table.find('.pricing-list').hasClass('bounce-invert')) pricing_table_wrapper.toggleClass('reverse-animation');
+                            });
+                        }
+                    });
+                });
+            }
+            function show_selected_items(selected_elements) {
+                selected_elements.addClass('is-selected');
+            }
+
+            function hide_not_selected_items(table_containers, filter) {
+                $.each(table_containers, function (key, value) {
+                    if (key != filter) {
+                        $(this).removeClass('is-visible is-selected').addClass('is-hidden');
+
+                    } else {
+                        $(this).addClass('is-visible').removeClass('is-hidden is-selected');
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('body').on('click', '.checkmobile', function (e) {
+                var vnf_regex = /^[0-9]+$/;
+                var mobile = $('#phone').val();
+                if (mobile !== '') {
+                    if (vnf_regex.test(mobile) == false) {
+                        alert('Số điện thoại của bạn không đúng định dạng!');
+                        e.preventDefault();
+                    } else {
+                        //alert('Số điện thoại của bạn hợp lệ!');
+                        $('#frmRegister').submit();
+                    }
+                }
+                else {
+                    alert('Bạn chưa điền số điện thoại!');
+                    e.preventDefault();
+                }
+            });
+
+            $('body').on('click', '.checkmobile_middle_area', function (e) {
+                var vnf_regex = /^[0-9]+$/;
+                var mobile = $('#frmRegisterMiddle').find('input[name="phone"]').val();
+                if (mobile !== '') {
+                    if (vnf_regex.test(mobile) == false) {
+                        alert('Số điện thoại của bạn không đúng định dạng!');
+                        e.preventDefault();
+                    } else {
+                        //alert('Số điện thoại của bạn hợp lệ!');
+                        $('#frmRegisterMiddle').submit();
+                    }
+                }
+                else {
+                    alert('Bạn chưa điền số điện thoại!');
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        let searchParams = new URLSearchParams(window.location.search)
+        if (searchParams.has('success')) {
+            let param = searchParams.get('success');
+            if (param == "success") {
+                alert('Cám ơn bạn đã quan tâm dịch vụ! \nChúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.');
+            }
+        }
+    </script>
+}

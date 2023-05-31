@@ -1,0 +1,354 @@
+﻿@{
+    ViewBag.Title = "Dùng thử - Bảo Hành Điện Tử";    
+    Layout = "~/Views/Shared/_LayoutBHDT.cshtml";
+    IEnumerable<BHDTNEWS.Models.Article> footerNews = ViewBag.footerNews;
+    IEnumerable<BHDTNEWS.Models.Video> footerVideos = ViewBag.footerVideos;
+    BHDTNEWS.Models.Config config = ViewBag.config;
+}
+
+<h1 class="hidden" style="display: none;">@ViewBag.Title</h1>
+
+<section class="bg-light section1_bg">
+    <div class="container dungthu_bg">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="section1_first_text" style="text-align: left;">
+                    
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">                
+                <form class="form-horizontal" action="@Url.Action("TrialDemo","Trial")" method="POST" role="form" id="frmDemo">
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <p class="trial_form_title">Mời bạn nhập nội dung<br />để trải nghiệm dịch vụ</p>
+                        </div>                        
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <input type="text" maxlength="20" id="company" name="company" placeholder="Tên thương hiệu (Panasonic, Aqua...)" style="font-size: 25px;" class="form-control" autofocus>
+                            <span class="required_text">(Vui lòng nhập nội dung không dấu và tối đa 20 ký tự)</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <input type="text" maxlength="20" id="product" name="product" placeholder="Tên sản phẩm (Máy lọc nước, nồi cơm điện...)" class="form-control" autofocus>
+                            <span class="required_text">(Vui lòng nhập nội dung không dấu và tối đa 20 ký tự)</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <input type="text" maxlength="11" id="hotline" name="hotline" placeholder="Hotline" class="form-control" value="@ViewBag.trial_form_phone">
+                            <span class="required_text">(Vui lòng nhập đúng số điện thoại Hotline)</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <input type="text" maxlength="20" id="product_code" name="product_code" placeholder="Mã sản phẩm trên tem" class="form-control">
+                            <span class="required_text">(Vui lòng nhập mã sản phẩm dự kiến)</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <select id="warranty_time" name="warranty_time" class="form-control">
+                                <option value="">Thời gian bảo hành</option>
+                                <option value="1">1 năm</option>
+                                <option value="2">2 năm</option>
+                                <option value="3">3 năm</option>
+                                <option value="4">4 năm</option>
+                                <option value="5">5 năm</option>
+                                <option value="6">6 năm</option>
+                                <option value="7">7 năm</option>
+                                <option value="8">8 năm</option>
+                                <option value="9">9 năm</option>
+                                <option value="10">10 năm</option>
+                            </select>
+                            <span class="required_text">(Vui lòng chọn thời gian bảo hành sản phẩm)</span>
+                        </div>
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <button type="submit" id="btnConfirm" class="btn btn-primary btn-block" >Xác nhận</button>
+                        </div>
+                    </div>
+                </form> <!-- /form -->
+            </div>
+            <div class="col-md-5">
+                <div class="row" style="text-align: center; text-transform: uppercase; padding-top: 40px; font-size: 18px; color: #0065b3;">
+                    <p>Mẫu tem dự kiến</p>
+                </div>
+                <div class="row">
+                    <div class="dungthu_temp_box_demo">
+                        <p style="text-transform: uppercase;text-align: center;">Sản phẩm được phân phối bởi công ty <span id="company_demo_text"></span></p>
+                        <p>Mã sản phẩm: <span id="productcode_demo_text" style="text-transform: uppercase;color: #fff; margin-left: 10px;padding: 6px;background-image: url(../../images/bhdt/trial_temp_code_bg.png);"></span></p>
+                        <p>Nhắn tin BHDT <span id="productcode_demo_syntax_text" style="text-transform: uppercase;"></span> gửi 8077</p>
+                        <p>Hoặc truy cập kichhoat.baohanhdientu.vip để kích hoạt bảo hành</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="container footer">
+    <div class="container-fluid px-lg-5">
+        <div class="row">
+            <div class="col-md-12 py-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/">Trang chủ</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="~/gioi-thieu">Giới Thiệu</a></li>
+                                            <li class="short_new_title"><a class="short_new_title" href="~/giai-phap">Giải Pháp</a></li>
+                                            <li class="short_new_title"><a href="~/dung-thu">Dùng Thử</a></li>
+                                            <li class="short_new_title"><a href="~/dang-ky">Đăng Ký Sử Dụng</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/bang-gia">Báo Giá</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Cơ Bản</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Nâng Cao</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước VIP</a></li>
+                                            <li class="short_new_title"><a href="~/bang-gia">Gói Cước Super VIP</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/tin-tuc">Tin tức</a></h2>
+                                        <ul class="list-unstyled">
+                                            @foreach (var oldFooter in footerNews)
+                                            {
+                                                <li class="short_new_title">
+                                                    <a href="@Url.Action("NewsDetail","News",new {rewrite=oldFooter.Link})" class="d-block">
+                                                        @oldFooter.Title
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h2><a class="footer_heading_title" style="color: #fff;" href="~/kenh-youtube">Kênh Youtube</a></h2>
+                                        <ul class="list-unstyled">
+                                            @foreach (var oldFooterVideo in footerVideos)
+                                            {
+                                                <li class="short_new_title">
+                                                    <a href="@Url.Action("YoutubeChannelDetail", "YoutubeChannel", new { id = oldFooterVideo.Id })" class="d-block">
+                                                        @oldFooterVideo.Title
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="padding-bottom: 40px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_phone.png);background-repeat: no-repeat; background-position-x: 16px; background-position-y: 8px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 58px; padding-bottom: 8px;"><a class="footer_heading_title" style="color: #fff;margin-bottom: 30px;" href="#">Điện thoại</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="tel:02437672210">0243 767 2210</a></li>
+                                            <li class="short_new_title">
+                                                <span style="color: #fff;">Hotline:</span><br />
+                                                <a class="short_new_title" href="tel:@config.Hotline">@config.Hotline</a><span style="color: #fff;"> - </span>
+                                                <a class="short_new_title" href="tel:@config.PhoneNumber">@config.PhoneNumber</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_email.png);background-repeat: no-repeat; background-position-x: 20px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 80px; padding-bottom: 8px;"><a class="footer_heading_title" style="color: #fff;" href="#">Email</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="short_new_title"><a href="mail:baohanh@bluesea.vn">baohanh@bluesea.vn</a></li>
+                                            <li class="short_new_title"><a href="mail:xuanhung@bluesea.vn">xuanhung@bluesea.vn</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_location.png);background-repeat: no-repeat; background-position-x: 16px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 48px; padding-bottom: 9px;"><a class="footer_heading_title" style="color: #fff;" href="#">Địa chỉ</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li class="">
+                                                <span style="color: #fff;">Head Office:</span><br />
+                                                <span style="color: #fff;">91 Trung Kính, Trung Hòa,<br /><span>Cầu Giấy, Hà Nội</span></span>
+                                            </li>
+                                            <br />
+                                            <li class="">
+                                                <span style="color: #fff;">Brand Office:</span><br />
+                                                <span style="color: #fff;">205B Hoàng Hoa Thám, P.6,<br /><span>Bình Thạnh, TP.HCM</span></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3" style="background-image: url(../../images/bhdt/footer_fb_icon.png);background-repeat: no-repeat; background-position-x: 16px;background-position-y: 1px;">
+                                        <h2 style="border-bottom: 3px solid #fff; padding-left: 68px;padding-bottom: 9px;"><a class="footer_heading_title" style="color: #fff;" href="#">Facebook</a></h2>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <div id="fb-root"></div>                                                
+                                                <div class="fb-page" data-href="https://www.facebook.com/BaoHanhDienTuBlueSea/" data-tabs="timeline" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/BaoHanhDienTuBlueSea/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/BaoHanhDienTuBlueSea/">Bảo Hành Điện Tử</a></blockquote></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('body').on('click', '#btnConfirm', function (e) {
+                var errors_title = "Vui lòng kiểm tra lại:";
+                var errors = "";
+                var vnf_regex = /^[0-9]+$/;
+                var hotline = $('#hotline').val().trim();
+                var company = $('#company').val().trim();
+                var product = $('#product').val().trim();
+                var product_code = $('#product_code').val().trim();
+                var warranty_time = $('#warranty_time').val().trim();
+
+                if (company == '' || company.length < 3) {
+                    errors += "\n - Bạn chưa nhập tên công ty hoặc tên bạn nhập quá ngắn!";
+                    e.preventDefault();
+                }
+
+                if (product == '' || product.length < 3) {
+                    errors += "\n - Bạn chưa nhập tên sản phẩm hoặc tên bạn nhập quá ngắn!";
+                    e.preventDefault();
+                }
+
+                if (product_code == '' || product_code.length < 3) {
+                    errors += "\n - Bạn chưa nhập mã sản phẩm hoặc mã bạn nhập quá ngắn!";
+                    e.preventDefault();
+                }
+
+                if (warranty_time == '' || warranty_time.length == 0) {
+                    errors += "\n - Bạn chưa chọn thời gian bảo hành!";
+                    e.preventDefault();
+                }
+
+                if (hotline !== '' && hotline.length > 0) {
+                    if (vnf_regex.test(hotline) == false) {
+                        errors += "\n - Số điện thoại của bạn không đúng định dạng!";
+                        e.preventDefault();
+                    }
+                }
+                else {
+                    errors += "\n - Bạn chưa điền số điện thoại!";
+                    e.preventDefault();
+                }
+
+                if (errors !== '') {                    
+                    alert(errors_title + errors);                    
+                } else {
+                    $('#frmDemo').submit();
+                    waitingDialog.show('Xin vui lòng đợi trong giây lát!', { dialogSize: 'sm', progressType: 'striped progress-bar-animated' }); setTimeout(function () { waitingDialog.hide(); }, 13000);
+                }
+            });
+
+            $("#company").on("keyup paste", function () {
+                $("#company_demo_text").html($(this).val());
+            });
+
+            /*$("#product").on("keyup paste", function () {
+                $("#product_demo_text").html($(this).val());
+            });*/
+
+            /*$("#hotline").on("keyup paste", function(){
+                $("#company_demo_text").html($(this).val());
+            });*/
+
+            $("#product_code").on("keyup paste", function () {
+                $("#productcode_demo_text").html($(this).val());
+                $("#productcode_demo_syntax_text").html($(this).val());
+            });
+        });
+
+
+        /**
+         * Module for displaying "Waiting for..." dialog using Bootstrap
+         *
+         * author Eugene Maslovich <ehpc@em42.ru>
+         */
+
+        var waitingDialog = waitingDialog || (function ($) {
+            'use strict';
+
+	        // Creating modal dialog's DOM
+	        var $dialog = $(
+		        '<div class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true" style="padding-top:15%; overflow-y:visible;">' +
+		        '<div class="modal-dialog modal-m">' +
+		        '<div class="modal-content">' +
+			        '<div class="modal-header"><h3 style="margin:0;color: #1C668B;"></h3></div>' +
+			        '<div class="modal-body">' +
+				        '<div class="progress progress-striped active" style="margin-bottom:0;"><div class="progress-bar" style="width: 100%;"></div></div>' +
+			        '</div>' +
+		        '</div></div></div>');
+
+	        return {
+		        /**
+		         * Opens our dialog
+		         * param message Custom message
+		         * param options Custom options:
+		         * 				  options.dialogSize - bootstrap postfix for dialog size, e.g. "sm", "m";
+		         * 				  options.progressType - bootstrap postfix for progress bar type, e.g. "success", "warning".
+		         */
+		        show: function (message, options) {
+			        // Assigning defaults
+			        if (typeof options === 'undefined') {
+				        options = {};
+			        }
+			        if (typeof message === 'undefined') {
+				        message = 'Loading';
+			        }
+			        var settings = $.extend({
+				        dialogSize: 'm',
+				        progressType: '',
+				        onHide: null // This callback runs after the dialog was hidden
+			        }, options);
+
+			        // Configuring dialog
+			        $dialog.find('.modal-dialog').attr('class', 'modal-dialog').addClass('modal-' + settings.dialogSize);
+			        $dialog.find('.progress-bar').attr('class', 'progress-bar');
+			        if (settings.progressType) {
+                        $dialog.find('.progress-bar').addClass('progress-bar-' + settings.progressType);
+			        }
+			        $dialog.find('h3').text(message);
+			        // Adding callbacks
+			        if (typeof settings.onHide === 'function') {
+				        $dialog.off('hidden.bs.modal').on('hidden.bs.modal', function (e) {
+					        settings.onHide.call($dialog);
+				        });
+			        }
+			        // Opening dialog
+			        $dialog.modal();
+		        },
+		        /**
+		         * Closes dialog
+		         */
+		        hide: function () {
+			        $dialog.modal('hide');
+		        }
+	        };
+
+        })(jQuery);
+
+    </script>
+}
+

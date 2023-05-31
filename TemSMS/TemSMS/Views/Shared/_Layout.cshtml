@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@ViewBag.Description">
+    <meta name="keywords" content="@ViewBag.Keywords">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/animate.css" rel="stylesheet" />
+    <link href="~/Content/hover.css" rel="stylesheet" />
+    <link href="~/Content/slidequestion.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '510033152686388',
+                xfbml: true,
+                version: 'v3.0'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script async src="//static.zotabox.com/b/a/ba873ec866d0196248a2259b28d93868/widgets.js"></script>
+    <meta name="google-site-verification" content="dyCs9wZWwt3rmS5FKJSp7taM5ufkGjI7DrKxSPhod_E" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122149252-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-122149252-1');
+    </script>
+</head>
+<body>
+    
+    <header class="container">
+        <div style="float:left;">
+            <a href="~/">
+                <img src="~/images/logo-header.png" class="img-responsive" alt="BLUESEA" width="150" />
+            </a>
+        </div>
+        <div style="float:right;margin-top:-10px;">
+            <a href="tel:0986113058">
+                <img src="~/images/line.png" alt=""/>
+            </a>
+        </div>
+    </header>
+    <div class="menu-nav" style="">
+        <nav id="mainNav" class="navbar navbar-default navbar-custom container">
+            <div class="menu">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a title="" class="page-scroll" href="~/">TRANG CHỦ</a>
+                        </li>
+                        <li><img src="~/images/soc.png" style="padding-top:2px;" class="pc" alt="" /></li>
+                        <li style="padding-left:5px;">
+                            <a title="" class="page-scroll" href="~/tin-tuc/tem-xac-thuc">TEM XÁC THỰC SMS</a>
+                        </li>
+                        <li><img src="~/images/soc.png" style="padding-top:2px;" class="pc" alt="" /></li>
+                        <li style="padding-left:5px;">
+                            <a title="" class="page-scroll" href="~/tin-tuc/bao-hanh-dien-tu">BẢO HÀNH ĐIỆN TỬ SMS</a>
+                        </li>
+                        <li><img src="~/images/soc.png" style="padding-top:2px;" class="pc" alt="" /></li>
+                        <li style="padding-left:5px;">
+                            <a title="" class="page-scroll" href="~/tin-tuc/lap-trinh-chuong-trinh-khuyen-mai">LẬP TRÌNH CT TRÚNG THƯỞNG</a>
+                        </li>
+                        <li><img src="~/images/soc.png" style="padding-top:2px;" class="pc" alt="" /></li>
+                        <li style="padding-left:5px;">
+                            <a title="" class="page-scroll" href="~/tin-tuc/huong-dan-dang-ky-chuong-trinh-khuyen-mai">HƯỚNG DẪN DK CTKM</a>
+                        </li>
+                        <li><img src="~/images/soc.png" style="padding-top:2px;" class="pc" alt="" /></li>
+                        <li style="padding-left:5px;">
+                            <a title="" class="page-scroll" href="~/tin-tuc">TIN TỨC</a>
+                        </li>
+                        <li><img src="~/images/soc.png" style="padding-top:2px;" class="pc" alt="" /></li>
+                        <li style="padding-left:5px;">
+                            <a title="" class="page-scroll" href="#foot">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    @{ Html.RenderAction("LoadSlider", "Default");}
+    <div class="container body-content">
+        @RenderBody()
+        <a href="tel:0986113058" id="scroll" style="display: none;"><img src="~/images/line.png" alt=""/></a>
+    </div>
+
+    <div class="v-form-fixed-3 v-form-fixed">
+        <div class="wrap-v-form">
+            <div class="v-form-title">
+                ĐỂ ĐƯỢC TƯ VẤN MIỄN PHÍ, VUI LÒNG ĐĂNG KÍ NGAY
+            </div>
+            @*<div class="v-form-description">
+                    <p>Tai day du thong tin du an</p>
+                </div>*@
+            <div class="v-form-content clearfix">
+                <div class="form-wrap">
+                    <form>
+                        <div>
+                            <div class="form-group">
+                                <input type="text" name="full-name" id="mname" required="required" data-error="{'required':true, 'letterOnly':true}" data-message="{'required':'Họ và tên là bắt buộc', 'letterOnly':'Vui lòng nhập tên hợp lệ'}" placeholder="Họ và tên(*)" class="form-control error" maxlength="50" aria-required="true">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="memail" required="required" data-error="{'email': true}" data-message="{'email': 'Vui lòng nhập email hợp lệ'}" placeholder="Email(*)" class="form-control valid" maxlength="70">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <input type="tel" name="phone-number" id="mphone" required="required" data-error="{'required':true, 'minlenght': 7}" data-message="{'required':'Số điện thoại là bắt buộc', 'minlenght': 'Vui lòng nhập ít nhất 7 số'}" placeholder="Điện thoại(*)" class="form-control error" maxlength="13" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div>
+                            <div class="form-group">
+                                <input type="text" name="company" id="mcompany" required="required" data-error="{'required':true, 'letterOnly':true}" data-message="{'required':'Tên công ty là bắt buộc', 'letterOnly':'Vui lòng nhập tên công ty của bạn'}" placeholder="Công ty" class="form-control error" maxlength="500" aria-required="true">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="mtext" name="text" rows="3" placeholder="Ghi chú"></textarea>
+                            </div>
+                        </div>
+                        <div class="sendmail-submit" style="text-align:center;">
+                            <button id="mbtnSend" type="submit" data-dismiss="modal" class="btn btn-primary">ĐĂNG KÝ NGAY</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="before v-close-form-fixed">
+            +
+        </div>
+    </div>
+    <div class="v-open-form-fixed-3 blink">
+        <i class="fa fa-envelope"></i>
+    </div>
+
+    @*<hr style="border-top: 1px solid #c8c7c7;" />*@
+    <section id="foot" style="background-color:#404040;">
+        <footer class="container">
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <a href="~/">
+                    <img src="~/images/logo-header.png" class="img-responsive" alt="BLUESEA" width="150" />
+                </a>
+                <div style="padding-top:25px!important;">
+                    <p>Trụ sở chính: 91 Trung Kính - Trung Hòa - Cầu Giấy - Hà Nội</p>
+                    <p>Điện thoại: 024.3.767.2210 hoặc 0986.113.058</p>
+                    <p>Fax: 024.3.767.2005</p>
+                    <p>Chi nhánh: 205B Hoàng Hoa Thám - P6 - Quận Bình Thạnh - TP. HCM</p>
+                    <p>Điện thoại: 028.3.515.8577 hoặc 028.3.550.0422</p>
+                    <p>Fax: 028.3.515.3123</p>
+                    <p>© 2013 Bluesea Media, JSC</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="fb-page"
+                     data-href="https://www.facebook.com/tuvanquangcaohieuqua/?ref=br_rs"
+                     data-width="340"
+                     data-hide-cover="false"
+                     data-show-facepile="true">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12 contact">
+                <div class="form-wrap">
+                    <form>
+                        <div>
+                            <div class="form-group">
+                                <input type="text" name="full-name" id="name" required="required" data-error="{'required':true, 'letterOnly':true}" data-message="{'required':'Họ và tên là bắt buộc', 'letterOnly':'Vui lòng nhập tên hợp lệ'}" placeholder="Họ và tên(*)" class="form-control error" maxlength="50" aria-required="true">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" required="required" data-error="{'email': true}" data-message="{'email': 'Vui lòng nhập email hợp lệ'}" placeholder="Email(*)" class="form-control valid" maxlength="70">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <input type="tel" name="phone-number" id="phone" required="required" data-error="{'required':true, 'minlenght': 7}" data-message="{'required':'Số điện thoại là bắt buộc', 'minlenght': 'Vui lòng nhập ít nhất 7 số'}" placeholder="Điện thoại(*)" class="form-control error" maxlength="13" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div>
+                            <div class="form-group">
+                                <input type="text" name="company" id="company" required="required" data-error="{'required':true, 'letterOnly':true}" data-message="{'required':'Tên công ty là bắt buộc', 'letterOnly':'Vui lòng nhập tên công ty của bạn'}" placeholder="Công ty" class="form-control error" maxlength="500" aria-required="true">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="text" name="text" rows="3" placeholder="Ghi chú"></textarea>
+                            </div>
+                        </div>
+                        <div class="sendmail-submit" style="text-align:center;">
+                            <button id="btnSend" type="submit" data-dismiss="modal" class="btn btn-primary">ĐĂNG KÝ NGAY</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </footer>
+    </section>
+    @*<footer class="container">
+            <div class="col-lg-2">
+                <img src="~/images/logo-header.png" class="img-responsive" alt="BLUESEA" width="150" />
+
+            </div>
+            <div class="col-lg-10">
+                <div class="menu-footer">
+                    <ul>
+                        <li>
+                            <a href="" title="">Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Sản phẩm - dịch vụ</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Đối tác</a>
+                        </li>
+                        <li>
+                            <a href="tin-tuc" title="">Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Gia nhập Bluesea</a>
+                        </li>
+                        <li>
+                            <a href="~/" title="">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-footer">
+                    <div class="col-lg-8">
+                        <p>Trụ sở chính: 91 Trung Kính - Trung Hòa - Cầu Giấy - Hà Nội</p>
+                        <p>Điện thoại: 04.3.767.2210 hoặc 0986.113.058 Fax: 04.3.767.2005</p>
+                        <br />
+                        <p>Chi nhánh: 205B Hoàng Hoa Thám - P6 - Quận Bình Thạnh - TP. HCM</p>
+                        <p>Điện thoại: 08.3.515.8577 hoặc 08.3.550.0422 Fax: 08.3.515.3123</p>
+                        <p>© 2013 Bluesea Media, JSC</p>
+                    </div>
+                    <div class="col-lg-4 call-footer">
+                        <div class="text-center col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                            <a href="tel:0986113058" title="">
+                                <img src="~/images/call-footer.png" width="50" /><br />
+                                0986.113.058
+                            </a>
+                        </div>
+                        <div class="text-center col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                            <a href="mailto:vinhtq@bluesea.vn" title="">
+                                <img src="~/images/mail-footer.png" width="50" /><br />
+                                vinhtq@bluesea.vn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>*@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+
+    <script src="~/Scripts/agency.js"></script>
+
+    <script src="~/Scripts/slidequestion.js"></script>
+    <script src="~/Scripts/contact.js"></script>
+    <script src="~/Scripts/mcontact.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            function set_fixed_form_max_width() {
+                var fixed_form_w = $(".v-form-fixed-3").outerWidth();
+                if (screen.width <= fixed_form_w) {
+                    $(".v-form-fixed-3").addClass("over-screen");
+                }
+            }
+
+            set_fixed_form_max_width();
+
+            $(".v-close-form-fixed").click(function () {
+                $(".v-form-fixed-3").removeClass("active");
+                $(".v-open-form-fixed-3").addClass("active");
+            });
+
+            setTimeout(function () {
+                $(".v-form-fixed-3").addClass("active");
+                set_fixed_form_max_width();
+            }, 6000);
+
+
+
+            $(".v-open-form-fixed-3, .v-show-form-fixed, .v-open-form-fixed").click(function () {
+
+                $(".v-form-fixed-3").addClass("active");
+                $(".v-open-form-fixed-3").removeClass("active");
+                set_fixed_form_max_width();
+            });
+
+            $(".v-toggle-form-fixed").click(function () {
+
+                $(".v-form-fixed-3").toggleClass("active");
+                $(".v-open-form-fixed-3").toggleClass("active");
+                set_fixed_form_max_width();
+            });
+
+
+
+            var fixed_form_3_item = $(".v-form-fixed-3 .v-form-item").size();
+
+
+            switch (fixed_form_3_item) {
+                case 2:
+                    {
+                        $(".v-form-fixed-3 .v-form-item").addClass("v-col-6 fl border-box");
+                        break;
+                    }
+                case 3:
+                    {
+                        $(".v-form-fixed-3 .v-form-item").addClass("v-col-4 fl border-box");
+                        break;
+                    }
+                case 4:
+                    {
+                        $(".v-form-fixed-3 .v-form-item").addClass("v-col-6 fl border-box");
+                        break;
+                    }
+            }
+
+
+        });
+
+    </script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#scroll').fadeIn();
+                } else {
+                    $('#scroll').fadeOut();
+                }
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.blink').each(function () {
+                var elem = $(this);
+                setInterval(function () {
+                    if (elem.css('visibility') == 'hidden') {
+                        elem.css('visibility', 'visible');
+                    } else {
+                        elem.css('visibility', 'hidden');
+                    }
+                }, 500);
+            });
+        });
+
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿@model List<Dichvuhoanhao.Entity.Partner>
+
+<div class="partner-title">
+    <h2>đối tác chiến lược</h2>
+</div>
+<div class="slide-holder1">
+    <div class="slide-pager1">
+        <div class="slide-control-prev1">«</div>
+        <div class="slide-control-next1">»</div>
+    </div>
+    <div class="slide-container1">
+        <div class="slide-stage1">
+            @foreach (var item in Model)
+            {
+                <div class="slide-image1">
+                    <a href="@item.WebsiteAddress" title="@item.PartnerName">
+                        <img src="@item.Image" class="img-responsive" alt="@item.PartnerName" />
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

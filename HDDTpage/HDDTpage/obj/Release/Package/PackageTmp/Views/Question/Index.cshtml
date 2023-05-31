@@ -1,0 +1,22 @@
+﻿@model IEnumerable<HDDTpage.Models.Article>
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Client.cshtml";
+    }
+    <div class="title">
+        <h1>GIẢI ĐÁP THẮC MẮC</h1>
+    </div>
+    <div class="list-article">
+        @foreach (var item in Model)
+        {
+            <div class="list-item">
+                <div class="icon col-md-2">
+                    <a href="@Url.Action("QuestionDetail","Question",new {rewrite=item.Url})" title="@item.Title"><img src="@item.Image" alt="@item.Title" class="img-circle img-responsive" /></a>
+                </div>
+                <div class="right col-md-10">
+                    <a href="@Url.Action("QuestionDetail","Question",new {rewrite=item.Url})" title="@item.Title"><h2 style="display:block !important;">@item.Title</h2></a>
+                    <p>@item.Description</p>
+                </div>
+            </div>
+        }        
+    </div>

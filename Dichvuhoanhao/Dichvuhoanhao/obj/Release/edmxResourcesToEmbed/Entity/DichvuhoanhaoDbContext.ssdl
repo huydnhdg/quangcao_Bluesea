@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="webdichvuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="500" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="WebsiteAddress" Type="varchar" MaxLength="100" />
+    <Property Name="Alt" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="Alt" Type="nvarchar" MaxLength="100" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="ServiceChose" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Function">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icon" Type="varchar" MaxLength="100" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Alt" Type="nvarchar" MaxLength="100" />
+    <Property Name="Service" Type="bigint" Nullable="false" />
+    <Property Name="LinkDetail" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ItemService">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="Icon" Type="varchar" MaxLength="100" />
+    <Property Name="BigImage" Type="varchar" MaxLength="100" />
+    <Property Name="Alt" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Service" Type="bigint" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="MetaTitle" Type="nvarchar" MaxLength="250" />
+    <Property Name="MetaDescription" Type="nvarchar" MaxLength="250" />
+    <Property Name="Url" Type="varchar" MaxLength="100" />
+    <Property Name="Tags" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="LinkHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Link" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Mailsystem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Pass" Type="varchar" MaxLength="255" />
+    <Property Name="Keys" Type="int" />
+  </EntityType>
+  <EntityType Name="Partner">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PartnerName" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="Alt" Type="nvarchar" MaxLength="100" />
+    <Property Name="WebsiteAddress" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Quote">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="Alt" Type="nvarchar" MaxLength="100" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="FileDownload" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Service" Type="bigint" Nullable="false" />
+    <Property Name="MetaTitle" Type="nvarchar" MaxLength="250" />
+    <Property Name="MetaDescription" Type="nvarchar" MaxLength="250" />
+    <Property Name="Url" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BigImage" Type="varchar" MaxLength="100" />
+    <Property Name="Icon" Type="varchar" MaxLength="100" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Alt" Type="nvarchar" MaxLength="100" />
+    <Property Name="MetaTitle" Type="nvarchar" MaxLength="250" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="50" />
+    <Property Name="MetaDescription" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Skype">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SkypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="LinkSkype" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Slider">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="Link" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Title">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Extra1" Type="nvarchar" MaxLength="500" />
+    <Property Name="Extra2" Type="nvarchar" MaxLength="500" />
+    <Property Name="Extra3" Type="nvarchar" MaxLength="500" />
+    <Property Name="Extra4" Type="nvarchar" MaxLength="500" />
+    <Property Name="Extra5" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Usercms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Video">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icon" Type="varchar" MaxLength="100" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="LinkFile" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Whyme">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Icon" Type="varchar" MaxLength="100" />
+    <Property Name="Alt" Type="nvarchar" MaxLength="100" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Sort" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Function_Services">
+    <End Role="Services" Type="Self.Services" Multiplicity="1" />
+    <End Role="Function" Type="Self.Function" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Function">
+        <PropertyRef Name="Service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Quote_Services">
+    <End Role="Services" Type="Self.Services" Multiplicity="1" />
+    <End Role="Quote" Type="Self.Quote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Quote">
+        <PropertyRef Name="Service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="webdichvuModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Event" EntityType="Self.Event" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Feedback" EntityType="Self.Feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Function" EntityType="Self.Function" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemService" EntityType="Self.ItemService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LinkHeader" EntityType="Self.LinkHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mailsystem" EntityType="Self.Mailsystem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Partner" EntityType="Self.Partner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Quote" EntityType="Self.Quote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Skype" EntityType="Self.Skype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Title" EntityType="Self.Title" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usercms" EntityType="Self.Usercms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Video" EntityType="Self.Video" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Whyme" EntityType="Self.Whyme" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Function_Services" Association="Self.FK_Function_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="Function" EntitySet="Function" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Quote_Services" Association="Self.FK_Quote_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="Quote" EntitySet="Quote" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

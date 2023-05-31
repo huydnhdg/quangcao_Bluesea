@@ -1,0 +1,203 @@
+.slide-holder {
+    margin: 0 auto;
+    width: auto;
+}
+
+.slide-container { /*slide-container là khối bao mà slide-stage có thể "trượt" bên trong */
+    height: 160px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-stage {
+    position: absolute;
+}
+
+.slide-image { /*Độ rộng của .slide-image có thể được thay đổi theo nhu cầu, ảnh hưởng đến độ rộng chung của slideshow*/
+    float: left;
+    width: 180px;
+    height: auto;
+    text-align: center;
+    margin: 0 0px;
+}
+
+    .slide-image img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+.slide-pager {
+    position: relative;
+}
+
+.slide-control-prev {
+    position: absolute;
+    text-align: center;
+    width: 25px;
+    height: 60px;
+    line-height: 60px;
+    color: #5bb8f6;
+    cursor: pointer;
+    top: 35px;
+    left: -30px;
+    font-size: 32px;
+}
+
+.slide-control-next {
+    position: absolute;
+    text-align: center;
+    width: 25px;
+    height: 60px;
+    line-height: 60px;
+    color: #5bb8f6;
+    cursor: pointer;
+    right: -30px;
+    top: 35px;
+    font-size: 32px;
+}
+
+
+.slide-holder1 {
+    margin: 0 auto;
+    width: auto;
+    margin-bottom: 10px;
+    background-color: #052b5f;
+}
+
+.slide-container1 { /*slide-container là khối bao mà slide-stage có thể "trượt" bên trong */
+    height: 120px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-stage1 {
+    position: absolute;
+}
+
+.slide-image1 { /*Độ rộng của .slide-image có thể được thay đổi theo nhu cầu, ảnh hưởng đến độ rộng chung của slideshow*/
+    float: left;
+    width: 180px;
+    height: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .slide-image1 img {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+.slide-pager1 {
+    position: relative;
+}
+
+.slide-control-prev1 {
+    position: absolute;
+    text-align: center;
+    width: 25px;
+    height: 60px;
+    line-height: 60px;
+    color: #5bb8f6;
+    cursor: pointer;
+    top: 35px;
+    left: -30px;
+    font-size: 32px;
+}
+
+.slide-control-next1 {
+    position: absolute;
+    text-align: center;
+    width: 25px;
+    height: 60px;
+    line-height: 60px;
+    color: #5bb8f6;
+    cursor: pointer;
+    right: -30px;
+    top: 35px;
+    font-size: 32px;
+}
+
+.slide-image p {
+    font-size: 12px;
+    margin: 0 !important;
+}
+
+.slide-image {
+    position: relative;
+}
+
+/*slide trang khach hang noi ve chung toi*/
+.slide-holder2 {
+    margin: 0 auto;
+    width: auto;
+}
+
+.slide-container2 { /*slide-container là khối bao mà slide-stage có thể "trượt" bên trong */
+    height: 320px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-stage2 {
+    position: absolute;
+}
+
+.slide-image2 { /*Độ rộng của .slide-image có thể được thay đổi theo nhu cầu, ảnh hưởng đến độ rộng chung của slideshow*/
+    float: left;
+    width: 360px;
+    height: auto;
+    text-align: center;
+    margin: 0;
+    
+}
+.slide-image2 ul{
+    width:95%;
+    border: 1px solid #c0c0c0;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+    .slide-image2 img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+.slide-pager2 {
+    position: relative;
+}
+
+.slide-control-prev2 {
+    position: absolute;
+    text-align: center;
+    width: 25px;
+    height: 60px;
+    line-height: 60px;
+    color: #5bb8f6;
+    cursor: pointer;
+    top: 140px;
+    left: -30px;
+    font-size: 32px;
+}
+
+.slide-control-next2 {
+    position: absolute;
+    text-align: center;
+    width: 25px;
+    height: 60px;
+    line-height: 60px;
+    color: #5bb8f6;
+    cursor: pointer;
+    right: -30px;
+    top: 140px;
+    font-size: 32px;
+}
+
+.slide-image2 .feedback-item {
+    margin: 0 10px;    
+}
+.slide-image2 ul {
+    min-height:300px;     
+}

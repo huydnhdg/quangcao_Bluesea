@@ -1,0 +1,75 @@
+﻿@model Dichvuhoanhao.Entity.ItemService
+@{
+    ViewBag.Description = ViewBag.des;
+    ViewBag.Title = ViewBag.title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Dichvuhoanhao.Entity.ItemService> itemservice = ViewBag.itemservice;
+
+    string s = Model.Tags;
+    string[] tags = null;
+    if (!String.IsNullOrEmpty(s))
+    {
+        tags = s.Split(',');
+    }
+}
+<div class="banner">
+    <img class="img-responsive" alt="thiet ke website" src="~/Assets/client/img/thiet-ke-website.jpg" />
+</div>
+<div class="container">
+    <div class="baogia">
+        <div class="baogia-title">
+            <h1>@Model.Title</h1>
+        </div>
+        <div class="baogia-content">
+            <div class="bao-wow col-lg-9">
+                <div class="baogia-wow">
+                    <div class="baogia-txt">
+                        @Html.Raw(Model.Text)
+
+                        <div class="tags">
+                            Tags:
+                            @if (tags != null)
+                            {
+                                foreach (var tag in tags)
+                                {
+                                    <a href="/tim-kiem?keywords=@tag"><i>@tag</i></a>
+                                }
+                            }
+                        </div>
+                    </div>
+                    @*<span><a href="#" class="col-lg-3">Tải về</a></span>*@
+
+                    <div class="tags">
+
+                    </div>
+                </div>
+            </div>
+            <div class="baogia-main-service col-lg-3">
+                <div class="brand-main-title">
+                    <h4>dịch vụ chính</h4>
+                </div>
+                @{Html.RenderAction("LoadQuangcao", "Home");}
+            </div>
+        </div>
+        <div class="facebook">
+            <div class="fb-like" data-href="@Request.Url.AbsoluteUri" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-comments" data-href="@Request.Url.AbsoluteUri" data-order-by="reverse_time" data-width="100%" data-numposts="4"></div>
+        </div>
+    </div>
+    <div class="tinlienquan">
+        <div class="tinlienquan-title">
+            <h4>các tin liên quan</h4>
+        </div>
+        <div class="tinlienquan-list">
+            @foreach (var item in itemservice)
+            {
+                <div class="tinlienquan-item">
+                    <img alt="@item.Title" src="/Assets/client/img/bao-gia_07.png" class="img-responsive">
+                    <a title="@item.Title" href="/icheck/@item.Url-@item.Id">
+                        <h3>@item.Title</h3>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+﻿@model BHDTNEWS.Models.ServiceDemo
+
+@{
+    ViewBag.Title = "Delete";
+}
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ServiceDemo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ComName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hotline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hotline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeWarranti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeWarranti)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Createdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Createdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Editdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Editdate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
